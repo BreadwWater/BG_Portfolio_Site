@@ -1,0 +1,9 @@
+@use './mixins' as *;
+@use './breakpoints' as *;
+@use './typography' as *;
+@use './breakpoints' as *;
+@use './globals.scss' as *;
+
+.nav {
+    background-color: $secondary-color--light-grey;
+}
