@@ -1,0 +1,61 @@
+@use './mixins' as *;
+@use './breakpoints' as *;
+@use './typography' as *;
+@use './breakpoints' as *;
+
+$portfolio-color--pink: #E9A18B;
+$portfolio-color--grey: #D1C5C2;
+$portfolio-color--white: #F8F8F8;
+$portfolio-color--blue: #235789;
+$portfolio-color--navy: #1E2433;
+$portfolio-color--black: #1E1B19;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    font-family: 'Gontserrat';
+    color: $portfolio-color--black;
+    text-decoration: none;
+}
+
+::selection {
+    background-color: $portfolio-color--pink;
+    color: $portfolio-color--white;
+}
+
+h1 {
+    @include sub-font(1.25rem, 400, 1rem);
+
+    @include md {
+        @include sub-font(3rem, 400, 3.75rem);
+    }
+}
+
+h2 {
+    @include sub-font(1rem, 400, 1.25rem);
+
+    @include md {
+        @include sub-font(2rem, 400, 2rem);
+    }
+}
+
+h3 {
+    @include sub-font(.75rem, 400, 1rem);
+
+    @include md {
+        @include sub-font(1.5rem, 400, 2rem);
+    }
+}
+
+h4,
+p {
+    @include sub-font(1rem, 400, 1.2);
+
+    @include md {
+        @include sub-font(1.125rem, 400, 2rem);
+    }
+}

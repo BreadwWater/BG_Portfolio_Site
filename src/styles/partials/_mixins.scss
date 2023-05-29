@@ -1,0 +1,31 @@
+@use './typography' as *;
+
+@mixin flex($flex-direction, $justify-content, $align-items) {
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+// Main font mixin
+@mixin main-font($font-size, $font-weight, $line-height) {
+    font-family: 'Bohemian Soul', sans-serif;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+}
+
+// Sub font mixin
+@mixin sub-font($font-size, $font-weight, $line-height, $font-style: normal) {
+    font-family: 'Gontserrat', sans-serif;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+    font-style: $font-style;
+}
+
+@mixin btn($font-color, $bg-color, $line-color, ) {
+    color: $font-color;
+    background-color: $bg-color;
+    border: 2px solid $line-color;
+}
