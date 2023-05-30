@@ -1,11 +1,34 @@
+import React, { useEffect, useState } from 'react';
 import './Header.scss';
 
 import LogoLight from '../../assets/icons/Bread-logo-icon-light.svg';
 
 function Header() {
+    const [showMobileHeader, setShowMobileHeader] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const heroSection = document.getElementById('hero');
+            const header = document.querySelector('.navbar');
+
+            if (heroSection && header) {
+                const heroSectionBottom = heroSection.offsetTop + heroSection.offsetHeight;
+                const scrollPosition = window.scrollY + header.offsetHeight;
+
+                setShowMobileHeader(scrollPosition > heroSectionBottom);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
         <>
-            <nav className='navbar'>
+            <nav className={`navbar ${showMobileHeader ? 'show-mobile-header' : ''}`}>
                 <div className='navbar__cont'>
                     <div className='navbar__sec'>
                         <a className='navbar__logo' href="/">
