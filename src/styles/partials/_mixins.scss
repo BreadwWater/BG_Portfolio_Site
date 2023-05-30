@@ -24,6 +24,7 @@
     font-style: $font-style;
 }
 
+// Button mixin
 @mixin btn($font-color, $bg-color, $line-color, ) {
     color: $font-color;
     background-color: $bg-color;
