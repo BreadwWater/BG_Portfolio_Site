@@ -1,0 +1,90 @@
+@use '../../styles/partials/globals.scss' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/breakpoints' as *;
+
+.hero-btn {
+    display: none;
+
+    @include md {
+        @include flex(row, space-between, center);
+        @include sub-font(24px, 600, 20px);
+        width: 290px;
+
+        &--divider {
+            background-color: $portfolio-color--black;
+            width: 0px;
+            height: 0px;
+            border-radius: 60px;
+            transition: ease-in-out .2s;
+        }
+
+        &:hover .hero-btn--divider {
+            width: 3px;
+            height: 24px;
+        }
+
+        &--opt {
+            color: $portfolio-color--white;
+            text-transform: uppercase;
+            padding: 2px 4px;
+            position: relative;
+            cursor: pointer;
+
+            &::after,
+            &::before {
+                content: '';
+                width: 0%;
+                margin: 28px 0px;
+                transition: ease .45s;
+            }
+
+            &:first-of-type:hover {
+
+                &::after,
+                &::before {
+                    content: '';
+                    background-color: $portfolio-color--black;
+                    height: 3px;
+                    width: 100%;
+                    border-radius: 2px;
+                    position: absolute;
+                }
+
+                &::after {
+                    right: 0px;
+
+                }
+
+                &::before {
+                    right: 0;
+                    bottom: 0px;
+                }
+            }
+
+            &:last-of-type:hover {
+
+                &::after,
+                &::before {
+                    content: '';
+                    background-color: $portfolio-color--black;
+                    height: 3px;
+                    width: 100%;
+                    border-radius: 2px;
+                    position: absolute;
+                }
+
+                &::after {
+                    left: 0px;
+
+                }
+
+                &::before {
+                    left: 0;
+                    bottom: 0px;
+                }
+            }
+        }
+    }
+
+
+}
