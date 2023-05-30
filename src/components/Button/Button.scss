@@ -3,7 +3,7 @@
 @use '../../styles/partials/breakpoints' as *;
 
 .btn {
-    @include btn($portfolio-color--white, $portfolio-color--navy, $portfolio-color--white);
+    @include btn($portfolio-color--black, transparent, $portfolio-color--black);
     @include sub-font(12px, 600, 14px);
     @include flex(row, center, center);
     box-shadow: 0px 6px 23px -4px rgba(0, 0, 0, 0.15);
@@ -14,33 +14,36 @@
     min-width: 64px;
     min-height: 32px;
     padding: 0px 8px;
+    margin: 8px;
     border-radius: 4px;
     cursor: pointer;
     transition: ease-out .2s;
 
     @include md {
-        @include sub-font(24px, 600, 30px);
         border-radius: 8px;
         padding: 8px 16px;
     }
 
     &-text {
-        color: $portfolio-color--white;
+        @include sub-font(12px, 600, 16px);
+        color: $portfolio-color--black;
+
+        @include md {
+            @include sub-font(24px, 600, 30px);
+        }
     }
 
     &:hover {
-        @include btn($portfolio-color--white, $portfolio-color--blue, $portfolio-color--blue);
+        @include btn($portfolio-color--white, $portfolio-color--black, $portfolio-color--black);
         box-shadow: 0px 6px 23px -4px rgba(0, 0, 0, 0.18);
-        scale: 1.015;
-        animation: shake .4s infinite;
-    }
 
-    // Inverted version of btn
-    &--inverted {
-        @include btn($portfolio-color--white, $portfolio-color--blue, $portfolio-color--blue);
+        @include md {
+            scale: 1.015;
+            animation: shake .4s infinite;
+        }
 
-        &:hover {
-            @include btn($portfolio-color--white, $portfolio-color--navy, $portfolio-color--white);
+        &>.btn-text {
+            color: $portfolio-color--white;
         }
     }
 }
@@ -60,5 +63,17 @@
 
     100% {
         rotate: 0deg;
+    }
+}
+
+// Inverted version of btn
+#btn--inverted {
+    @include btn($portfolio-color--white, $portfolio-color--blue, $portfolio-color--blue);
+
+    &:hover {
+        @include btn($portfolio-color--white, $portfolio-color--navy, $portfolio-color--white);
+        box-shadow: 0px 6px 23px -4px rgba(0, 0, 0, 0.18);
+        scale: 1.05;
+        animation: shake .4s infinite;
     }
 }

@@ -1,0 +1,141 @@
+@use '../../styles/partials/globals.scss' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/breakpoints' as *;
+
+.hero {
+    @include flex(row, center, center);
+    background-color: $portfolio-color--pink;
+    height: 270px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    @include md {
+        height: 720px;
+    }
+
+    &__sec {
+        @include flex(row, center, center);
+
+        @include md {
+            width: 100%;
+        }
+    }
+
+    &__info {
+        width: 100%;
+
+        &:first-of-type {
+            @include flex(column, center, center);
+            position: absolute;
+            z-index: 2;
+        }
+
+        &:last-of-type {}
+    }
+
+    &__text {
+        text-align: center;
+        margin: 16px 0px
+    }
+
+    &__title {
+        @include main-font(20px, 400, none);
+        margin: 8px 0px;
+
+        @include md {
+            @include main-font(48px, 400, none);
+        }
+    }
+
+    &__subtitle {
+        @include main-font(12px, 400, 16px);
+
+        @include md {
+            @include main-font(24px, 400, 32px);
+        }
+    }
+
+    &__mobile {
+
+        &--btn,
+        &--bg {
+            display: flex;
+
+            @include md {
+                display: none;
+            }
+        }
+
+        &--bg {
+            width: 100%;
+            @include flex(column, center, center);
+
+            @include md {
+                display: none;
+            }
+        }
+
+        &--img {
+
+            &:first-of-type {
+                width: 100px;
+                left: -50px;
+                top: 16px;
+                transform: rotate(-15deg);
+                position: absolute;
+                justify-self: flex-start;
+                align-self: flex-start;
+                animation: floatDown ease-in-out infinite 3s;
+            }
+
+            &:last-of-type {
+                width: 140px;
+                right: -80px;
+                bottom: -20px;
+                transform: rotate(15deg);
+                position: absolute;
+                justify-self: flex-end;
+                align-self: flex-end;
+                animation: floatUp ease-in-out infinite 3s;
+            }
+        }
+    }
+
+    &__model {
+        display: none;
+
+        @include md {
+            display: flex;
+        }
+    }
+
+}
+
+@keyframes floatUp {
+    0% {
+        translate: 0px 15px;
+    }
+
+    50% {
+        translate: 0px 0px;
+    }
+
+    100% {
+        translate: 0px 15px;
+    }
+}
+
+@keyframes floatDown {
+    0% {
+        translate: 0px -10px;
+    }
+
+    50% {
+        translate: 0px 0px;
+    }
+
+    100% {
+        translate: 0px -10px;
+    }
+}

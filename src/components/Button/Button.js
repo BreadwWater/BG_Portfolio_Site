@@ -2,11 +2,11 @@ import React from 'react';
 
 import '../Button/Button.scss';
 
-const Button = ({ text }) => {
+const Button = ({ text, newId }) => {
     return (
         <>
-            <button className='btn'>
-                <a className='btn-text' href="/">{text}Contact</a>
+            <button id={newId} className='btn'>
+                <a className='btn-text' href="/">{text}</a>
             </button>
         </>
     );
