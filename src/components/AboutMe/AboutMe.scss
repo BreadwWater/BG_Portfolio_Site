@@ -1,0 +1,17 @@
+@use '../../styles/partials/globals.scss' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/breakpoints' as *;
+
+.aboutme {
+    background-color: $portfolio-color--navy;
+    height: 400px;
+    width: 100%;
+
+    & * {
+        color: white;
+    }
+
+    @include md {
+        height: 720px;
+    }
+}

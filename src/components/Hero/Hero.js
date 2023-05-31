@@ -22,7 +22,7 @@ function Hero() {
                             <Button text={'Contact'}></Button>
                             <Button text={'Projects'}></Button>
                         </div>
-                        <div className='hero__btn--desktop'>
+                        <div className='hero__desktop--btn'>
                             <HeroButton></HeroButton>
                         </div>
                     </div>
