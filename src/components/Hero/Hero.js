@@ -1,9 +1,11 @@
-import './Hero.scss';
-
+import React from 'react';
 import HeroButton from '../HeroButton/HeroButton';
 import Button from '../Button/Button';
+import BreadModel from '../BreadModel/BreadModel';
 
 import BreadIcon from '../../assets/icons/Bread--icon.svg';
+
+import '../Hero/Hero.scss';
 
 function Hero() {
     return (
@@ -20,7 +22,7 @@ function Hero() {
                             <Button text={'Contact'}></Button>
                             <Button text={'Projects'}></Button>
                         </div>
-                        <div className='hero__btn--desktop'>
+                        <div className='hero__desktop--btn'>
                             <HeroButton></HeroButton>
                         </div>
                     </div>
@@ -34,8 +36,8 @@ function Hero() {
 
                 </div>
                 <div className='hero__sec'>
-                    <div className='hero__model'>
-                        3d Model Goes Here
+                    <div className="hero__model">
+                        <BreadModel />
                     </div>
                 </div>
             </section>
