@@ -28,8 +28,8 @@ function Header() {
 
     return (
         <>
-            <nav className={`navbar ${showMobileHeader ? 'show-mobile-header' : ''}`}>
-                <div className='navbar__cont'>
+            <header className={`navbar ${showMobileHeader ? 'show-mobile-header' : ''}`}>
+                <nav className='navbar__cont'>
                     <div className='navbar__sec'>
                         <a className='navbar__logo' href="/">
                             <h2 className='navbar__logo--text'>
@@ -48,8 +48,8 @@ function Header() {
                             <input className='navbar--theme' type="checkbox" />
                         </div>
                     </div>
-                </div>
-            </nav>
+                </nav>
+            </header>
         </>
     );
 }
