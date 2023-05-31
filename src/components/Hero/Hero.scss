@@ -106,7 +106,10 @@
         display: none;
 
         @include md {
-            display: flex;
+            @include flex(row, center, center);
+            height: 350px;
+            width: 100%;
+            background-color: red;
         }
     }
 
