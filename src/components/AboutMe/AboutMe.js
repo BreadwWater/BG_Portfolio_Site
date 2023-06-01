@@ -30,9 +30,6 @@ function AboutMe() {
                     </div>
                 </div>
 
-
-
-
                 <div>
                     <img src="/" alt="my selfie dekstop" />
                 </div>
