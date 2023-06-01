@@ -8,18 +8,18 @@ function Model({ gltf }) {
     const modelRef = useRef();
 
     useFrame(() => {
-        modelRef.current.rotation.y += 0.01; // Adjust the rotation speed as needed
+        modelRef.current.rotation.y += 0.003; // Adjust the rotation speed
     });
 
     return (
-        <mesh ref={modelRef} scale={[0.50, 0.50, 0.50]} position={[0, -2.2, 0]} rotation={[0, 0, 0]}>
+        <mesh ref={modelRef} scale={[0.115, 0.115, 0.1]} position={[0, -1.3, 0]} rotation={[0, 0, 0]}>
             {gltf ? <primitive object={gltf.scene} /> : null}
         </mesh>
     );
 }
 
 function BreadModel() {
-    const gltf = useLoader(GLTFLoader, require('../../assets/models/Bred.gltf'));
+    const gltf = useLoader(GLTFLoader, require('../../assets/models/Placeholder.gltf'));
 
     return (
         <div id='canva'>
