@@ -60,3 +60,69 @@ a {
         @include sub-font(1.125rem, 400, 2rem);
     }
 }
+
+// All Animations
+
+// This is to open ::after ::before from center
+.animation--underline {}
+
+// Floating animation
+@keyframes floatUp {
+    0% {
+        translate: 0px 15px;
+    }
+
+    50% {
+        translate: 0px 0px;
+    }
+
+    100% {
+        translate: 0px 15px;
+    }
+}
+
+@keyframes floatDown {
+    0% {
+        translate: 0px -10px;
+    }
+
+    50% {
+        translate: 0px 0px;
+    }
+
+    100% {
+        translate: 0px -10px;
+    }
+}
+
+// Flip out from center animation
+@keyframes flipOutLeft {
+    0% {
+        translate: 160px 0px;
+        rotate: -15deg;
+    }
+
+
+    10% {
+        rotate: 180deg;
+    }
+
+    100% {
+        rotate: -15deg;
+    }
+}
+
+@keyframes flipOutRight {
+    0% {
+        translate: -160px 0px;
+        rotate: 15deg;
+    }
+
+    10% {
+        rotate: -180deg;
+    }
+
+    100% {
+        rotate: 15deg;
+    }
+}
