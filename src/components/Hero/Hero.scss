@@ -18,6 +18,19 @@
         height: 900px;
     }
 
+    &__cont {
+        @include flex(row, center, center);
+
+        @include md {
+            width: 100%;
+        }
+
+        @include lg {
+            width: 80%;
+        }
+    }
+
+
     &__sec {
         @include flex(row, center, center);
 
