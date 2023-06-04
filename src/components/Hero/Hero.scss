@@ -11,8 +11,25 @@
     position: relative;
 
     @include md {
-        height: 720px;
+        height: 750px;
     }
+
+    @include lg {
+        height: 900px;
+    }
+
+    &__cont {
+        @include flex(row, center, center);
+
+        @include md {
+            width: 100%;
+        }
+
+        @include lg {
+            width: 80%;
+        }
+    }
+
 
     &__sec {
         @include flex(row, center, center);
@@ -24,6 +41,7 @@
 
     &__info {
         @include flex(column, center, center);
+        margin-top: 16px;
 
         &:first-of-type {
             width: 100%;
@@ -32,6 +50,7 @@
 
             @include md {
                 width: 47%;
+                margin: 0;
             }
         }
     }
@@ -42,8 +61,8 @@
     }
 
     &__title {
-        @include main-font(20px, 400, none);
-        margin: 8px 0px;
+        @include main-font(24px, 400, none);
+        margin: 16px 0px;
 
         @include md {
             @include main-font(40px, 400, none);
@@ -57,7 +76,7 @@
     }
 
     &__subtitle {
-        @include main-font(12px, 400, 16px);
+        @include main-font(14px, 400, 16px);
 
         @include md {
             @include main-font(20px, 400, 32px);
@@ -101,7 +120,7 @@
             &:first-of-type {
                 width: 100px;
                 left: -50px;
-                top: 16px;
+                top: 10px;
                 transform: rotate(-15deg);
                 position: absolute;
                 justify-self: flex-start;
@@ -112,7 +131,7 @@
             &:last-of-type {
                 width: 140px;
                 right: -80px;
-                bottom: -20px;
+                bottom: -32px;
                 transform: rotate(15deg);
                 position: absolute;
                 justify-self: flex-end;
@@ -133,32 +152,4 @@
         }
     }
 
-}
-
-@keyframes floatUp {
-    0% {
-        translate: 0px 15px;
-    }
-
-    50% {
-        translate: 0px 0px;
-    }
-
-    100% {
-        translate: 0px 15px;
-    }
-}
-
-@keyframes floatDown {
-    0% {
-        translate: 0px -10px;
-    }
-
-    50% {
-        translate: 0px 0px;
-    }
-
-    100% {
-        translate: 0px -10px;
-    }
 }
