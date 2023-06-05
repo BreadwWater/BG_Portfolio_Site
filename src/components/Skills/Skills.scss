@@ -1,3 +1,111 @@
 @use '../../styles/partials/globals.scss' as *;
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/breakpoints' as *;
+
+
+.skills {
+    @include flex(column, center, center);
+    background-color: $portfolio-color--white;
+    min-height: 620px;
+    width: 100%;
+
+    @include md {
+        padding: 40px 0px;
+
+    }
+
+    &__body {
+        @include flex(column, center, center);
+        width: 100%;
+
+        &::after {
+            content: '';
+            background-color: $portfolio-color--navy;
+            width: 100%;
+            height: 80px;
+        }
+    }
+
+    &__main {
+        @include flex(column, center, center);
+        width: 100%;
+    }
+
+    &__sec {
+        margin: 0px 0px 8px 0px;
+
+        @include md {
+            margin: 0px 0px 16px 0px;
+        }
+    }
+
+    &__header {
+        @include flex(column, center, center);
+        width: 100%;
+        padding: 8px 0px;
+
+        @include md {
+            @include flex(column, center, flex-start);
+            padding: 16px 0px;
+            width: 90%;
+        }
+
+        @include lg {
+            width: 80%;
+        }
+
+        &--icon {
+            width: 45px;
+            margin: 0px 0px 8px 0px;
+
+            @include md {
+                display: none
+            }
+        }
+
+        &--text {
+            @include flex(column, center, center);
+            @include sub-font(16px, 700, 20px);
+
+            @include md {
+                display: none
+            }
+        }
+    }
+
+    &__subheader {
+        @include sub-font(16px, 600, 20px);
+        background-color: $portfolio-color--navy;
+        color: $portfolio-color--white;
+        text-align: center;
+        width: 100%;
+        padding: 16px 0px;
+
+        @include md {
+            @include sub-font(24px, 600, 20px);
+            background-color: transparent;
+            color: $portfolio-color--black;
+        }
+    }
+
+    &__cont {
+        @include flex(column, center, center);
+        background-color: $portfolio-color--white;
+        width: 100%;
+    }
+
+    &__group {
+        @include flex(row, flex-start, center);
+        flex-wrap: wrap;
+        width: 94%;
+
+        @include md {
+            @include flex(row, flex-start, center);
+            width: 100%;
+        }
+
+        @include lg {
+            width: 100%;
+        }
+    }
+}

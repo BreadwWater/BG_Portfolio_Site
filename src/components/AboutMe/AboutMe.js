@@ -1,15 +1,13 @@
 import React, { useEffect, useRef } from 'react';
-
 import './AboutMe.scss';
 
 import breadIcon from '../../assets/icons/Bread--icon.svg';
 import profilePicMobile from '../../assets/images/Headshot_casual--mobile.png';
 import profilePicDesktop from '../../assets/images//Headshot_casual--desktop.png';
 import aboutMeIcon from '../../assets/animated icons/aboutme-animated-icon.gif';
-
+import SectionHeader from '../SectionHeader/SectionHeader';
 
 function AboutMe() {
-
     const animatedTextRef = useRef(null);
 
     useEffect(() => {
@@ -35,8 +33,11 @@ function AboutMe() {
     return (
         <>
             <section id='aboutme' className='aboutme'>
-                <articale id='aboutme' className='aboutme__cont'>
+                <div className='aboutme__sec'>
+                    <SectionHeader title={'Who'} text={'Brenda Gonzalez'} />
+                </div>
 
+                <articale className='aboutme__cont'>
                     <div className='aboutme__body'>
                         <div className='aboutme__header'>
                             <div className='aboutme__header--title'>Who</div>

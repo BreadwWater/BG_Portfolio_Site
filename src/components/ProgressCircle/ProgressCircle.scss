@@ -4,14 +4,26 @@
 
 .progress-bar {
     @include flex(column, center, center);
+    margin: 8px;
+    padding: 4px;
 
     &__cont {
         @include flex(column, center, center);
         position: relative;
-        height: 74px;
-        width: 74px;
+        height: 75px;
+        width: 75px;
         border-radius: 50%;
-        background: conic-gradient($portfolio-color--pink 3.6deg, $portfolio-color--grey 0deg);
+        background: conic-gradient($portfolio-color--pink 360deg, $portfolio-color--grey 0deg);
+
+        @include md {
+            height: 100px;
+            width: 100px;
+        }
+
+        @include lg {
+            height: 115px;
+            width: 115px;
+        }
 
         &::after {
             content: "";
@@ -20,15 +32,41 @@
             width: 55px;
             height: 55px;
             border-radius: 50%;
+
+            @include md {
+                height: 75px;
+                width: 75px;
+            }
+
+            @include lg {
+                height: 90px;
+                width: 90px;
+            }
+        }
+
+    }
+
+    &__value,
+    &__text {
+        @include sub-font(12px, 600, 1.5);
+        margin: 4px 0px;
+
+        @include md {
+            @include sub-font(14px, 600, 1.5);
+            margin: 8px 0px;
         }
     }
 
     &--img {
-        width: 30px;
+        width: 34px;
         z-index: 2;
-    }
 
-    &__text {
-        @include sub-font(18px, 500, 1.5)
+        @include md {
+            width: 45px;
+        }
+
+        @include lg {
+            width: 55px;
+        }
     }
 }

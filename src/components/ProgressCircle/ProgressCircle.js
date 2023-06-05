@@ -14,37 +14,34 @@ function ProgressCircle({ name, value, img }) {
 
         observer.observe(progressRef.current);
 
-        return () => {
-            observer.disconnect();
-        };
+        return () => observer.disconnect();
     }, []);
 
     useEffect(() => {
         if (isIntersecting) {
+            const speed = 1.5; // Adjust Speed of Progress
             const interval = setInterval(() => {
                 setProgress((prevProgress) => {
-                    const increment = value / 100;
+                    const increment = value / (100 * speed);
                     const nextProgress = prevProgress + increment;
                     return nextProgress >= value ? value : nextProgress;
                 });
             }, 10);
 
-            return () => {
-                clearInterval(interval);
-            };
+            return () => clearInterval(interval);
         } else {
-            setProgress(0); // Reset's the progress when component is out of view
+            setProgress(0);
         }
     }, [isIntersecting, value]);
 
     const getBackgroundStyle = () => {
-        const degrees = progress * 3.6;
-        return `conic-gradient(#E9A18B ${degrees}deg, #D1C5C2 0deg)`;
+        const degrees = 360 - progress * 3.6;
+        return `conic-gradient(from 359deg, #D1C5C2 0deg, #D1C5C2 ${degrees}deg, #E9A18B ${degrees}deg, #E9A18B 360deg)`;
     };
 
     return (
         <div className="progress-bar" ref={progressRef}>
-            <p className="progress-bar__value">{Math.round(progress)}</p>
+            <p className="progress-bar__value">{Math.round(progress)}%</p>
             <div className="progress-bar__cont" style={{ background: getBackgroundStyle() }}>
                 <img className="progress-bar--img" src={img} alt="Tech Icon" />
             </div>
