@@ -30,7 +30,8 @@
 
 
     &__body {
-        @include flex(column, center, center);
+        @include flex(column, flex-start, center);
+        height: 500px;
 
         @include md {
             width: 65%;
@@ -40,7 +41,6 @@
     &__header {
         @include flex(column, center, center);
         width: 100%;
-
 
         @include md {
             @include flex(row, flex-start, flex-start);
@@ -83,7 +83,7 @@
                 margin: 4px;
                 width: 0px;
                 height: 3px;
-                transition: ease-in-out .9s;
+                transition: 1.5s ease-out 0.2s;
             }
 
             &.animation--underline::after {
@@ -106,7 +106,7 @@
                     margin: 0px 8px;
                     width: 3px;
                     height: 0px;
-                    transition: ease-in-out .9s;
+                    transition: .9s ease-out 0.2s;
                 }
 
                 &.animation--underline::before {
@@ -161,11 +161,7 @@
         width: 80%;
 
         @include md {
-            width: 90%;
-        }
-
-        @include lg {
-            width: 77%;
+            width: 80%;
         }
     }
 
@@ -183,9 +179,13 @@
         display: none;
 
         @include md {
-            @include flex(column, flex-start, flex-start);
+            @include flex(column, center, center);
             padding: 8px 0px;
             width: 100%;
+        }
+
+        @include lg {
+            @include flex(column, flex-start, flex-start);
         }
 
         &--item {
@@ -208,7 +208,7 @@
             transition: ease .3s;
 
             @include lg {
-                width: 400px;
+                width: 360px;
             }
         }
     }
