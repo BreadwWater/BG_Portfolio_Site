@@ -29,7 +29,7 @@ function SectionHeader({ title, text }) {
         <>
             <div className='section-header'>
                 <h3 className='section-header--title'>{title}</h3>
-                <h3 className='section-header--text' ref={animatedTextRef}>{text}</h3>
+                <h4 className='section-header--text' ref={animatedTextRef}>{text}</h4>
             </div>
         </>
     );

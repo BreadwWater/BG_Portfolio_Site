@@ -29,7 +29,7 @@ import MayaIcon from '../../assets/icons/Maya--icon.svg';
 function Skills() {
     return (
         <>
-            <section className='skills'>
+            <section id='skills' className='skills'>
                 <article className='skills__body'>
 
                     <div className='skills__header'>
@@ -40,7 +40,7 @@ function Skills() {
 
                     <div className='skills__main'>
 
-                        <articale className='skills__sec'>
+                        <article className='skills__sec'>
                             <p className='skills__subheader'>Tech-Stack</p>
                             <div className='skills__cont'>
                                 <div className='skills__group'>
@@ -54,9 +54,9 @@ function Skills() {
                                     <ProgressCircle value={40} name={'Next.js'} img={NextIcon}></ProgressCircle>
                                 </div>
                             </div>
-                        </articale>
+                        </article>
 
-                        <articale className='skills__sec'>
+                        <article className='skills__sec'>
                             <p className='skills__subheader'>Design-Stack</p>
                             <div className='skills__cont'>
                                 <div className='skills__group'>
@@ -69,7 +69,7 @@ function Skills() {
                                     <ProgressCircle value={75} name={'Maya'} img={MayaIcon}></ProgressCircle>
                                 </div>
                             </div>
-                        </articale>
+                        </article>
                     </div>
 
                 </article>

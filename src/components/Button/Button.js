@@ -1,15 +1,14 @@
-import React from 'react';
-
+import React, { useState } from 'react';
 import '../Button/Button.scss';
 
-const Button = ({ text, newId, location }) => {
+const Button = ({ text, newId, location, isActive, onClick }) => {
     return (
-        <>
-            <button id={newId} className='btn'>
-                <a className='btn-text' href={location}>{text}</a>
-            </button>
-        </>
+        <button onClick={onClick} id={newId} className={`btn ${isActive ? 'btn--active' : 'btn--inactive'}`}>
+            <span className="btn-text">{text}</span>
+        </button>
     );
 };
 
 export default Button;
+
+

@@ -39,12 +39,13 @@
 
         @include md {
             scale: 1.015;
-            animation: shake .4s infinite;
+            animation: shake ease .4s infinite;
         }
 
         &>.btn-text {
             color: $portfolio-color--white;
         }
+
     }
 }
 
@@ -66,14 +67,31 @@
     }
 }
 
+#btn--active {
+    @include btn($portfolio-color--white, $portfolio-color--blue, $portfolio-color--blue);
+    animation: none;
+    scale: none;
+
+    & span {
+        color: $portfolio-color--white;
+    }
+}
+
 // Inverted version of btn
 #btn--inverted {
     @include btn($portfolio-color--white, $portfolio-color--blue, $portfolio-color--blue);
+    border: none;
+
+    & a {
+        background-color: transparent;
+        color: $portfolio-color--white;
+    }
 
     &:hover {
         @include btn($portfolio-color--white, $portfolio-color--navy, $portfolio-color--white);
+        border: none;
         box-shadow: 0px 6px 23px -4px rgba(0, 0, 0, 0.18);
         scale: 1.05;
-        animation: shake .4s infinite;
+        animation: shake ease .4s infinite;
     }
 }

@@ -12,6 +12,7 @@
 
     &--title {
         @include main-font(32px, 500, 40px);
+        color: $portfolio-color--pink;
         display: none;
 
         @include md {
