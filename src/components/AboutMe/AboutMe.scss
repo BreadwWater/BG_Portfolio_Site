@@ -3,11 +3,10 @@
 @use '../../styles/partials/breakpoints' as *;
 
 .aboutme {
-    @include flex(row, center, center);
+    @include flex(column, center, center);
     background-color: $portfolio-color--navy;
-    height: 600px;
     width: 100%;
-    padding: 24px 8px;
+    padding: 40px 0px;
     overflow: hidden;
 
     & * {
@@ -16,23 +15,40 @@
 
     @include md {
         padding: 60px 8px;
-        height: 650px;
     }
 
-    &__cont {
-        @include flex(row, center, center);
+    &__sec {
         width: 100%;
+
+        @include md {
+            width: 90%;
+        }
 
         @include lg {
             width: 80%;
         }
     }
 
+    &__cont {
+        @include flex(row, center, flex-start);
+        width: 100%;
+
+        @include md {
+            width: 100%;
+        }
+
+        @include lg {
+            width: 90%;
+            max-width: 1400px
+        }
+    }
 
     &__body {
         @include flex(column, center, center);
+        height: 500px;
 
         @include md {
+            @include flex(column, flex-start, center);
             width: 65%;
         }
     }
@@ -40,7 +56,6 @@
     &__header {
         @include flex(column, center, center);
         width: 100%;
-
 
         @include md {
             @include flex(row, flex-start, flex-start);
@@ -53,14 +68,12 @@
             display: none;
 
             @include md {
-                @include flex(column, flex-start, flex-start);
-                text-align: start;
+                display: none
             }
         }
 
         &--info {
             @include flex(column, center, center);
-
         }
 
         &--icon {
@@ -83,7 +96,7 @@
                 margin: 4px;
                 width: 0px;
                 height: 3px;
-                transition: ease-in-out .9s;
+                transition: 1.5s ease-out 0.2s;
             }
 
             &.animation--underline::after {
@@ -92,30 +105,8 @@
             }
 
             @include md {
-                @include flex(row, center, center);
-                @include sub-font(32px, 700, 40px);
-
-                &::after {
-                    display: none;
-                }
-
-                &::before {
-                    content: "";
-                    background-color: $portfolio-color--pink;
-                    border-radius: 2px;
-                    margin: 0px 8px;
-                    width: 3px;
-                    height: 0px;
-                    transition: ease-in-out .9s;
-                }
-
-                &.animation--underline::before {
-                    width: 3px;
-                    height: 32px;
-                }
-
+                display: none
             }
-
         }
     }
 
@@ -149,7 +140,7 @@
         &--profile {
             width: 150px;
             border-radius: 100%;
-            border: 4px solid $portfolio-color--white;
+            border: 6px solid $portfolio-color--white;
             z-index: 1;
         }
 
@@ -161,11 +152,7 @@
         width: 80%;
 
         @include md {
-            width: 90%;
-        }
-
-        @include lg {
-            width: 77%;
+            width: 80%;
         }
     }
 
@@ -202,13 +189,15 @@
         }
 
         &--profile {
-            width: 300px;
+            width: 250px;
             border: 4px solid $portfolio-color--white;
             border-radius: 4px;
             transition: ease .3s;
+            margin: 16px;
 
             @include lg {
-                width: 400px;
+                width: 360px;
+                margin: 0px;
             }
         }
     }

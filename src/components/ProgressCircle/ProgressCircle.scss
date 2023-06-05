@@ -1,0 +1,72 @@
+@use '../../styles/partials/globals.scss' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/breakpoints' as *;
+
+.progress-bar {
+    @include flex(column, center, center);
+    margin: 8px;
+    padding: 4px;
+
+    &__cont {
+        @include flex(column, center, center);
+        position: relative;
+        height: 75px;
+        width: 75px;
+        border-radius: 50%;
+        background: conic-gradient($portfolio-color--pink 360deg, $portfolio-color--grey 0deg);
+
+        @include md {
+            height: 100px;
+            width: 100px;
+        }
+
+        @include lg {
+            height: 115px;
+            width: 115px;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            background-color: $portfolio-color--navy;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+
+            @include md {
+                height: 75px;
+                width: 75px;
+            }
+
+            @include lg {
+                height: 90px;
+                width: 90px;
+            }
+        }
+
+    }
+
+    &__value,
+    &__text {
+        @include sub-font(12px, 600, 1.5);
+        margin: 4px 0px;
+
+        @include md {
+            @include sub-font(14px, 600, 1.5);
+            margin: 8px 0px;
+        }
+    }
+
+    &--img {
+        width: 34px;
+        z-index: 2;
+
+        @include md {
+            width: 45px;
+        }
+
+        @include lg {
+            width: 55px;
+        }
+    }
+}

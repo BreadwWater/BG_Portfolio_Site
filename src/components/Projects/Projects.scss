@@ -1,0 +1,47 @@
+@use '../../styles/partials/globals.scss' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/breakpoints' as *;
+
+
+.projects {
+
+    &__header {
+        @include flex(column, center, center);
+        width: 100%;
+        padding: 8px 0px;
+
+        @include md {
+            @include flex(column, center, flex-start);
+            padding: 16px 0px;
+            width: 90%;
+        }
+
+        @include lg {
+            width: 80%;
+        }
+
+        &--icon {
+            width: 50px;
+            margin: 0px 0px 4px 0px;
+
+            @include md {
+                display: none
+            }
+        }
+
+        &--text {
+            @include flex(column, center, center);
+            @include sub-font(16px, 700, 20px);
+
+            @include md {
+                display: none
+            }
+        }
+    }
+
+
+    &__body * {
+        background-color: $portfolio-color--navy;
+        color: $portfolio-color--white;
+    }
+}
