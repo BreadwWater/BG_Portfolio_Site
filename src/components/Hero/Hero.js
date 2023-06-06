@@ -10,9 +10,8 @@ import '../Hero/Hero.scss';
 function Hero() {
     return (
         <>
-            <section className='hero'>
+            <section id='hero' className='hero'>
                 <article className='hero__cont'>
-
 
                     <div className='hero__sec'>
 
@@ -22,8 +21,8 @@ function Hero() {
                                 <h2 className='hero__subtitle'>3D Modeler | Front-End Dev | Bread Lover</h2>
                             </div>
                             <div className='hero__mobile--btn'>
-                                <Button location={'#aboutme'} text='Contact' />
-                                <Button location={'#aboutme'} text='Projects' />
+                                <Button location={'#contact'} text='Contact' />
+                                <Button location={'#projects'} text='Projects' />
                             </div>
                             <div className='hero__desktop--btn'>
                                 <HeroButton></HeroButton>

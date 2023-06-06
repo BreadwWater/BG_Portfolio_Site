@@ -75,6 +75,7 @@
     &__links {
         display: none;
         position: relative;
+        cursor: pointer;
 
         @include md {
             @include flex(row, space-between, center);

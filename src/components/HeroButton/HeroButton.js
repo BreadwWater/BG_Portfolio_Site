@@ -1,18 +1,31 @@
 import './HeroButton.scss';
+import { Link as ScrollLink } from 'react-scroll';
 
 function HeroButton() {
     return (
         <>
             <div className='hero-btn'>
-                <div className='hero-btn--opt'>
+                <ScrollLink
+                    to="contact"
+                    spy={true}
+                    smooth={true}
+                    offset={-80}
+                    duration={500}
+                    className='hero-btn--opt'>
                     Contact
-                </div>
+                </ScrollLink>
                 <div className='hero-btn--divider'>
 
                 </div>
-                <div className='hero-btn--opt'>
+                <ScrollLink
+                    to="projects"
+                    spy={true}
+                    smooth={true}
+                    offset={-80}
+                    duration={500}
+                    className='hero-btn--opt'>
                     Projects
-                </div>
+                </ScrollLink>
             </div>
         </>
     );
