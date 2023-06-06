@@ -4,14 +4,24 @@
 
 
 .projects {
+    @include flex(column, center, center);
+    background-color: $portfolio-color--navy;
+    padding: 40px 0px;
+    width: 100%;
 
     &__header {
         @include flex(column, center, center);
+        background-color: $portfolio-color--white;
         width: 100%;
         padding: 8px 0px;
 
+        & h4 {
+            color: $portfolio-color--white;
+        }
+
         @include md {
             @include flex(column, center, flex-start);
+            background-color: transparent;
             padding: 16px 0px;
             width: 90%;
         }
@@ -39,9 +49,68 @@
         }
     }
 
+    &__sec {
+        @include flex(column, center, center);
+    }
 
-    &__body * {
-        background-color: $portfolio-color--navy;
+    &__group {
+        @include flex(row, center, center);
+        flex-wrap: wrap;
+    }
+
+    &__body {
+        @include flex(column, center, center);
+        padding: 16px 0px;
+        width: 100%;
+    }
+
+    &__text {
         color: $portfolio-color--white;
+        text-align: center;
+        width: 75%;
+        order: 1;
+
+        @include md {
+            width: 88%;
+            order: 2;
+            margin: 16px 0px;
+        }
+
+        @include lg {
+            width: 70%;
+
+        }
+    }
+
+    &__opts {
+        @include flex(row, center, center);
+        margin: 16px 0px;
+        order: 2;
+
+        @include lg {
+            order: 1;
+        }
+
+        & * {
+            color: $portfolio-color--white;
+            border-color: $portfolio-color--white;
+            min-width: 90px;
+
+            @include md {
+                min-width: 100px;
+            }
+
+            @include lg {
+                min-width: 120px;
+            }
+
+            &:hover {
+                animation: none;
+            }
+        }
+    }
+
+    &__btns {
+        margin: 16px;
     }
 }

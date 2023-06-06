@@ -23,6 +23,10 @@
             background-color: $portfolio-color--navy;
             width: 100%;
             height: 80px;
+
+            @include md {
+                all: unset;
+            }
         }
     }
 

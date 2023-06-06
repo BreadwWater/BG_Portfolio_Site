@@ -37,7 +37,7 @@ function AboutMe() {
                     <SectionHeader title={'Who'} text={'Brenda Gonzalez'} />
                 </div>
 
-                <articale className='aboutme__cont'>
+                <article className='aboutme__cont'>
                     <div className='aboutme__body'>
                         <div className='aboutme__header'>
                             <div className='aboutme__header--title'>Who</div>
@@ -66,7 +66,7 @@ function AboutMe() {
                     <div className='aboutme__desktop'>
                         <img className='aboutme__desktop--profile' src={profilePicDesktop} alt="my selfie dekstop" />
                     </div>
-                </articale>
+                </article>
             </section>
         </>
     );

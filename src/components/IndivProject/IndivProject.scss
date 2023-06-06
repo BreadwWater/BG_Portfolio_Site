@@ -1,0 +1,134 @@
+@use '../../styles/partials/globals.scss' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/breakpoints' as *;
+
+.indiv {
+    @include flex(column, center, center);
+    margin: 16px;
+    width: 90%;
+    order: 6;
+    cursor: pointer;
+    transition: ease .4s;
+
+    @include md {
+        width: 40%;
+
+        &:hover {
+            scale: 1.02
+        }
+    }
+
+    @include lg {
+        width: 30%;
+    }
+
+
+    &__header {
+        @include flex(column, flex-end, center);
+        background-color: $portfolio-color--blue;
+        overflow: hidden;
+
+        @include md {
+            border-radius: 8px;
+        }
+
+        &>.indiv__body {
+            display: none;
+        }
+
+        &:hover {
+            &>.indiv__body {
+                @include md {
+                    @include flex(column, center, center);
+                    background-color: $portfolio-color--white;
+                    border-radius: 4px;
+                    text-align: start;
+                    line-height: none;
+                    font-weight: 600;
+                    margin: 0;
+                    padding: 16px 0px;
+                    position: absolute;
+                    width: 40%;
+                    z-index: 2;
+
+                    @include md {
+                        width: 100%;
+                    }
+
+                    & h3 {
+                        @include main-font(18px, 600, 1.5);
+                        color: $portfolio-color--black;
+                        width: 100%;
+                    }
+
+                    & p {
+                        @include sub-font(16px, 500, 1.5);
+                        color: $portfolio-color--black;
+                        text-align: start;
+                        width: 90%;
+                    }
+                }
+            }
+
+            @include md {
+                &>img {
+                    filter: blur(2.8px);
+                    opacity: 50%;
+                    scale: 0.96;
+                }
+            }
+        }
+    }
+
+    &__img {
+        background-color: $portfolio-color--pink;
+        border-radius: 4px;
+        min-width: 280px;
+        width: 100%;
+        min-height: 180px;
+        object-fit: cover;
+        scale: 1.01;
+        transition: ease .8s;
+    }
+
+    &__body {
+        @include flex(column, center, center);
+        min-width: 240px;
+        margin: 16px 0px;
+        width: 90%;
+
+
+        @include md {
+            background-color: $portfolio-color--white;
+            width: 80%;
+            display: none;
+
+        }
+    }
+
+    &__title {
+        @include flex(column, center, center);
+        @include main-font(20px, 600, 1.5);
+        letter-spacing: 1px;
+        color: $portfolio-color--white;
+        min-width: 85%;
+
+        &::after {
+            content: '';
+            background-color: $portfolio-color--grey;
+            margin: 4px 0px;
+            width: 90%;
+            height: 3px;
+        }
+    }
+
+    &__desc {
+        @include sub-font(14px, 500, 1.5);
+        letter-spacing: .25px;
+        color: $portfolio-color--white;
+        min-width: 280px;
+        width: 75%;
+        padding: 8px;
+        text-align: center;
+    }
+}

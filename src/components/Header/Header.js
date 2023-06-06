@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { Link as ScrollLink } from 'react-scroll';
+import { Link } from 'react-router-dom';
 import './Header.scss';
 
 import LogoLight from '../../assets/icons/Bread-logo-icon-light.svg';
@@ -31,18 +33,57 @@ function Header() {
             <header className={`navbar ${showMobileHeader ? 'show-mobile-header' : ''}`}>
                 <nav className='navbar__cont'>
                     <div className='navbar__sec'>
-                        <a className='navbar__logo' href="/">
+                        <ScrollLink
+                            to="hero"
+                            spy={true}
+                            smooth={true}
+                            offset={-80}
+                            duration={500}
+                            className='navbar__logo'>
                             <h2 className='navbar__logo--text'>
                                 BG.
                             </h2>
                             <img src={LogoLight} alt="Bren.Dev Logo" className='navbar__logo--img' />
-                        </a>
+                        </ScrollLink>
                     </div>
                     <div className='navbar__sec'>
                         <ul className='navbar__opts'>
-                            <li><a className='navbar__links' href="/">Who</a></li>
-                            <li><a className='navbar__links' href="/">What</a></li>
-                            <li><a className='navbar__links' href="/">Where</a></li>
+                            <li>
+                                <ScrollLink
+                                    to="aboutme"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-80}
+                                    duration={500}
+                                    className='navbar__links'
+                                >
+                                    Who
+                                </ScrollLink>
+                            </li>
+                            <li>
+                                <ScrollLink
+                                    to="projects"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-80}
+                                    duration={500}
+                                    className='navbar__links'
+                                >
+                                    What
+                                </ScrollLink>
+                            </li>
+                            <li>
+                                <ScrollLink
+                                    to="contact"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-80}
+                                    duration={500}
+                                    className='navbar__links'
+                                >
+                                    Where
+                                </ScrollLink>
+                            </li>
                         </ul>
                         <div className='navbar__opts'>
                             <input className='navbar--theme' type="checkbox" />
