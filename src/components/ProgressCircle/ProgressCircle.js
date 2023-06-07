@@ -19,16 +19,21 @@ function ProgressCircle({ name, value, img }) {
 
     useEffect(() => {
         if (isIntersecting) {
-            const speed = 1.5; // Adjust Speed of Progress
-            const interval = setInterval(() => {
-                setProgress((prevProgress) => {
-                    const increment = value / (100 * speed);
-                    const nextProgress = prevProgress + increment;
-                    return nextProgress >= value ? value : nextProgress;
-                });
-            }, 10);
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            if (prefersReducedMotion) {
+                setProgress(value);
+            } else {
+                const speed = 1.5; // Adjust Speed of Progress
+                const interval = setInterval(() => {
+                    setProgress((prevProgress) => {
+                        const increment = value / (100 * speed);
+                        const nextProgress = prevProgress + increment;
+                        return nextProgress >= value ? value : nextProgress;
+                    });
+                }, 10);
 
-            return () => clearInterval(interval);
+                return () => clearInterval(interval);
+            }
         } else {
             setProgress(0);
         }
@@ -38,6 +43,7 @@ function ProgressCircle({ name, value, img }) {
         const degrees = 360 - progress * 3.6;
         return `conic-gradient(from 359deg, #D1C5C2 0deg, #D1C5C2 ${degrees}deg, #E9A18B ${degrees}deg, #E9A18B 360deg)`;
     };
+
 
     return (
         <div className="progress-bar" ref={progressRef}>

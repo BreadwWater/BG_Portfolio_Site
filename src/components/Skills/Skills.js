@@ -4,8 +4,8 @@ import SectionHeader from '../SectionHeader/SectionHeader';
 
 import ProgressCircle from '../../components/ProgressCircle/ProgressCircle';
 
-import SkillsIcon from '../../assets/animated icons/stack-animated-icon.gif';
-
+import SkillsIconAnim from '../../assets/animated icons/stack-animated-icon.gif';
+import SkillsIconStatic from '../../assets/animated icons/stack-icon.svg';
 
 import HTMLIcon from '../../assets/icons/html--icon.svg';
 import JsIcon from '../../assets/icons/js--icon.svg';
@@ -24,16 +24,29 @@ import AnimateIcon from '../../assets/icons/Animate--icon.svg';
 import AiIcon from '../../assets/icons/Illustrator--icon.svg';
 import IdIcon from '../../assets/icons/InDesign--icon.svg';
 import MayaIcon from '../../assets/icons/Maya--icon.svg';
+import { useEffect } from 'react';
 
 
 function Skills() {
+    const handleReplaceSrc = () => {
+        if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            const iconElement = document.querySelector('.skills__header--icon');
+            iconElement.setAttribute('src', SkillsIconStatic);
+        }
+    };
+
+    useEffect(() => {
+        handleReplaceSrc();
+    }, []);
+
+
     return (
         <>
             <section id='skills' className='skills'>
                 <article className='skills__body'>
 
                     <div className='skills__header'>
-                        <img className='skills__header--icon' src={SkillsIcon} alt="Skills icon" />
+                        <img className='skills__header--icon' src={SkillsIconAnim} alt="Skills icon" />
                         <h3 className='skills__header--text'>Skills</h3>
                         <SectionHeader title={'What'} text={'Skills'} />
                     </div>

@@ -11,7 +11,7 @@
         padding: 16px;
 
         &--divider {
-            background-color: $portfolio-color--black;
+            background-color: $portfolio-color--white;
             width: 0px;
             height: 0px;
             border-radius: 60px;
@@ -24,12 +24,13 @@
         }
 
         &--opt {
-            @include sub-font(24px, 600, 20px);
-            color: $portfolio-color--white;
+            @include sub-font(24px, 600, 0.8);
+            color: $portfolio-color--black;
             text-transform: uppercase;
             padding: 2px 4px;
             position: relative;
             cursor: pointer;
+
 
             &::after,
             &::before {
@@ -44,8 +45,8 @@
                 &::after,
                 &::before {
                     content: '';
-                    background-color: $portfolio-color--black;
-                    height: 3px;
+                    background-color: $portfolio-color--white;
+                    height: 4px;
                     width: 100%;
                     border-radius: 2px;
                     position: absolute;
@@ -67,8 +68,8 @@
                 &::after,
                 &::before {
                     content: '';
-                    background-color: $portfolio-color--black;
-                    height: 3px;
+                    background-color: $portfolio-color--white;
+                    height: 4px;
                     width: 100%;
                     border-radius: 2px;
                     position: absolute;
