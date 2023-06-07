@@ -14,9 +14,9 @@ function HeroButton() {
                     className='hero-btn--opt'>
                     Contact
                 </ScrollLink>
-                <div className='hero-btn--divider'>
 
-                </div>
+                <span className='hero-btn--divider'></span>
+
                 <ScrollLink
                     to="projects"
                     spy={true}

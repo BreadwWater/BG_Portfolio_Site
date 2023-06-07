@@ -40,7 +40,8 @@
             &>.indiv__body {
                 @include md {
                     @include flex(column, center, center);
-                    background-color: $portfolio-color--white;
+                    background-color: rgba(248, 248, 248, 0.7);
+                    backdrop-filter: blur(8px);
                     border-radius: 4px;
                     text-align: start;
                     line-height: none;
@@ -115,7 +116,8 @@
 
         &::after {
             content: '';
-            background-color: $portfolio-color--grey;
+            background-color: $portfolio-color--pink;
+            border-radius: 50%;
             margin: 4px 0px;
             width: 90%;
             height: 3px;

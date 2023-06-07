@@ -1,0 +1,66 @@
+@use '../../styles/partials/globals.scss' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/breakpoints' as *;
+
+
+.contact {
+    @include flex(column, center, center);
+    width: 100%;
+
+    &__header {
+        @include flex(column, center, center);
+        background-color: $portfolio-color--white;
+        width: 100%;
+        padding: 8px 0px;
+
+        & h4 {
+            color: $portfolio-color--black;
+        }
+
+        @include md {
+            @include flex(column, center, flex-start);
+            background-color: transparent;
+            padding: 16px 0px;
+            width: 90%;
+        }
+
+        @include lg {
+            width: 80%;
+        }
+
+        &--icon {
+            width: 50px;
+            margin: 0px 0px 4px 0px;
+
+            @include md {
+                display: none
+            }
+        }
+
+        &--text {
+            @include flex(column, center, center);
+            @include sub-font(16px, 700, 20px);
+
+            @include md {
+                display: none
+            }
+        }
+    }
+
+    &__title {
+        @include flex(column, center, center);
+        @include sub-font(12px, 600, none);
+
+        @include md {
+            @include sub-font(16px, 600, none);
+        }
+
+        &::after {
+            content: '';
+            background-color: $portfolio-color--pink;
+            height: 3px;
+            width: 0%;
+            border-radius: 60px;
+        }
+    }
+}
