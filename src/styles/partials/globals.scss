@@ -25,7 +25,7 @@ $portfolio-color--black: #1E1B19;
 
 ::selection {
     background-color: $portfolio-color--pink;
-    color: $portfolio-color--white;
+    color: $portfolio-color--black;
 }
 
 h1 {
@@ -65,7 +65,17 @@ a {
 // All Animations
 
 // This is to open ::after ::before from center
-.animation--underline {}
+.animation--underline::after {
+    width: 80px;
+    height: 3px;
+}
+
+
+.fade-in {
+    opacity: 1;
+    filter: blur(0);
+    translate: 0px 0px;
+}
 
 // Floating animation
 @keyframes floatUp {
@@ -125,5 +135,36 @@ a {
 
     100% {
         rotate: 15deg;
+    }
+}
+
+
+// All Media Queries
+
+@media (prefers-reduced-motion) {
+
+    .hero__mobile--img,
+    .aboutme__mobile--img {
+        animation: none !important;
+    }
+
+    .section-header--text {
+        transition: none;
+
+        &::before {
+            width: 3px;
+            height: 32px;
+        }
+    }
+
+    .aboutme__header--text::after {
+        width: 80px;
+        height: 3px;
+    }
+
+    .aboutme__list--item {
+        translate: 0;
+        opacity: 1;
+        filter: blur(0);
     }
 }

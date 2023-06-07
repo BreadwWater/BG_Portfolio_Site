@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Projects.scss';
 
-import ProjIcon from '../../assets/animated icons/projects-animated-icon.gif';
+import ProjIconAnim from '../../assets/animated icons/projects-animated-icon.gif';
+import ProjIconStatic from '../../assets/animated icons/projects-icon.svg';
+
 import SectionHeader from '../SectionHeader/SectionHeader';
 import Button from '../Button/Button';
 import IndivProject from '../IndivProject/IndivProject';
@@ -11,6 +13,18 @@ import ProjThumb2 from '../../assets/images/2Ye-thumb.png';
 import ProjThumb3 from '../../assets/images//UKG-thumb.png.png';
 
 function Projects() {
+    const handleReplaceSrc = () => {
+        if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            const iconElement = document.querySelector('.projects__header--icon');
+            iconElement.setAttribute('src', ProjIconStatic);
+        }
+    };
+
+    useEffect(() => {
+        handleReplaceSrc();
+    }, []);
+
+
     const [activeBtn, setActiveBtn] = useState('btn1'); // Set 'btn1' as the initial active button
 
     const handleBtnClick = (id) => {
@@ -21,7 +35,7 @@ function Projects() {
             <section id="projects" className="projects">
 
                 <div className="projects__header">
-                    <img className="projects__header--icon" src={ProjIcon} alt="Projects icon" />
+                    <img className="projects__header--icon" src={ProjIconAnim} alt="Projects icon" />
                     <h3 className="projects__header--text">Projects</h3>
                     <SectionHeader title={'What'} text={'Projects'} />
                 </div>
