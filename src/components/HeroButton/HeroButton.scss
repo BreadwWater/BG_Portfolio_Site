@@ -21,12 +21,14 @@
         &:hover .hero-btn--divider {
             width: 3px;
             height: 24px;
+            margin: -16px 0px;
         }
 
         &--opt {
             @include sub-font(24px, 600, 0.8);
             color: $portfolio-color--black;
             text-transform: uppercase;
+            line-height: 0;
             padding: 2px 4px;
             position: relative;
             cursor: pointer;
@@ -35,8 +37,9 @@
             &::after,
             &::before {
                 content: '';
+                position: absolute;
                 width: 0%;
-                margin: 28px 0px;
+                margin: 24px 0px;
                 transition: ease .45s;
             }
 
@@ -45,15 +48,16 @@
                 &::after,
                 &::before {
                     content: '';
+                    position: absolute;
                     background-color: $portfolio-color--white;
                     height: 4px;
                     width: 100%;
                     border-radius: 2px;
-                    position: absolute;
                 }
 
                 &::after {
                     right: 0px;
+                    top: -2px;
 
                 }
 
@@ -68,16 +72,16 @@
                 &::after,
                 &::before {
                     content: '';
+                    position: absolute;
                     background-color: $portfolio-color--white;
                     height: 4px;
                     width: 100%;
                     border-radius: 2px;
-                    position: absolute;
                 }
 
                 &::after {
                     left: 0px;
-
+                    top: -2px;
                 }
 
                 &::before {

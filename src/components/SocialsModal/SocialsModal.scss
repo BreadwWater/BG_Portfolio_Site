@@ -1,0 +1,93 @@
+@use '../../styles/partials/globals.scss' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/breakpoints' as *;
+
+.socials-modal {
+    display: none;
+
+    @include md {
+        @include flex(column, center, center);
+        background-color: rgba(255, 255, 255, .5);
+        backdrop-filter: blur(8px);
+        box-shadow: 0px 4px 12px -5px rgba(0, 0, 0, 0.4);
+        border-radius: 8px 0px 0px 8px;
+        position: fixed;
+        top: 15%;
+        right: 0;
+        margin: 8px -1px;
+        padding: 8px 8px 16px 8px;
+        z-index: 100;
+        transform-origin: right;
+        transition: ease .3s;
+
+        &__cont {
+            @include flex(column, center, center);
+        }
+
+        &__title {
+            @include main-font(16px, 700, none);
+            letter-spacing: 0.5px;
+            padding: 0px 0px 8px 0px;
+        }
+
+        &__link {
+            @include flex(row, center, center);
+            position: relative;
+
+            &::before {
+                content: '';
+                @include sub-font(16px, 700, none);
+                background-color: $portfolio-color--white;
+                color: $portfolio-color--white;
+                position: absolute;
+                right: 0;
+                margin: 0px 30px 12px 0px;
+                padding: 0px 8px;
+                border-radius: 10px 10px 0px 10px;
+                overflow: hidden;
+                opacity: 0;
+                z-index: 100;
+                transition: ease .3s;
+            }
+
+            &:hover::before {
+                opacity: 1;
+                color: $portfolio-color--black;
+                margin: 0px 40px 16px 0px;
+                // display: flex;
+            }
+
+            &:nth-of-type(1) {
+                &::before {
+                    content: 'LinkedIn';
+                    background-color: rgba(35, 87, 137, 0.9);
+                    color: $portfolio-color--white;
+                }
+            }
+
+            &:nth-of-type(2) {
+                &::before {
+                    content: 'GitHub';
+                    background-color: rgba(30, 27, 25, 0.9);
+                    color: $portfolio-color--white;
+                }
+            }
+
+            &:nth-of-type(3) {
+                &::before {
+                    content: 'IDK';
+                    background-color: rgba(248, 248, 248, 0.9);
+                    color: $portfolio-color--black;
+                }
+            }
+        }
+
+        &--icon {
+            width: 35px;
+            background-color: $portfolio-color--black;
+            border-radius: 4px;
+            border: 2px solid white;
+        }
+    }
+
+}
