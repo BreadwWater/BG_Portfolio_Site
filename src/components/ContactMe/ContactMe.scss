@@ -58,9 +58,11 @@
         @include sub-font(12px, 600, none);
         text-align: center;
         margin: 8px 0px;
+        width: 70%;
 
         @include md {
             @include sub-font(16px, 600, none);
+            width: 100%;
         }
 
         &:nth-of-type(2) {
@@ -113,6 +115,7 @@
         resize: none;
 
         @include md {
+            @include sub-font(12px, 500, none);
             height: 100px;
         }
     }
@@ -120,6 +123,10 @@
     &__label {
         @include sub-font(12px, 600, none);
         margin: 4px 0px 8px 0px;
+
+        @include md {
+            @include sub-font(16px, 600, none);
+        }
 
         &--input {
             @include sub-font(12px, 500, none);
@@ -146,15 +153,17 @@
                 box-shadow: 0 0 10px rgba(233, 161, 139, 0.5);
                 background-color: white;
             }
+
+            @include md {
+                @include sub-font(12px, 500, none);
+            }
         }
     }
 
     &__btn {
+        @include flex(row, center, center);
+        line-height: normal;
         align-self: center;
         margin-top: 8px;
-
-        &:hover {
-            scale: 1.035;
-        }
     }
 }

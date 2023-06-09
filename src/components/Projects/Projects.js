@@ -24,16 +24,21 @@ function Projects() {
         handleReplaceSrc();
     }, []);
 
-
     const [activeBtn, setActiveBtn] = useState('btn1'); // Set 'btn1' as the initial active button
+    const [showDesignProjects, setShowDesignProjects] = useState(false);
 
     const handleBtnClick = (id) => {
+        if (id === 'btn2') {
+            setShowDesignProjects(true);
+        } else {
+            setShowDesignProjects(false);
+        }
         setActiveBtn(id);
     };
+
     return (
         <>
             <section id="projects" className="projects">
-
                 <div className="projects__header">
                     <img className="projects__header--icon" src={ProjIconAnim} alt="Projects icon" />
                     <h3 className="projects__header--text">Projects</h3>
@@ -41,7 +46,6 @@ function Projects() {
                 </div>
 
                 <div className="projects__body">
-
                     <div className='projects__sec'>
                         <p className='projects__text'>
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum, deserunt saepe ut numquam porro odit illum
@@ -61,48 +65,89 @@ function Projects() {
                         </div>
                     </div>
 
-                    <div className='projects__sec'>
-                        <div className='projects__group'>
-                            <IndivProject
-                                Title={'Fetchfind'}
-                                Img={ProjThumb1}
-                                DescShort={`Using the fetchfinder API, I've created a dog adoption platform, and created every asset on the site.`}
-                                DescLarge={`Using the fetchfinder API, I've created a dog adoption platform, and created every asset on the site. I used this lorem to the ipsum ultimate`}
-                            />
-                            <IndivProject
-                                Title={'2Ye | Clothing Brand'}
-                                Img={ProjThumb2}
-                                DescShort={''}
-                                DescLarge={''}
-                            />
-                            <IndivProject
-                                Title={'UKG | Industry Project'}
-                                Img={ProjThumb3}
-                                DescShort={''}
-                                DescLarge={''}
-                            />
-                            <IndivProject
-                                Title={''}
-                                Img={ProjThumb1}
-                                DescShort={''}
-                                DescLarge={''}
-                            />
-                            <IndivProject
-                                Title={''}
-                                Img={ProjThumb1}
-                                DescShort={''}
-                                DescLarge={''}
-                            />
-                            <IndivProject
-                                Title={''}
-                                Img={ProjThumb1}
-                                DescShort={''}
-                                DescLarge={''}
-                            />
-
+                    {showDesignProjects ? (
+                        <div className='projects__sec'>
+                            <div className='projects__group'>
+                                <IndivProject
+                                    Title={'Cruiseline Proj'}
+                                    Img={ProjThumb1}
+                                    DescShort={`Using the fetchfinder API, I've created a dog adoption platform, and created every asset on the site.`}
+                                    DescLarge={`Using the fetchfinder API, I've created a dog adoption platform, and created every asset on the site. I used this lorem to the ipsum ultimate`}
+                                />
+                                <IndivProject
+                                    Title={'Cruiseline Proj'}
+                                    Img={ProjThumb1}
+                                    DescShort={`Using the fetchfinder API, I've created a dog adoption platform, and created every asset on the site.`}
+                                    DescLarge={`Using the fetchfinder API, I've created a dog adoption platform, and created every asset on the site. I used this lorem to the ipsum ultimate`}
+                                />
+                                <IndivProject
+                                    Title={'Cruiseline Proj'}
+                                    Img={ProjThumb1}
+                                    DescShort={`Using the fetchfinder API, I've created a dog adoption platform, and created every asset on the site.`}
+                                    DescLarge={`Using the fetchfinder API, I've created a dog adoption platform, and created every asset on the site. I used this lorem to the ipsum ultimate`}
+                                />
+                                <IndivProject
+                                    Title={'Cruiseline Proj'}
+                                    Img={ProjThumb1}
+                                    DescShort={`Using the fetchfinder API, I've created a dog adoption platform, and created every asset on the site.`}
+                                    DescLarge={`Using the fetchfinder API, I've created a dog adoption platform, and created every asset on the site. I used this lorem to the ipsum ultimate`}
+                                />
+                                <IndivProject
+                                    Title={'Cruiseline Proj'}
+                                    Img={ProjThumb1}
+                                    DescShort={`Using the fetchfinder API, I've created a dog adoption platform, and created every asset on the site.`}
+                                    DescLarge={`Using the fetchfinder API, I've created a dog adoption platform, and created every asset on the site. I used this lorem to the ipsum ultimate`}
+                                />
+                                <IndivProject
+                                    Title={'Cruiseline Proj'}
+                                    Img={ProjThumb1}
+                                    DescShort={`Using the fetchfinder API, I've created a dog adoption platform, and created every asset on the site.`}
+                                    DescLarge={`Using the fetchfinder API, I've created a dog adoption platform, and created every asset on the site. I used this lorem to the ipsum ultimate`}
+                                />
+                            </div>
                         </div>
-                    </div>
-
+                    ) : (
+                        <div className='projects__sec'>
+                            <div className='projects__group'>
+                                <IndivProject
+                                    Title={'Fetchfind'}
+                                    Img={ProjThumb1}
+                                    DescShort={`Using the fetchfinder API, I've created a dog adoption platform, and created every asset on the site.`}
+                                    DescLarge={`Using the fetchfinder API, I've created a dog adoption platform, and created every asset on the site. I used this lorem to the ipsum ultimate`}
+                                />
+                                <IndivProject
+                                    Title={'2Ye | Clothing Brand'}
+                                    Img={ProjThumb2}
+                                    DescShort={''}
+                                    DescLarge={''}
+                                />
+                                <IndivProject
+                                    Title={'UKG | Industry Project'}
+                                    Img={ProjThumb3}
+                                    DescShort={''}
+                                    DescLarge={''}
+                                />
+                                <IndivProject
+                                    Title={''}
+                                    Img={ProjThumb1}
+                                    DescShort={''}
+                                    DescLarge={''}
+                                />
+                                <IndivProject
+                                    Title={''}
+                                    Img={ProjThumb1}
+                                    DescShort={''}
+                                    DescLarge={''}
+                                />
+                                <IndivProject
+                                    Title={''}
+                                    Img={ProjThumb1}
+                                    DescShort={''}
+                                    DescLarge={''}
+                                />
+                            </div>
+                        </div>
+                    )}
                 </div>
             </section>
         </>
