@@ -78,35 +78,35 @@ function Projects() {
                                 <IndivProject
                                     Title={'Odyssey Cruiseline'}
                                     Img={ProjThumb7}
-                                    DescShort={`Using the fetchfinder API, I've created a dog adoption platform, and created every asset on the site.`}
-                                    DescLarge={`Using the fetchfinder API, I've created a dog adoption platform, and created every asset on the site. I used this lorem to the ipsum ultimate`}
+                                    DescShort={`Concept for a faux Cruiseline Website that I plan on building out as a side project.`}
+                                    DescLarge={`Concept for a faux Cruiseline Website that I plan on building out as a side project with two pages completed as of now; I plan on making a full page map next.`}
                                     url={''}
                                 />
                                 <IndivProject
                                     Title={'The Flock.'}
                                     Img={ProjThumb8}
-                                    DescShort={`Using the fetchfinder API, I've created a dog adoption platform, and created every asset on the site. and a bit.`}
-                                    DescLarge={`Using the fetchfinder API, I've created a dog adoption platform, and created every asset on the site. I used this lorem to the ipsum ultimate forclosure on this.`}
+                                    DescShort={`A website for a family run blog account about there pet chickens and the homestead.`}
+                                    DescLarge={`A website for a family run blog account about there pet chickens and the homestead. Simple blog style layout design.`}
                                     url={''}
                                 />
                                 <IndivProject
                                     Title={'Winden Fields Sanctuary'}
                                     Img={ProjThumb9}
-                                    DescShort={`Using the fetchfinder API, I've created a dog adoption platform, and created every asset on the site.`}
-                                    DescLarge={`Using the fetchfinder API, I've created a dog adoption platform, and created every asset on the site. I used this lorem to the ipsum ultimate`}
+                                    DescShort={`Site for a sanctuary that breeds King Charles Spaniel's of all types such as special needs.`}
+                                    DescLarge={`Site for a sanctuary that breeds, houses, and accepts Cavalier King Charles Spaniel's of all types such as special needs.`}
                                     url={''}
                                 />
                                 <IndivProject
                                     Title={'SaveGame'}
                                     Img={ProjThumb10}
-                                    DescShort={`Using the fetchfinder API, I've created a dog adoption platform, and created every asset on the site.`}
-                                    DescLarge={`Using the fetchfinder API, I've created a dog adoption platform, and created every asset on the site. I used this lorem to the ipsum ultimate`}
+                                    DescShort={`Game key vendor website; mainly used to test out design concept of hover scaled replacable images for different genres.`}
+                                    DescLarge={`Video game key vendor website; mainly used to test out design concept of hover scaled replacable images for different genres.`}
                                     url={''}
                                 />
                                 <IndivProject
                                     Title={'Raccoon Kid'}
                                     Img={ProjThumb11}
-                                    DescShort={`Using the fetchfinder API, I've created a dog adoption platform, and created every asset on the site.`}
+                                    DescShort={`A 3D Model of my personal website mascot that is currently in the texturing phase; I plan on adding him to my websites hero soon!`}
                                     DescLarge={`A raccoon mascot for my personal website that is still in the works!`}
                                     url={''}
                                 />

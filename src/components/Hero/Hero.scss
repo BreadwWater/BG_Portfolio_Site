@@ -111,9 +111,7 @@
             width: 100%;
             @include flex(column, center, center);
 
-            @include md {
-                display: none;
-            }
+            @include md {}
         }
 
         &--img {
@@ -139,6 +137,34 @@
                 align-self: flex-end;
                 animation: floatUp ease-in-out infinite 3s;
             }
+
+
+            // DELETE THIS WHEN YOU GET THE MODEL WORKING; ITS THE BREAD BUT ON MD
+            @include md {
+
+                &:first-of-type {
+                    width: 250px;
+                    left: -80px;
+                    top: 100px;
+                    transform: rotate(-15deg);
+                    position: absolute;
+                    justify-self: flex-start;
+                    align-self: flex-start;
+                    animation: floatDown ease-in-out infinite 3s;
+                }
+
+                &:last-of-type {
+                    width: 240px;
+                    right: -80px;
+                    bottom: 150px;
+                    transform: rotate(15deg);
+                    position: absolute;
+                    justify-self: flex-end;
+                    align-self: flex-end;
+                    animation: floatUp ease-in-out infinite 3s;
+                }
+
+            }
         }
     }
 
@@ -155,6 +181,8 @@
 
 }
 
+
+// Delete this and the class entirely when you get the 3D Model running; this was just to hide the section
 .render {
     display: none;
 }
