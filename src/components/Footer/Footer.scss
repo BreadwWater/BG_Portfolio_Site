@@ -6,6 +6,8 @@
     @include flex(column, center, center);
     background-color: $portfolio-color--grey;
     height: 140px;
+    width: 100%;
+    z-index: 998;
 
     @include md {
         background-color: $portfolio-color--black;

@@ -68,11 +68,9 @@
         color: $portfolio-color--white;
         text-align: center;
         width: 75%;
-        order: 1;
 
         @include md {
             width: 88%;
-            order: 2;
             margin: 16px 0px;
         }
 
@@ -85,11 +83,6 @@
     &__opts {
         @include flex(row, center, center);
         margin: 16px 0px;
-        order: 2;
-
-        @include lg {
-            order: 1;
-        }
 
         & * {
             color: $portfolio-color--white;

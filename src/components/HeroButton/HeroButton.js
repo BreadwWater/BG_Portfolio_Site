@@ -9,7 +9,7 @@ function HeroButton() {
                     to="contact"
                     spy={true}
                     smooth={true}
-                    offset={-80}
+                    offset={-70}
                     duration={500}
                     className='hero-btn--opt'>
                     Contact
@@ -21,7 +21,7 @@ function HeroButton() {
                     to="projects"
                     spy={true}
                     smooth={true}
-                    offset={-80}
+                    offset={-70}
                     duration={500}
                     className='hero-btn--opt'>
                     Projects

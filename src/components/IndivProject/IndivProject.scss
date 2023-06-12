@@ -8,7 +8,7 @@
     width: 90%;
     order: 6;
     cursor: pointer;
-    transition: ease .4s;
+    transition: ease .6s;
 
     @include md {
         width: 40%;
@@ -22,10 +22,14 @@
         width: 30%;
     }
 
+    &__cont {
+        @include flex(column, center, center);
+    }
 
     &__header {
         @include flex(column, flex-end, center);
         background-color: $portfolio-color--blue;
+        border-radius: 4px;
         overflow: hidden;
 
         @include md {
@@ -40,7 +44,7 @@
             &>.indiv__body {
                 @include md {
                     @include flex(column, center, center);
-                    background-color: rgba(248, 248, 248, 0.7);
+                    background-color: rgba(248, 248, 248, 0.78);
                     backdrop-filter: blur(8px);
                     border-radius: 4px;
                     text-align: start;
@@ -88,7 +92,6 @@
         width: 100%;
         min-height: 180px;
         object-fit: cover;
-        scale: 1.01;
         transition: ease .8s;
     }
 

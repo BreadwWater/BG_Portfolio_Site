@@ -37,7 +37,7 @@ function Header() {
                             to="hero"
                             spy={true}
                             smooth={true}
-                            offset={-80}
+                            offset={-70}
                             duration={500}
                             className='navbar__logo'>
                             <h2 className='navbar__logo--text'>
@@ -53,7 +53,7 @@ function Header() {
                                     to="aboutme"
                                     spy={true}
                                     smooth={true}
-                                    offset={-80}
+                                    offset={-70}
                                     duration={500}
                                     className='navbar__links'
                                 >
@@ -65,7 +65,7 @@ function Header() {
                                     to="projects"
                                     spy={true}
                                     smooth={true}
-                                    offset={-80}
+                                    offset={-70}
                                     duration={500}
                                     className='navbar__links'
                                 >
@@ -77,7 +77,7 @@ function Header() {
                                     to="contact"
                                     spy={true}
                                     smooth={true}
-                                    offset={-80}
+                                    offset={-70}
                                     duration={500}
                                     className='navbar__links'
                                 >

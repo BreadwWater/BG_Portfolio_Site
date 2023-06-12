@@ -1,7 +1,7 @@
 import React from 'react';
 import '../Button/Button.scss';
 
-const Button = ({ text, newId, location, isActive, onClick }) => {
+const Button = ({ text, newId, location, isActive, onClick, url }) => {
     const handleClick = (event) => {
         if (location) {
             event.preventDefault();
@@ -11,13 +11,22 @@ const Button = ({ text, newId, location, isActive, onClick }) => {
             }
         }
 
+        if (url) {
+            event.preventDefault();
+            window.open(url, '_blank');
+        }
+
         if (onClick) {
             onClick(event);
         }
     };
 
     return (
-        <button onClick={handleClick} id={newId} className={`btn ${isActive ? 'btn--active' : 'btn--inactive'}`}>
+        <button
+            onClick={handleClick}
+            id={newId}
+            className={`btn ${isActive ? 'btn--active' : 'btn--inactive'}`}
+        >
             <span className="btn-text">{text}</span>
         </button>
     );
