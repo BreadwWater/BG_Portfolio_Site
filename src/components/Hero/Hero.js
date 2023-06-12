@@ -35,9 +35,9 @@ function Hero() {
                                 <img className='hero__mobile--img' src={BreadIcon} alt="Bread Icon" />
                             </div>
                         </div>
-
                     </div>
-                    <div className='hero__sec'>
+
+                    <div className='hero__sec render'>
                         <div className="hero__model">
                             <BreadModel />
                         </div>

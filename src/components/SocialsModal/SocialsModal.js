@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import './SocialsModal.scss';
 
 import GitHubIconAnim from '../../assets/animated icons/github-animated-icon.gif';
@@ -8,6 +8,8 @@ import LinkedInIconAnim from '../../assets/animated icons/linkedin-animated-icon
 import LinkedInIconStatic from '../../assets/animated icons/linkedin-icon.svg';
 
 function SocialsModal() {
+    const [showModal, setShowModal] = useState(false);
+
     const handleReplaceSrc = () => {
         if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
             const iconElement1 = document.querySelector('.icon-linkedin');
@@ -19,25 +21,34 @@ function SocialsModal() {
     };
 
     useEffect(() => {
+        const timeoutId = setTimeout(() => {
+            setShowModal(true);
+        }, 6000);
+
+        return () => clearTimeout(timeoutId);
+    }, []);
+
+    useEffect(() => {
         handleReplaceSrc();
     }, []);
     return (
         <>
-            <article className='socials-modal fade-in'>
-                <div className='socials-modal__cont'>
+            {showModal && (
+                <article className='socials-modal slide-in'>
+                    <div className='socials-modal__cont'>
 
-                    <div className='socials-modal__title'>Socials</div>
+                        <div className='socials-modal__title'>Socials</div>
 
-                    <Link target='_blank' to='https://www.linkedin.com/in/bren-gonzalez/' className='socials-modal__link'>
-                        <img className='socials-modal--icon icon-linkedin' src={LinkedInIconAnim} alt="LinkedIn Profile Link" />
-                    </Link>
-                    <Link target='_blank' to='https://github.com/BreadwWater' className='socials-modal__link'>
-                        <img className='socials-modal--icon icon-github' src={GitHubIconAnim} alt="GitHub Profile Link" />
-                    </Link>
-                </div>
-            </article>
+                        <Link target='_blank' to='https://www.linkedin.com/in/bren-gonzalez/' className='socials-modal__link'>
+                            <img className='socials-modal--icon icon-linkedin' src={LinkedInIconAnim} alt="LinkedIn Profile Link" />
+                        </Link>
+                        <Link target='_blank' to='https://github.com/BreadwWater' className='socials-modal__link'>
+                            <img className='socials-modal--icon icon-github' src={GitHubIconAnim} alt="GitHub Profile Link" />
+                        </Link>
+                    </div>
+                </article>
+            )}
         </>
     );
 }
-
 export default SocialsModal;

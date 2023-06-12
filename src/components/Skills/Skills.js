@@ -15,6 +15,7 @@ import TypeScriptIcon from '../../assets/icons/TypeScript--icon.svg';
 import SQLIcon from '../../assets/icons/mySQL--icon.svg';
 import ThreeIcon from '../../assets/icons/Threejs--icon.svg';
 import NextIcon from '../../assets/icons/Nextjs--icon.svg';
+import PythonIcon from '../../assets/icons/Python--icon.svg';
 
 
 import FigmaIcon from '../../assets/icons/Figma--icon.svg';
@@ -58,13 +59,14 @@ function Skills() {
                             <div className='skills__cont'>
                                 <div className='skills__group'>
                                     <ProgressCircle value={90} name={'HTML/CSS'} img={HTMLIcon}></ProgressCircle>
-                                    <ProgressCircle value={70} name={'JavaScript'} img={JsIcon}></ProgressCircle>
+                                    <ProgressCircle value={64} name={'JavaScript'} img={JsIcon}></ProgressCircle>
                                     <ProgressCircle value={80} name={'Sass'} img={SassIcon}></ProgressCircle>
-                                    <ProgressCircle value={80} name={'React'} img={ReactIcon}></ProgressCircle>
-                                    <ProgressCircle value={55} name={'TypeScript'} img={TypeScriptIcon}></ProgressCircle>
-                                    <ProgressCircle value={40} name={'mySQL'} img={SQLIcon}></ProgressCircle>
-                                    <ProgressCircle value={50} name={'Three.js'} img={ThreeIcon}></ProgressCircle>
-                                    <ProgressCircle value={40} name={'Next.js'} img={NextIcon}></ProgressCircle>
+                                    <ProgressCircle value={76} name={'React'} img={ReactIcon}></ProgressCircle>
+                                    <ProgressCircle value={40} name={'TypeScript'} img={TypeScriptIcon}></ProgressCircle>
+                                    <ProgressCircle value={35} name={'mySQL'} img={SQLIcon}></ProgressCircle>
+                                    <ProgressCircle value={34} name={'Three.js'} img={ThreeIcon}></ProgressCircle>
+                                    <ProgressCircle value={28} name={'Next.js'} img={NextIcon}></ProgressCircle>
+                                    <ProgressCircle value={15} name={'Python'} img={PythonIcon}></ProgressCircle>
                                 </div>
                             </div>
                         </article>
@@ -73,9 +75,9 @@ function Skills() {
                             <p className='skills__subheader'>Design-Stack</p>
                             <div className='skills__cont'>
                                 <div className='skills__group'>
-                                    <ProgressCircle value={85} name={'Figma'} img={FigmaIcon}></ProgressCircle>
+                                    <ProgressCircle value={70} name={'Figma'} img={FigmaIcon}></ProgressCircle>
                                     <ProgressCircle value={90} name={'Photoshop'} img={PhotoshopIcon}></ProgressCircle>
-                                    <ProgressCircle value={65} name={'Animate'} img={AnimateIcon}></ProgressCircle>
+                                    <ProgressCircle value={54} name={'Animate'} img={AnimateIcon}></ProgressCircle>
                                     <ProgressCircle value={40} name={'After Effects'} img={AeIcon}></ProgressCircle>
                                     <ProgressCircle value={85} name={'Illustrator'} img={AiIcon}></ProgressCircle>
                                     <ProgressCircle value={70} name={'InDesign'} img={IdIcon}></ProgressCircle>

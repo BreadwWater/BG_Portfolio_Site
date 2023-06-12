@@ -10,7 +10,16 @@ import IndivProject from '../IndivProject/IndivProject';
 
 import ProjThumb1 from '../../assets/images/fetchfind-thumb.png';
 import ProjThumb2 from '../../assets/images/2Ye-thumb.png';
-import ProjThumb3 from '../../assets/images//UKG-thumb.png.png';
+import ProjThumb3 from '../../assets/images/UKG-thumb.png.png';
+import ProjThumb4 from '../../assets/images/BrainFlix-thumb.png';
+import ProjThumb5 from '../../assets/images/Bandsite-thumb.png';
+import ProjThumb6 from '../../assets/images/TravelSite-thumb.png';
+
+import ProjThumb7 from '../../assets/images/cruiseline--thumb.png';
+import ProjThumb8 from '../../assets/images/TheFlock--thumb.png';
+import ProjThumb9 from '../../assets/images/Windenfields--thumb.png';
+import ProjThumb10 from '../../assets/images/SaveGame--vid.gif';
+import ProjThumb11 from '../../assets/images/raccoon--thumb.png';
 
 function Projects() {
     const handleReplaceSrc = () => {
@@ -48,9 +57,7 @@ function Projects() {
                 <div className="projects__body">
                     <div className='projects__sec'>
                         <p className='projects__text'>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum, deserunt saepe ut numquam porro odit illum
-                            iusto magni expedita inventore aut reprehenderit dicta officia sequi repellendus cum corrupti itaque dolorem?
-                        </p>
+                            Explore my latest projects which are a testament to my growth in the field. Some are still in progress, reflecting my journey; I'll periodically update my showcase, sharing my favorite or most remarkable creations.                        </p>
                         <div className="projects__opts">
                             <Button
                                 newId={activeBtn === 'btn1' ? 'btn--active' : 'btn--inactive'}
@@ -69,40 +76,39 @@ function Projects() {
                         <div className='projects__sec'>
                             <div className='projects__group'>
                                 <IndivProject
-                                    Title={'Cruiseline Proj'}
-                                    Img={ProjThumb1}
+                                    Title={'Odyssey Cruiseline'}
+                                    Img={ProjThumb7}
                                     DescShort={`Using the fetchfinder API, I've created a dog adoption platform, and created every asset on the site.`}
                                     DescLarge={`Using the fetchfinder API, I've created a dog adoption platform, and created every asset on the site. I used this lorem to the ipsum ultimate`}
+                                    url={''}
                                 />
                                 <IndivProject
-                                    Title={'Cruiseline Proj'}
-                                    Img={ProjThumb1}
-                                    DescShort={`Using the fetchfinder API, I've created a dog adoption platform, and created every asset on the site.`}
-                                    DescLarge={`Using the fetchfinder API, I've created a dog adoption platform, and created every asset on the site. I used this lorem to the ipsum ultimate`}
+                                    Title={'The Flock.'}
+                                    Img={ProjThumb8}
+                                    DescShort={`Using the fetchfinder API, I've created a dog adoption platform, and created every asset on the site. and a bit.`}
+                                    DescLarge={`Using the fetchfinder API, I've created a dog adoption platform, and created every asset on the site. I used this lorem to the ipsum ultimate forclosure on this.`}
+                                    url={''}
                                 />
                                 <IndivProject
-                                    Title={'Cruiseline Proj'}
-                                    Img={ProjThumb1}
+                                    Title={'Winden Fields Sanctuary'}
+                                    Img={ProjThumb9}
                                     DescShort={`Using the fetchfinder API, I've created a dog adoption platform, and created every asset on the site.`}
                                     DescLarge={`Using the fetchfinder API, I've created a dog adoption platform, and created every asset on the site. I used this lorem to the ipsum ultimate`}
+                                    url={''}
                                 />
                                 <IndivProject
-                                    Title={'Cruiseline Proj'}
-                                    Img={ProjThumb1}
+                                    Title={'SaveGame'}
+                                    Img={ProjThumb10}
                                     DescShort={`Using the fetchfinder API, I've created a dog adoption platform, and created every asset on the site.`}
                                     DescLarge={`Using the fetchfinder API, I've created a dog adoption platform, and created every asset on the site. I used this lorem to the ipsum ultimate`}
+                                    url={''}
                                 />
                                 <IndivProject
-                                    Title={'Cruiseline Proj'}
-                                    Img={ProjThumb1}
+                                    Title={'Raccoon Kid'}
+                                    Img={ProjThumb11}
                                     DescShort={`Using the fetchfinder API, I've created a dog adoption platform, and created every asset on the site.`}
-                                    DescLarge={`Using the fetchfinder API, I've created a dog adoption platform, and created every asset on the site. I used this lorem to the ipsum ultimate`}
-                                />
-                                <IndivProject
-                                    Title={'Cruiseline Proj'}
-                                    Img={ProjThumb1}
-                                    DescShort={`Using the fetchfinder API, I've created a dog adoption platform, and created every asset on the site.`}
-                                    DescLarge={`Using the fetchfinder API, I've created a dog adoption platform, and created every asset on the site. I used this lorem to the ipsum ultimate`}
+                                    DescLarge={`A raccoon mascot for my personal website that is still in the works!`}
+                                    url={''}
                                 />
                             </div>
                         </div>
@@ -112,38 +118,43 @@ function Projects() {
                                 <IndivProject
                                     Title={'Fetchfind'}
                                     Img={ProjThumb1}
-                                    DescShort={`Using the fetchfinder API, I've created a dog adoption platform, and created every asset on the site.`}
-                                    DescLarge={`Using the fetchfinder API, I've created a dog adoption platform, and created every asset on the site. I used this lorem to the ipsum ultimate`}
+                                    DescShort={`Find and adopt dogs in need. Real-time data, contact form, and donation links. Easily accessible online.`}
+                                    DescLarge={`Discover and embrace the joy of adopting dogs in need. Explore real-time data, connect through contact form, and support with donation links. Accessible online, making forever homes possible.`}
+                                    url={''}
                                 />
                                 <IndivProject
                                     Title={'2Ye | Clothing Brand'}
                                     Img={ProjThumb2}
-                                    DescShort={''}
-                                    DescLarge={''}
+                                    DescShort={'A faux clothing line made for Kanye West; completed in under 6 hours. Includes AI voice, and Kanye Quotes API.'}
+                                    DescLarge={'A faux clothing line made for Kanye West; won 2nd place in 6 hour Hackathon, completed from Design to code. Also includes AI generated voice, and a Kanye Quotes API.'}
+                                    url={''}
                                 />
                                 <IndivProject
                                     Title={'UKG | Industry Project'}
                                     Img={ProjThumb3}
-                                    DescShort={''}
-                                    DescLarge={''}
+                                    DescShort={'Winning project for UKG; created the concept & coded an app with a voting system to plan weekly after work events.'}
+                                    DescLarge={'Winning project for UKG HR & Workforce Management. Worked with UI designers and created the concept for an app with a voting based system to plan weekly after work events.'}
+                                    url={''}
                                 />
                                 <IndivProject
-                                    Title={''}
-                                    Img={ProjThumb1}
-                                    DescShort={''}
-                                    DescLarge={''}
+                                    Title={'BrainFlix'}
+                                    Img={ProjThumb4}
+                                    DescShort={'Youtube style website that updates video data upon switching selected video; fully responsive.'}
+                                    DescLarge={'Youtube style website that updates video data upon switching selected video; fully responsive and functioning content navigation.'}
                                 />
                                 <IndivProject
-                                    Title={''}
-                                    Img={ProjThumb1}
-                                    DescShort={''}
-                                    DescLarge={''}
+                                    Title={'Bandsite'}
+                                    Img={ProjThumb5}
+                                    url={''}
+                                    DescShort={'Website for a band to that shows ticket dates; uses a Soundecloud embedded song, and upload comment feature.'}
+                                    DescLarge={'A responsive site for a band to host info about the band as well as available ticket dates; includes the use of embedded Soundcloud site, and an upload comment feature.'}
                                 />
                                 <IndivProject
-                                    Title={''}
-                                    Img={ProjThumb1}
-                                    DescShort={''}
-                                    DescLarge={''}
+                                    Title={'TravelSite'}
+                                    Img={ProjThumb6}
+                                    DescShort={'Site for an agency hosting trips and excursions that are available; first full sprint completed at Brainstation.'}
+                                    DescLarge={'Travel Site for an agency hosting multiple trips and excursions that are available; first full sprint completed at Brainstation.'}
+                                    url={''}
                                 />
                             </div>
                         </div>

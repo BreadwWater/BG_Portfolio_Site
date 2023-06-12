@@ -172,6 +172,7 @@
 
         &--item {
             @include sub-font(18px, 500, 1.5);
+            text-align: left;
             margin: 2px 0px;
             opacity: 0;
             filter: blur(5px);
@@ -188,6 +189,17 @@
 
             &:nth-of-type(3) {
                 transition-delay: 0.45s;
+            }
+        }
+
+        &--link {
+            color: $portfolio-color--white;
+            text-decoration: underline;
+            font-style: italic;
+            cursor: pointer;
+
+            &:hover {
+                color: $portfolio-color--pink;
             }
         }
     }

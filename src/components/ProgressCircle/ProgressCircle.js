@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './ProgressCircle.scss';
 
-function ProgressCircle({ name, value, img }) {
+function ProgressCircle({ name, value, img, newId }) {
     const [progress, setProgress] = useState(0);
     const [isIntersecting, setIsIntersecting] = useState(false);
     const progressRef = useRef(null);
@@ -46,7 +46,7 @@ function ProgressCircle({ name, value, img }) {
 
 
     return (
-        <div className="progress-bar" ref={progressRef}>
+        <div id={newId} className="progress-bar" ref={progressRef}>
             <p className="progress-bar__value">{Math.round(progress)}%</p>
             <div className="progress-bar__cont" style={{ background: getBackgroundStyle() }}>
                 <img className="progress-bar--img" src={img} alt="Tech Icon" />

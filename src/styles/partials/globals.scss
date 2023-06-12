@@ -70,11 +70,27 @@ a {
     height: 3px;
 }
 
-
 .fade-in {
     opacity: 1;
     filter: blur(0);
     translate: 0px 0px;
+}
+
+// Slides in from right to left
+.slide-in {
+    display: flex;
+    transform: translateX(100%);
+    animation: slide-in 0.5s forwards;
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
 // Floating animation
@@ -138,6 +154,17 @@ a {
     }
 }
 
+// All status
+#unknown {
+
+    & .progress-bar__cont::after {
+        overflow: hidden;
+    }
+
+    & img {
+        filter: blur(8px);
+    }
+}
 
 // All Media Queries
 
