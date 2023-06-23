@@ -54,16 +54,12 @@
     }
 
     &__title {
-        @include flex(column, center, center);
+        display: inline-block;
         @include sub-font(12px, 600, none);
+        position: relative;
         text-align: center;
         margin: 8px 0px;
         width: 70%;
-
-        @include md {
-            @include sub-font(16px, 600, none);
-            width: 100%;
-        }
 
         &:nth-of-type(2) {
             &::after {
@@ -71,14 +67,50 @@
             }
         }
 
-
         &::after {
             content: '';
+            @include flex(row, center, center);
+            bottom: 0;
             background-color: $portfolio-color--pink;
             height: 3px;
-            width: 50%;
-            margin-top: 8px;
+            margin: 4px 0px;
+            width: 100%;
             border-radius: 60px;
+        }
+
+        @include md {
+            @include flex(row, center, center);
+            @include sub-font(16px, 600, none);
+            width: 100%;
+
+
+            &::after {
+                all: unset;
+                content: '';
+                position: absolute;
+                bottom: 0;
+                background-color: $portfolio-color--pink;
+                height: 3px;
+                width: 50%;
+                border-radius: 60px;
+            }
+        }
+
+        &--link {
+            @include sub-font(12px, 600, none);
+            display: inline-block;
+            text-decoration: underline;
+            font-style: italic;
+            margin-left: 4px;
+
+            @include md {
+                @include sub-font(16px, 600, none);
+                font-style: italic;
+
+                &:hover {
+                    color: $portfolio-color--pink;
+                }
+            }
         }
     }
 
