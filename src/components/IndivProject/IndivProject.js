@@ -3,6 +3,7 @@ import { Link } from 'react-scroll';
 import './IndivProject.scss';
 
 import ArrowIcon from '../../assets/icons/arrow--icon.svg';
+import ModalDesc from '../ModalDesc/ModalDesc';
 
 function IndivProject({ Title, Thumb, DescShort, Imgs, DescLarge, url }) {
     const [isModalOpen, setModalOpen] = useState(false);
@@ -87,7 +88,9 @@ function IndivProject({ Title, Thumb, DescShort, Imgs, DescLarge, url }) {
             event.target.classList.contains('indiv__modal--btns') ||
             event.target.closest('.indiv__modal--btns') ||
             event.target.classList.contains('indiv__modal--img') ||
-            event.target.closest('.indiv__modal--img')
+            event.target.closest('.indiv__modal--img') ||
+            event.target.classList.contains('modaldesc') ||
+            event.target.closest('.modaldesc')
         ) {
             return; // Ignore the click event
         }
@@ -126,7 +129,7 @@ function IndivProject({ Title, Thumb, DescShort, Imgs, DescLarge, url }) {
                             src={Imgs[currentModalIndex]}
                             alt={`${Title} project pic`}
                         />
-
+                        <ModalDesc Title={Title}></ModalDesc>
                     </div>
                 </div>
             )}

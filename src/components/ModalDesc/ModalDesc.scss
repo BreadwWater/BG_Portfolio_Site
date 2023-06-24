@@ -1,0 +1,77 @@
+@use '../../styles/partials/globals.scss' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/breakpoints' as *;
+
+.modaldesc {
+    display: none;
+
+    @include md {
+        @include flex(column, center, center);
+        position: absolute;
+        width: 65%;
+        height: 10%;
+        bottom: 0;
+        overflow: hidden;
+        transition: ease .4s;
+
+        @include lg {
+            width: 70%;
+            height: 8%;
+
+            &:hover {
+                height: 12%;
+            }
+        }
+
+        &--expanded {
+            height: 50%;
+
+            &:hover {
+                height: 50%;
+            }
+
+        }
+
+        &__cont {
+            @include background-opacity($portfolio-color--white, 0.8);
+            backdrop-filter: blur(16px);
+            @include flex(column, space-between, center);
+            position: absolute;
+            border-radius: 8px 8px 0px 0px;
+            padding: 12px;
+            height: 100%;
+            width: 100%;
+        }
+
+        &--img {
+            position: absolute;
+            top: 4px;
+            width: 30px;
+            height: 30px;
+            rotate: 90deg;
+            transition: ease .2s;
+        }
+
+        &__desc {
+            @include flex(column, center, center);
+            margin-top: 20px;
+        }
+
+        &--stack {
+            @include flex(column, center, center);
+            width: 100%;
+
+            &::before,
+            &::after {
+                content: '';
+                background-color: $portfolio-color--pink;
+                border-radius: 8px;
+                width: 70%;
+                height: 3px;
+                margin: 4px;
+            }
+        }
+
+    }
+
+}
