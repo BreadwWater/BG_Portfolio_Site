@@ -154,16 +154,6 @@
         &--cont {
             @include flex(column, center, center);
             position: relative;
-
-            // &::before {
-            //     content: 'Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello He Hello Hello Hello Hello Hello Hello Hello Hello ';
-            //     background-color: red;
-            //     position: absolute;
-            //     padding: 8px 16px;
-            //     border-radius: 8px;
-            //     bottom: -24px;
-            //     width: 68%;
-            // }
         }
 
         &--img {
@@ -176,7 +166,6 @@
                 max-height: 700px;
                 border-radius: 16px;
             }
-
         }
 
         &--btns {
@@ -186,7 +175,7 @@
             cursor: default;
 
             @include md {
-                width: 80%;
+                width: 90%;
             }
 
             &-next,

@@ -20,9 +20,21 @@ import ProjThumb8 from '../../assets/images/TheFlock--thumb.png';
 import ProjThumb9 from '../../assets/images/Windenfields--thumb.png';
 import ProjThumb10 from '../../assets/images/SaveGame--vid.gif';
 import ProjThumb11 from '../../assets/images/raccoon--thumb.png';
+import ProjThumb12 from '../../assets/images/raccoon--thumb.png';
 
-import Proj1ModalImg1 from '../../assets/images/2Ye-thumb.png';
-import Proj1ModalImg2 from '../../assets/images/Bandsite-thumb.png';
+import Proj1ModalImg1 from '../../assets/images/fetchfind-img1.png';
+import Proj1ModalImg2 from '../../assets/images/fetchfind-img2.png';
+import Proj1ModalImg3 from '../../assets/images/fetchfind-img3.png';
+
+import Proj2ModalImg1 from '../../assets/images/2ye-img1.png';
+import Proj2ModalImg2 from '../../assets/images/2ye-img2.png';
+
+import Proj3ModalImg1 from '../../assets/images/ukg-img1.png';
+import Proj3ModalImg2 from '../../assets/images/ukg-img2.png';
+import Proj3ModalImg3 from '../../assets/images/ukg-img3.png';
+
+import Proj7ModalImg1 from '../../assets/images/cruiseline-img1.png';
+import Proj7ModalImg2 from '../../assets/images/cruiseline-img2.png';
 
 function Projects() {
     const handleReplaceSrc = () => {
@@ -83,40 +95,60 @@ function Projects() {
                                     Thumb={ProjThumb7}
                                     DescShort={`Concept for a faux Cruiseline Website that I plan on building out as a side project.`}
                                     DescLarge={`Concept for a faux Cruiseline Website that I plan on building out as a side project with two pages completed as of now; I plan on making a full page map next.`}
-                                    url={''}
-                                    Imgs={''}
+                                    Imgs={[Proj7ModalImg1, Proj7ModalImg2,]}
+                                    githubLink={'https://github.com/BreadwWater'}
+                                    hasWebsite={true}
+                                    websiteLink={''}
                                 />
                                 <IndivProject
                                     Title={'The Flock.'}
                                     Thumb={ProjThumb8}
                                     DescShort={`A website for a family run blog account about there pet chickens and the homestead.`}
                                     DescLarge={`A website for a family run blog account about there pet chickens and the homestead. Simple blog style layout design.`}
-                                    url={''}
                                     Imgs={''}
+                                    githubLink={'https://github.com/BreadwWater'}
+                                    hasWebsite={true}
+                                    websiteLink={''}
                                 />
                                 <IndivProject
                                     Title={'Winden Fields Sanctuary'}
                                     Thumb={ProjThumb9}
                                     DescShort={`Site for a sanctuary that breeds King Charles Spaniel's of all types such as special needs.`}
                                     DescLarge={`Site for a sanctuary that breeds, houses, and accepts Cavalier King Charles Spaniel's of all types such as special needs.`}
-                                    url={''}
                                     Imgs={''}
+                                    githubLink={'https://github.com/BreadwWater'}
+                                    hasWebsite={true}
+                                    websiteLink={''}
                                 />
                                 <IndivProject
                                     Title={'SaveGame'}
                                     Thumb={ProjThumb10}
                                     DescShort={`Game key vendor website; mainly used to test out design concept of hover scaled replacable images for different genres.`}
                                     DescLarge={`Video game key vendor website; mainly used to test out design concept of hover scaled replacable images for different genres.`}
-                                    url={''}
                                     Imgs={''}
+                                    githubLink={'https://github.com/BreadwWater'}
+                                    hasWebsite={true}
+                                    websiteLink={''}
                                 />
                                 <IndivProject
                                     Title={'Raccoon Kid'}
                                     Thumb={ProjThumb11}
                                     DescShort={`A 3D Model of my personal website mascot that is currently in the texturing phase; I plan on adding him to my websites hero soon!`}
                                     DescLarge={`A raccoon mascot for my personal website that is still in the works!`}
-                                    url={''}
                                     Imgs={''}
+                                    githubLink={'https://github.com/BreadwWater'}
+                                    hasWebsite={true}
+                                    websiteLink={''}
+                                />
+                                <IndivProject
+                                    Title={'Portfolio Site'}
+                                    Thumb={ProjThumb12}
+                                    DescShort={`A 3D Model of my personal website mascot that is currently in the texturing phase; I plan on adding him to my websites hero soon!`}
+                                    DescLarge={`A raccoon mascot for my personal website that is still in the works!`}
+                                    Imgs={''}
+                                    githubLink={'https://github.com/BreadwWater'}
+                                    hasWebsite={true}
+                                    websiteLink={''}
                                 />
                             </div>
                         </div>
@@ -128,48 +160,60 @@ function Projects() {
                                     Thumb={ProjThumb1}
                                     DescShort={`Find and adopt dogs in need. Real-time data, contact form, and donation links. Easily accessible online.`}
                                     DescLarge={`Discover and embrace the joy of adopting dogs in need. Explore real-time data, connect through contact form, and support with donation links. Accessible online, making forever homes possible.`}
-                                    url={''}
-                                    Imgs={[Proj1ModalImg1, Proj1ModalImg2,]}
+                                    Imgs={[Proj1ModalImg1, Proj1ModalImg2, Proj1ModalImg3,]}
+                                    githubLink={'https://github.com/BreadwWater/FetchFind'}
+                                    hasWebsite={true}
+                                    websiteLink={'https://fetch-find-h2y97ej6n-breadwwater.vercel.app/'}
                                 />
                                 <IndivProject
                                     Title={'2Ye | Clothing Brand'}
                                     Thumb={ProjThumb2}
                                     DescShort={'A faux clothing line made for Kanye West; completed in under 6 hours. Includes AI voice, and Kanye Quotes API.'}
                                     DescLarge={'A faux clothing line made for Kanye West; won 2nd place in 6 hour Hackathon, completed from Design to code. Also includes AI generated voice, and a Kanye Quotes API.'}
-                                    url={''}
-                                    Imgs={[Proj1ModalImg1, Proj1ModalImg2,]}
+                                    Imgs={[Proj2ModalImg1, Proj2ModalImg2,]}
+                                    githubLink={'https://github.com/AnthonyQuispe/2Ye-Apparel'}
+                                    hasWebsite={false}
+                                    websiteLink={''}
                                 />
                                 <IndivProject
                                     Title={'UKG | Industry Project'}
                                     Thumb={ProjThumb3}
                                     DescShort={'Winning project for UKG; created the concept & coded an app with a voting system to plan weekly after work events.'}
                                     DescLarge={'Winning project for UKG HR & Workforce Management. Worked with UI designers and created the concept for an app with a voting based system to plan weekly after work events.'}
-                                    url={''}
-                                    Imgs={[Proj1ModalImg1, Proj1ModalImg2,]}
+                                    Imgs={[Proj3ModalImg1, Proj3ModalImg2, Proj3ModalImg3,]}
+                                    githubLink={'https://github.com/luke-mar/industry-front-end'}
+                                    hasWebsite={false}
+                                    websiteLink={''}
                                 />
                                 <IndivProject
                                     Title={'BrainFlix'}
                                     Thumb={ProjThumb4}
                                     DescShort={'Youtube style website that updates video data upon switching selected video; fully responsive.'}
                                     DescLarge={'Youtube style website that updates video data upon switching selected video; fully responsive and functioning content navigation.'}
-                                    url={''}
                                     Imgs={[Proj1ModalImg1, Proj1ModalImg2,]}
+                                    githubLink={'https://github.com/BreadwWater/brenda-gonzalez-brainflix'}
+                                    hasWebsite={false}
+                                    websiteLink={''}
                                 />
                                 <IndivProject
                                     Title={'Bandsite'}
                                     Thumb={ProjThumb5}
                                     DescShort={'Website for a band to that shows ticket dates; uses a Soundecloud embedded song, and upload comment feature.'}
                                     DescLarge={'A responsive site for a band to host info about the band as well as available ticket dates; includes the use of embedded Soundcloud site, and an upload comment feature.'}
-                                    url={''}
                                     Imgs={[Proj1ModalImg1, Proj1ModalImg2,]}
+                                    githubLink={'https://github.com/BreadwWater/Brenda-Gonzalez-BandSite'}
+                                    hasWebsite={false}
+                                    websiteLink={''}
                                 />
                                 <IndivProject
                                     Title={'TravelSite'}
                                     Thumb={ProjThumb6}
                                     DescShort={'Site for an agency hosting trips and excursions that are available; first full sprint completed at Brainstation.'}
                                     DescLarge={'Travel Site for an agency hosting multiple trips and excursions that are available; first full sprint completed at Brainstation.'}
-                                    url={''}
                                     Imgs={[Proj1ModalImg1, Proj1ModalImg2,]}
+                                    githubLink={'https://github.com/BreadwWater/Brenda-Gonzalez-TravelSite'}
+                                    hasWebsite={false}
+                                    websiteLink={''}
                                 />
                             </div>
                         </div>
