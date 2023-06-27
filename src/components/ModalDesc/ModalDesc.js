@@ -6,7 +6,7 @@ import StackTag from '../StackTag/StackTag';
 import GitHubIcon from '../../assets/icons/GitHub-outline--icon.svg';
 import ExtLinkIcon from '../../assets/icons/ExtLink--icon.svg';
 
-function ModalDesc({ Title, hasWebsite, websiteLink, githubLink }) {
+function ModalDesc({ Title, hasWebsite, websiteLink, githubLink, stacks, modalDesc }) {
     const [expanded, setExpanded] = useState(false);
 
     const toggleWidth = () => {
@@ -25,20 +25,17 @@ function ModalDesc({ Title, hasWebsite, websiteLink, githubLink }) {
                     <div className="modaldesc__desc">
                         <div className="modaldesc__group">
                             <div className="modaldesc--stack">
-                                <StackTag stack={'React'} />
-                                <span>•</span>
-                                <StackTag stack={'Sass'} />
-                                <span>•</span>
-                                <StackTag stack={'JSX'} />
-                                <span>•</span>
-                                <StackTag stack={'HTML'} />
+                                {stacks.map((stack, index) => (
+                                    <React.Fragment key={index}>
+                                        <StackTag stack={stack} />
+                                        {index < stacks.length - 1 && <span>•</span>}
+                                    </React.Fragment>
+                                ))}
                             </div>
                         </div>
                         <p className="modaldesc--title">{Title}</p>
                         <p className="modaldesc--text">
-                            Description of project Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa beatae ullam alias
-                            corporis! Molestiae quia, tempore assumenda blanditiis aliquid quam exercitationem minima dolore
-                            repellendus laborum soluta, inventore a cupiditate voluptas.
+                            {modalDesc}
                         </p>
                         <div className="modaldesc__external">
                             <a href={githubLink} target="_blank" rel="noopener noreferrer" className="modaldesc--link">

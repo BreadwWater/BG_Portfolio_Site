@@ -15,6 +15,10 @@
         overflow: hidden;
         transition: ease .4s;
 
+        &:hover {
+            height: 15%;
+        }
+
         @include lg {
             width: 70%;
             height: 8%;

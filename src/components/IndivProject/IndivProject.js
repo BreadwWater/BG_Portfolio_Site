@@ -5,7 +5,7 @@ import './IndivProject.scss';
 import ArrowIcon from '../../assets/icons/arrow--icon.svg';
 import ModalDesc from '../ModalDesc/ModalDesc';
 
-function IndivProject({ Title, Thumb, DescShort, Imgs, DescLarge, url, hasWebsite, githubLink, websiteLink }) {
+function IndivProject({ Title, Thumb, DescShort, Imgs, DescLarge, url, hasWebsite, githubLink, websiteLink, stacks, modalDesc }) {
     const [isModalOpen, setModalOpen] = useState(false);
     const [currentModalIndex, setCurrentModalIndex] = useState(0);
     const modalRef = useRef(null);
@@ -134,6 +134,8 @@ function IndivProject({ Title, Thumb, DescShort, Imgs, DescLarge, url, hasWebsit
                             hasWebsite={hasWebsite}
                             githubLink={githubLink}
                             websiteLink={websiteLink}
+                            stacks={stacks}
+                            modalDesc={modalDesc}
                         ></ModalDesc>
                     </div>
                 </div>
