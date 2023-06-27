@@ -30,3 +30,9 @@
     background-color: $bg-color;
     border: 4px solid $line-color;
 }
+
+// Create BG Opacity w variable colors
+@mixin background-opacity($color, $opacity: none) {
+    background: $color;
+    background: rgba($color, $opacity);
+}

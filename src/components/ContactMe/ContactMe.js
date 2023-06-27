@@ -71,7 +71,14 @@ function ContactMe() {
                     <h3 className="contact__header--text">Contact</h3>
                     <SectionHeader title="Where" text="Contact" />
                 </div>
-                <p className="contact__title">Reach out to me by email or by contacting me on other platforms!</p>
+                <p className="contact__title">Reach out to me by email or by contacting me on
+                    <a
+                        href="https://www.linkedin.com/in/bren-gonzalez/"
+                        className="contact__title--link"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        other platforms!</a>
+                </p>
                 <form action="" className="contact__form" onSubmit={handleSubmit}>
                     <label className="contact__label" htmlFor="full-name">
                         First Name

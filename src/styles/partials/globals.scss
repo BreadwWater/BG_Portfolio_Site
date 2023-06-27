@@ -1,7 +1,6 @@
 @use './mixins' as *;
 @use './breakpoints' as *;
 @use './typography' as *;
-@use './breakpoints' as *;
 
 $portfolio-color--pink: #E9A18B;
 $portfolio-color--grey: #D1C5C2;
@@ -60,6 +59,10 @@ a {
     @include md {
         @include sub-font(1.125rem, 400, 2rem);
     }
+}
+
+.hidden {
+    display: none;
 }
 
 // All Animations

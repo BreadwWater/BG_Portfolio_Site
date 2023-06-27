@@ -90,7 +90,7 @@ function AboutMe() {
                             </p>
                             <ul className="aboutme__list">
                                 <li ref={(el) => (listItemsRef.current[0] = el)} className="aboutme__list--item">
-                                    * Nickenamed the "Queen of Sass/SCSS" by my cohort.
+                                    * Nicknamed the "Queen of Sass/SCSS" by my cohort.
                                 </li>
                                 <li ref={(el) => (listItemsRef.current[1] = el)} className="aboutme__list--item">
 
