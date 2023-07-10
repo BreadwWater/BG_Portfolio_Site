@@ -86,7 +86,7 @@ function Header() {
                             </li>
                         </ul>
                         <div className='navbar__opts'>
-                            <input className='navbar--theme' type="checkbox" />
+                            <input id='theme-switch' className='navbar--theme' type="checkbox" />
                         </div>
                     </div>
                 </nav>

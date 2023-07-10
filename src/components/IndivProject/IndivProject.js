@@ -5,7 +5,7 @@ import './IndivProject.scss';
 import ArrowIcon from '../../assets/icons/arrow--icon.svg';
 import ModalDesc from '../ModalDesc/ModalDesc';
 
-function IndivProject({ Title, Thumb, DescShort, Imgs, DescLarge, url, hasWebsite, githubLink, websiteLink, stacks, modalDesc }) {
+function IndivProject({ Title, Thumb, DescShort, Imgs, DescLarge, hasWebsite, githubLink, websiteLink, stacks, modalDesc }) {
     const [isModalOpen, setModalOpen] = useState(false);
     const [currentModalIndex, setCurrentModalIndex] = useState(0);
     const modalRef = useRef(null);
@@ -65,7 +65,7 @@ function IndivProject({ Title, Thumb, DescShort, Imgs, DescLarge, url, hasWebsit
     if (Imgs.length === 0) {
         return (
             <section className='indiv'>
-                <Link to={url} className='indiv__cont'>
+                <Link to='/' className='indiv__cont'>
                     <div className='indiv__header'>
                         <img className='indiv__img' src={Thumb} alt={`${Title} Project Thumbnail`} />
                         <div className='indiv__body'>
@@ -102,7 +102,7 @@ function IndivProject({ Title, Thumb, DescShort, Imgs, DescLarge, url, hasWebsit
     return (
         <>
             <section className='indiv'>
-                <Link to={url} className='indiv__cont'>
+                <Link to='/' className='indiv__cont'>
                     <div className='indiv__header' onClick={handleOpenModal}>
                         <img className='indiv__img' src={Thumb} alt={`${Title} Project Thumbnail`} />
                         <div className='indiv__body'>
