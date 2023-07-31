@@ -93,6 +93,7 @@ function ContactMe() {
                         value={fullName}
                         onChange={handleFullNameChange}
                         required
+                        autoComplete='true'
                     />
 
                     <label className="contact__label" htmlFor="company-name">
@@ -108,6 +109,7 @@ function ContactMe() {
                         value={companyName}
                         onChange={handleCompanyNameChange}
                         required
+                        autoComplete='true'
                     />
 
                     <label className="contact__label" htmlFor="subject-name">
@@ -123,6 +125,7 @@ function ContactMe() {
                         value={subjectName}
                         onChange={handleSubjectNameChange}
                         required
+                        autoComplete='true'
                     />
 
                     <div className="contact__btn">
