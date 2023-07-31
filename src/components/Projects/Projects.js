@@ -8,7 +8,7 @@ import SectionHeader from '../SectionHeader/SectionHeader';
 import Button from '../Button/Button';
 import IndivProject from '../IndivProject/IndivProject';
 
-import ProjThumb1 from '../../assets/images/fetchfind-thumb.png';
+import ProjThumb1 from '../../assets/images/fetchfind-thumbnail.png';
 import ProjThumb2 from '../../assets/images/2Ye-thumb.png';
 import ProjThumb3 from '../../assets/images/UKG-thumb.png.png';
 import ProjThumb4 from '../../assets/images/BrainFlix-thumb.png';
