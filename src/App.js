@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+// import { BrowserRouter as Router } from 'react-router-dom';
 import AboutMe from './components/AboutMe/AboutMe';
 import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';

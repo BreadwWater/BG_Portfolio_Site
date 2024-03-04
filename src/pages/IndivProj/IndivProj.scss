@@ -4,13 +4,28 @@
 
 .indivproj {
     @include flex(column, center, center);
+    transition: ease .3s;
 
     &_header {
         @include flex(column, center, center);
 
         &--hero {
             @include flex(row, center, center);
+            background-color: $portfolio-color--blue;
+            overflow: hidden;
             width: 100%;
+            min-height: 215px;
+            background-image: url(../../assets/images/Stairbox-hero.jpg);
+            background-size: cover;
+            transition: ease-in-out .8s;
+
+            @include md {
+                height: 400px;
+            }
+
+            @include lg {
+                height: 500px;
+            }
         }
 
         &--title {
@@ -18,7 +33,13 @@
             @include flex(row, center, center);
             color: $portfolio-color--white;
             position: absolute;
-            translate: 0px 20px;
+            translate: 0px 24px;
+            transition: ease-in-out .3s;
+
+            @include md {
+                font-size: 32px;
+                translate: 0px 24px;
+            }
         }
 
         &--text {
@@ -26,62 +47,148 @@
             @include flex(row, center, center);
             color: $portfolio-color--pink;
             position: absolute;
-            translate: 0px -8px;
+            translate: 0px 0px;
+            transition: ease-in-out .3s;
+
+            @include md {
+                font-size: 16px;
+                translate: 0px -16px;
+            }
         }
     }
 
     &_desc {
         @include flex(column, center, center);
         margin: 40px 12px 24px 12px;
+        width: 80%;
+        transition: ease-in-out .5s;
+
+        @include md {
+            width: 70%;
+        }
+
+        @include lg {
+            margin-top: 96px;
+        }
 
         &--title {
             @include sub-font(16px, 600, normal);
             margin: 0px 0px 12px 0px;
-            text-transform: uppercase
+            text-transform: uppercase;
+
+            @include md {
+                width: 100%;
+            }
         }
 
         &--text {
             @include sub-font(12px, 500, 3);
+
+            @include lg {
+                @include sub-font(16px, 500, 2.5);
+            }
         }
     }
 
     &_services {
         @include flex(column, center, center);
-        margin: 0px 8px 12px 8px;
+        text-align: center;
+        margin: 0px 8px 24px 8px;
         width: 100%;
+
+        @include md {
+            margin: 24px 8px 64px 8px;
+        }
 
         &--title {
             @include sub-font(16px, 600, normal);
             margin: 0px 0px 12px 0px;
-            text-transform: uppercase
+            text-transform: uppercase;
+            text-align: center;
+            width: 80%;
+
+            @include md {
+                text-align: start;
+                width: 70%;
+            }
         }
 
         &--group {
             @include flex(row, center, center);
             flex-wrap: wrap;
             padding: 8px 0px;
-            width: 100%;
+            width: 80%;
+            transition: ease-in-out .3s;
+
+            @include md {
+                @include flex(row, start, start);
+                width: 70%;
+            }
         }
 
-        &--pill {
+        &--tag {
             @include sub-font(12px, 600, normal);
             background-color: $portfolio-color--pink;
             margin: 4px;
-            padding: 8px 12px;
+            padding: 6px 8px;
             border-radius: 50px;
+            transition: ease-in-out .3s;
+            width: 115px;
+
+            @include lg {
+                width: 110px
+            }
         }
     }
 
-    &_collage {
+    &_group {
         @include flex(column, center, center);
         margin: 8px 0px 0px 0px;
         padding: 12px 0px;
         background-color: $portfolio-color--white;
+        width: 100%;
+
+        @include md {
+            padding: 42px 0px;
+        }
+    }
+
+    &_collage {
+        @include flex(column, space-between, center);
+        width: 100%;
+        margin: 4px 0px;
+        transition: ease .5s;
+
+        @include md {
+            padding: 42px 0px;
+            width: 70%;
+        }
+
+        &--collection {
+            @include flex(column, center, center);
+            width: 100%;
+            transition: ease .8s;
+
+            @include md {
+                @include flex(row, space-between, center);
+                width: 100%;
+            }
+
+            &>.indivproj_collage--img {
+                width: 100%;
+
+                @include md {
+                    width: 49%;
+                }
+            }
+        }
 
         &--img {
             width: 100%;
             background-color: $portfolio-color--grey;
             margin: 8px 0px;
+            transition: ease-in-out .3s;
+
         }
     }
 
@@ -96,6 +203,14 @@
             @include flex(column, center, center);
             text-align: center;
             margin: 16px 0px;
+            transition: ease-in-out .3s;
+
+            @include md {
+                &:last-of-type {
+                    @include flex(row, space-between, center);
+                    width: 90%;
+                }
+            }
         }
 
         &--title {
@@ -103,23 +218,51 @@
             margin: 0px 0px 12px 0px;
             text-transform: uppercase;
             width: 100%;
+
+            @include md {
+                font-size: 18px;
+            }
         }
 
         &--text {
             @include sub-font(12px, 500, 2.5);
             width: 75%;
             margin: 0px 0px 8px 0px;
+
+            @include md {
+                font-size: 16px;
+            }
         }
 
         &--btn {
             @include sub-font(16px, 600, normal);
-            background-color: red;
             @include btn($portfolio-color--black, $portfolio-color--white, $portfolio-color--black, );
             border-radius: 4px;
+            min-width: 100px;
             width: 40%;
             padding: 8px 0px;
             margin: 8px 0px 0px 0px;
             transition: ease 500ms;
+
+            @include md {
+                width: 25%;
+
+                &:hover {
+                    @include btn($portfolio-color--white, $portfolio-color--black, $portfolio-color--black);
+                    box-shadow: 0px 6px 23px -4px rgba(0, 0, 0, 0.18);
+                    cursor: pointer;
+
+                    @include md {
+                        scale: 1.015;
+                        animation: shake ease .4s infinite;
+                    }
+
+                    &>.btn-text {
+                        color: $portfolio-color--white;
+                    }
+                }
+            }
+
 
             &:active {
                 background-color: $portfolio-color--black;
@@ -139,21 +282,36 @@
             padding: 8px 0px;
             border-radius: 12px;
             width: 180px;
+            transition: ease .3s;
+
+            @include md {
+                background-color: unset;
+                cursor: pointer;
+            }
         }
 
         &--next>.indivproj_btn--arrow {
             transform: rotate(180deg);
         }
 
+        &--last {
+            @include md {
+                &:hover {
+                    translate: -15px;
+                }
+            }
+        }
+
+        &--next {
+            @include md {
+                &:hover {
+                    translate: 15px;
+                }
+            }
+        }
+
         &--arrow {
             width: 16px;
         }
     }
-
-}
-
-#IndivProj--btn {
-    background-color: $portfolio-color--white;
-    width: 144px;
-    height: 50px;
 }
