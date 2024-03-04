@@ -4,7 +4,7 @@
 
 .navbar {
     @include flex(row, center, center);
-    background-color: rgba(209, 197, 194, 0.8);
+    background-color: rgb(227, 228, 229, 0.8);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
     backdrop-filter: blur(4.5px);
     width: 100%;
@@ -34,24 +34,15 @@
     }
 
     &__logo {
-        &--text {
-            @include main-font(32px, 500, 25px);
-            margin: 0px 8px;
-            cursor: pointer;
-            display: none;
-
-            @include md {
-                display: flex;
-            }
-        }
-
-        &--img {
-            width: 34px;
+        &--desktop {
+            width: 24px;
             margin: 0px 8px;
             cursor: pointer;
 
             @include md {
-                display: none
+                width: 34px;
+                margin: 0px 8px;
+                cursor: pointer;
             }
         }
     }
@@ -108,14 +99,15 @@
                     width: 100%;
                     border-radius: 2px;
                     position: absolute;
+
                 }
 
                 &::after {
-                    top: 0;
+                    top: 0px;
                 }
 
                 &::before {
-                    bottom: 0;
+                    bottom: 0px;
                 }
             }
         }

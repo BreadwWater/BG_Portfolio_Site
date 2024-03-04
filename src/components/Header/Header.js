@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 import { Link } from 'react-router-dom';
 import './Header.scss';
-
-import LogoLight from '../../assets/icons/Bread-logo-icon-light.svg';
+import Logo from '../../assets/icons/Portfolio_Logo.svg';
 
 function Header() {
     const [showMobileHeader, setShowMobileHeader] = useState(false);
@@ -40,10 +39,7 @@ function Header() {
                             offset={-70}
                             duration={500}
                             className='navbar__logo'>
-                            <h2 className='navbar__logo--text'>
-                                BG.
-                            </h2>
-                            <img src={LogoLight} alt="Bren.Dev Logo" className='navbar__logo--img' />
+                            <img src={Logo} alt="Bren.Dev Logo" className='navbar__logo--desktop' />
                         </ScrollLink>
                     </div>
                     <div className='navbar__sec'>

@@ -3,7 +3,7 @@ import './AboutMe.scss';
 
 import breadIcon from '../../assets/icons/Bread--icon.svg';
 import profilePicMobile from '../../assets/images/Headshot_casual--mobile.png';
-import profilePicDesktop from '../../assets/images//Headshot_casual--desktop.png';
+import profilePicDesktop from '../../assets/images//Headshot_casual--desktop.jpg';
 import aboutMeIconAnim from '../../assets/animated icons/aboutme-animated-icon.gif';
 import aboutMeIconStatic from '../../assets/animated icons/aboutme-icon.svg';
 
@@ -86,20 +86,14 @@ function AboutMe() {
 
                         <div className="aboutme__text">
                             <p className="aboutme__desc">
-                                A creative Front End Software Engineer blending artistic vision with technical expertise in 3D art, animation, game design, and Commercial Art. I'm Passionate about too many things to list, but some include video games, pet care, and philosophy. Thriving on merging art and tech for immersive digital experiences, pushing boundaries in the ever-evolving tech world.
+                                A creative Front End Software Engineer blending artistic vision with technical expertise in 3D art, animation, and Commercial Art. I'm Passionate about too many things to list, but some include video game design, travel, and philosophy. Thriving on merging art and tech for immersive digital experiences, pushing boundaries in the ever-evolving tech world.
                             </p>
                             <ul className="aboutme__list">
                                 <li ref={(el) => (listItemsRef.current[0] = el)} className="aboutme__list--item">
                                     * Nicknamed the "Queen of Sass/SCSS" by my cohort.
                                 </li>
                                 <li ref={(el) => (listItemsRef.current[1] = el)} className="aboutme__list--item">
-
-                                    * Currently a Dev in the <a
-                                        href="https://www.theshrimpsociety.com/insights/built-in-miami-official-announcement#:~:text=via%20builtmiami.com-,The%20Builders%20Summer,-is%20a%20six"
-                                        className="aboutme__list--link"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >Miami Bulider's Summer</a> collaboration
+                                    * Designed logo's for a handful of small businesses.
                                 </li>
                                 <li ref={(el) => (listItemsRef.current[2] = el)} className="aboutme__list--item">
                                     * Ran a small Web Dev server to help self-learner's mantain accountability.

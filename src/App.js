@@ -8,21 +8,22 @@ import Skills from './components/Skills/Skills';
 import ContactMe from './components/ContactMe/ContactMe';
 import Footer from './components/Footer/Footer';
 import SocialsModal from './components/SocialsModal/SocialsModal';
+// import { Route, Routes } from 'react-router-dom';
+import IndivProj from './pages/IndivProj/IndivProj';
 
 function App() {
   return (
-    <Router>
-      <div>
-        <Header />
-        <SocialsModal />
-        <Hero />
-        <AboutMe />
-        <Skills />
-        <Projects />
-        <ContactMe />
-        <Footer />
-      </div>
-    </Router>
+    <div>
+      <Header />
+      <IndivProj />
+      {/* <SocialsModal />
+      <Hero />
+      <AboutMe />
+      <Skills />
+      <Projects />
+      <ContactMe /> */}
+      <Footer />
+    </div>
   );
 }
 

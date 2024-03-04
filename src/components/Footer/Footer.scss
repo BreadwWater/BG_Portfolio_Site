@@ -4,13 +4,12 @@
 
 .footer {
     @include flex(column, center, center);
-    background-color: $portfolio-color--grey;
+    background-color: $portfolio-color--black;
     height: 140px;
     width: 100%;
     z-index: 998;
 
     @include md {
-        background-color: $portfolio-color--black;
         height: 120px;
     }
 
@@ -41,13 +40,12 @@
     &__text {
         @include flex(row, center, center);
         @include sub-font(12px, 700, 16px);
-        color: $portfolio-color--black;
+        color: $portfolio-color--white;
         text-align: center;
         width: 100%;
         margin: 8px 0px;
 
         @include md {
-            color: $portfolio-color--white;
             @include sub-font(16px, 700, 16px);
         }
 
