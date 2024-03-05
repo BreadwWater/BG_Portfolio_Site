@@ -15,7 +15,6 @@ function IndivProj(props) {
                     <div className='indivproj_header'>
                         <h2 className='indivproj_header--text'>Project Type</h2>
                         <h1 className='indivproj_header--title'>Project Title</h1>
-                        {/* <img src={hero_pic} className='indivproj_header--hero' alt="{name} Hero pic" /> */}
                     </div>
                 </div>
                 <div className='indivproj_desc'>
@@ -54,8 +53,9 @@ function IndivProj(props) {
                     </div>
                     <div className='indivproj_contact'>
                         <div className='indivproj_contact--group'>
-                            <h2 className='indivproj_contact--title'>Let's Talk About Lorem.</h2>
-                            <p className='indivproj_contact--text'>Lorem ipsum At laborum molestiae beatae officiis omnis! Let's get in touch!</p>
+                            <h2 className='indivproj_contact--title'>Let's Talk Logos.</h2>
+                            <p className='indivproj_contact--text'>Have a logo that needs updating? How about a logo for your new company, or maybe you want to solidify your visual identity.
+                                Have a logo that needs updating? How about a logo for your new company.</p>
                             <button className='indivproj_contact--btn'>Contact</button>
                         </div>
                         <div className='indivproj_contact--group'>

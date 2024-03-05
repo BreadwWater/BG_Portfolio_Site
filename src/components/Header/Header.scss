@@ -34,14 +34,17 @@
     }
 
     &__logo {
+        @include flex(row, center, center);
+        width: 100%;
+
         &--desktop {
-            width: 24px;
-            margin: 0px 8px;
             cursor: pointer;
+            width: 42px;
+            margin: 0px 8px;
+            padding: 8px;
 
             @include md {
-                width: 34px;
-                margin: 0px 8px;
+                width: 56px;
                 cursor: pointer;
             }
         }
@@ -56,7 +59,13 @@
     }
 
     &__sec {
-        @include flex(row, center, center);
+        @include flex(row, space-evenly, center);
+
+        @include md {
+            &:first-of-type {
+                width: 15%;
+            }
+        }
     }
 
     &__opts {
@@ -109,6 +118,38 @@
                 &::before {
                     bottom: 0px;
                 }
+            }
+        }
+
+        &--mobile {
+            @include flex(column, space-between, center);
+            font-weight: 600;
+            padding: 8px 44px;
+
+            &::after {
+                content: '';
+                position: absolute;
+                margin: 16px 0px;
+                transition: ease .2s;
+
+            }
+
+            &:hover {
+                cursor: pointer;
+
+                &::after {
+                    content: '';
+                    background-color: $portfolio-color--black;
+                    height: 3px;
+                    min-width: 75px;
+                    border-radius: 2px;
+                    margin: 20px 0px;
+                    position: absolute;
+                }
+            }
+
+            @include md {
+                display: none;
             }
         }
     }

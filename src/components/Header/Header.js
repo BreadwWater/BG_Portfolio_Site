@@ -33,13 +33,33 @@ function Header() {
                 <nav className='navbar__cont'>
                     <div className='navbar__sec'>
                         <ScrollLink
-                            to="hero"
+                            to="aboutme"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={500}
+                            className='navbar__links--mobile'
+                        >
+                            Home
+                        </ScrollLink>
+                        <Link
+                            to="/home"
                             spy={true}
                             smooth={true}
                             offset={-70}
                             duration={500}
                             className='navbar__logo'>
                             <img src={Logo} alt="Bren.Dev Logo" className='navbar__logo--desktop' />
+                        </Link>
+                        <ScrollLink
+                            to="aboutme"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={500}
+                            className='navbar__links--mobile'
+                        >
+                            Contact
                         </ScrollLink>
                     </div>
                     <div className='navbar__sec'>

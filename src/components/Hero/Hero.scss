@@ -15,7 +15,7 @@
     }
 
     @include lg {
-        height: 900px;
+        height: 800px;
     }
 
     &__cont {
@@ -26,7 +26,7 @@
         }
 
         @include lg {
-            width: 80%;
+            width: 100%;
         }
     }
 
@@ -35,7 +35,7 @@
         @include flex(row, center, center);
 
         @include md {
-            width: 100%;
+            width: 40%;
         }
     }
 
@@ -50,7 +50,7 @@
 
             @include md {
                 // width: 47%; Change to this when you get the 3D Model up and running
-                width: 80%;
+                width: 47%;
                 margin: 0;
             }
         }
@@ -110,62 +110,60 @@
         &--bg {
             width: 100%;
             @include flex(column, center, center);
-
-            @include md {}
         }
 
-        &--img {
+        // &--img {
 
-            &:first-of-type {
-                width: 100px;
-                left: -50px;
-                top: 10px;
-                transform: rotate(-15deg);
-                position: absolute;
-                justify-self: flex-start;
-                align-self: flex-start;
-                animation: floatDown ease-in-out infinite 3s;
-            }
+        //     &:first-of-type {
+        //         width: 100px;
+        //         left: -50px;
+        //         top: 10px;
+        //         transform: rotate(-15deg);
+        //         position: absolute;
+        //         justify-self: flex-start;
+        //         align-self: flex-start;
+        //         animation: floatDown ease-in-out infinite 3s;
+        //     }
 
-            &:last-of-type {
-                width: 140px;
-                right: -80px;
-                bottom: -32px;
-                transform: rotate(15deg);
-                position: absolute;
-                justify-self: flex-end;
-                align-self: flex-end;
-                animation: floatUp ease-in-out infinite 3s;
-            }
+        //     &:last-of-type {
+        //         width: 140px;
+        //         right: -80px;
+        //         bottom: -32px;
+        //         transform: rotate(15deg);
+        //         position: absolute;
+        //         justify-self: flex-end;
+        //         align-self: flex-end;
+        //         animation: floatUp ease-in-out infinite 3s;
+        //     }
 
 
-            // DELETE THIS WHEN YOU GET THE MODEL WORKING; ITS THE BREAD BUT ON MD
-            @include md {
+        //     // DELETE THIS WHEN YOU GET THE MODEL WORKING; ITS THE BREAD BUT ON MD
+        //     // @include md {
 
-                &:first-of-type {
-                    width: 250px;
-                    left: -80px;
-                    top: 100px;
-                    transform: rotate(-15deg);
-                    position: absolute;
-                    justify-self: flex-start;
-                    align-self: flex-start;
-                    animation: floatDown ease-in-out infinite 3s;
-                }
+        //     //     &:first-of-type {
+        //     //         width: 250px;
+        //     //         left: -80px;
+        //     //         top: 100px;
+        //     //         transform: rotate(-15deg);
+        //     //         position: absolute;
+        //     //         justify-self: flex-start;
+        //     //         align-self: flex-start;
+        //     //         animation: floatDown ease-in-out infinite 3s;
+        //     //     }
 
-                &:last-of-type {
-                    width: 240px;
-                    right: -80px;
-                    bottom: 150px;
-                    transform: rotate(15deg);
-                    position: absolute;
-                    justify-self: flex-end;
-                    align-self: flex-end;
-                    animation: floatUp ease-in-out infinite 3s;
-                }
+        //     //     &:last-of-type {
+        //     //         width: 240px;
+        //     //         right: -80px;
+        //     //         bottom: 150px;
+        //     //         transform: rotate(15deg);
+        //     //         position: absolute;
+        //     //         justify-self: flex-end;
+        //     //         align-self: flex-end;
+        //     //         animation: floatUp ease-in-out infinite 3s;
+        //     //     }
 
-            }
-        }
+        //     // }
+        // }
     }
 
     &__model {
@@ -184,5 +182,5 @@
 
 // Delete this and the class entirely when you get the 3D Model running; this was just to hide the section
 .render {
-    display: none;
+    // display: none;
 }

@@ -12,20 +12,20 @@ function Model({ gltf }) {
     });
 
     return (
-        <mesh ref={modelRef} scale={[0.115, 0.115, 0.1]} position={[0, -1.3, 0]} rotation={[0, 0, 0]}>
+        <mesh ref={modelRef} scale={[0.270, 0.270, 0.22]} position={[0, -2.2, 0]} rotation={[0, -1, -0.05]}>
             {gltf ? <primitive object={gltf.scene} /> : null}
         </mesh>
     );
 }
 
 function BreadModel() {
-    const gltf = useLoader(GLTFLoader, require('../../assets/models/Placeholder.gltf'));
+    const gltf = useLoader(GLTFLoader, require('../../assets/models/Raccoon_Model.gltf'));
 
     return (
         <div id='canva'>
             <Canvas>
-                <ambientLight intensity={0.7} />
-                <pointLight position={[0, 1, 0]} />
+                <ambientLight intensity={0.2} />
+                <pointLight position={[1, 1.5, 2]} />
                 <Model gltf={gltf} />
             </Canvas>
         </div>

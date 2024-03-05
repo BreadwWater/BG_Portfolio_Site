@@ -3,44 +3,56 @@
 @use '../../styles/partials/breakpoints.scss' as *;
 
 // Change only the --card-height to desired card size:
-$card-height: 300px;
-$card-width: calc(#{$card-height} / 0.65);
+$card-height: 240px;
+$card-width: calc(#{$card-height} / 0.60);
 
 
 .projCard {
     @include flex(column, center, center);
-    width: $card-width;
-    height: $card-height;
+    width: 280px;
+    height: calc(#{$card-height} / 1.4);
     background-color: $portfolio-color--blue;
     border-radius: 16px;
     transition: ease .5s;
     overflow: hidden;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+    margin: 12px;
+
+    @include md {
+        width: $card-width;
+        height: $card-height;
+    }
 
     // These are the hover effects for all the elements:
+
     &:hover {
-        background-color: $portfolio-color--blue;
-        scale: 1.03;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.06);
+        @include md {
+            background-color: $portfolio-color--blue;
+            scale: 1.03;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.06);
 
-        & .projCard__body {
-            bottom: 0px;
-        }
-
-        & .projCard__title {
-            &::after {
-                width: 80%;
+            & .projCard__body {
+                bottom: 0px;
             }
-        }
 
-        & .projCard__desc {
-            opacity: 100%;
-        }
+            & .projCard__title {
+                filter: unset;
 
-        & .projCard--img {
-            scale: 0.95;
-            opacity: 60%;
-            filter: blur(6px);
+                &::after {
+                    width: 80%;
+                }
+            }
+
+            & .projCard__desc {
+                opacity: 100%;
+                filter: unset;
+            }
+
+            & .projCard--img {
+                scale: 0.95;
+                opacity: 60%;
+                filter: blur(6px);
+            }
         }
     }
 
@@ -55,9 +67,9 @@ $card-width: calc(#{$card-height} / 0.65);
 
     &--img {
         background-color: $portfolio-color--pink;
-        width: calc(#{$card-height} / 0.65);
+        width: calc(#{$card-height} / 0.60);
         height: 100%;
-        border-radius: 8px;
+        border-radius: 12px;
         object-fit: cover;
         transition: ease .8s;
     }
@@ -67,15 +79,22 @@ $card-width: calc(#{$card-height} / 0.65);
         background-color: rgba(248, 248, 248, 0.8);
         position: absolute;
         text-align: center;
-        height: calc(#{$card-height} / 2.5);
+        height: calc(#{$card-height} / -1);
         width: 101%;
         padding: 8px 16px;
         bottom: -50%;
-        transition: ease .6s 0.1s;
+        transition: ease .5s 0.1s;
+
+        @include md {
+            height: calc(#{$card-height} / 2.2);
+        }
     }
 
     &__title {
         @include flex(column, center, center);
+        @include sub-font(16px, 700, 1.2);
+        transition: ease .6s;
+        filter: blur(4px);
 
         // Change color and size of title underline:
         &::after {
@@ -85,13 +104,19 @@ $card-width: calc(#{$card-height} / 0.65);
             margin: 4px 0px;
             height: 3px;
             background-color: $portfolio-color--pink;
-            transition: ease 0.8s;
+            transition: ease-out 0.8s;
         }
     }
 
     &__desc {
-        padding: 8px 0px;
+        padding: 4px 0px;
+        width: 100%;
         opacity: 0%;
-        transition: ease .6s 0.5s;
+        transition: ease .6s 0.1s;
+        filter: blur(4px);
+
+        @include md {
+            @include sub-font(12px, 700, 1.5);
+        }
     }
 }

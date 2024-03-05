@@ -30,16 +30,10 @@ function Hero() {
                         </div>
 
                         <div className='hero__info'>
-                            <div className='hero__mobile--bg'>
+                            {/* <div className='hero__mobile--bg'>
                                 <img className='hero__mobile--img' src={BreadIcon} alt="Bread Icon" />
                                 <img className='hero__mobile--img' src={BreadIcon} alt="Bread Icon" />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className='hero__sec render'>
-                        <div className="hero__model">
-                            <BreadModel />
+                            </div> */}
                         </div>
                     </div>
 

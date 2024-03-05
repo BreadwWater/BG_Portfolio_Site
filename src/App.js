@@ -15,13 +15,13 @@ function App() {
   return (
     <div>
       <Header />
-      <IndivProj />
-      {/* <SocialsModal />
+      {/* <IndivProj /> */}
+      {/* <SocialsModal /> */}
       <Hero />
       <AboutMe />
       <Skills />
       <Projects />
-      <ContactMe /> */}
+      <ContactMe />
       <Footer />
     </div>
   );
