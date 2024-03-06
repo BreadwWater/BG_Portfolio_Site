@@ -116,22 +116,6 @@
             }
         }
 
-        &--img {
-            width: 65px;
-            margin: 0px 8px;
-
-            &:first-of-type {
-                rotate: -15deg;
-                animation: flipOutLeft ease 1 2s;
-            }
-
-            &:last-of-type {
-                rotate: 15deg;
-                animation: flipOutRight ease 1 2s;
-
-            }
-        }
-
         &--profile {
             width: 150px;
             border-radius: 100%;
@@ -223,5 +207,45 @@
                 margin: 0px;
             }
         }
+    }
+}
+
+.img-- {
+    &brush {
+        width: 12px;
+        rotate: -40deg;
+        translate: 26px -50px;
+        transition: ease 1.5s;
+
+        animation: brushAnimation ease 1.4s forwards;
+        @include rotateLeft(38deg, brushAnimation);
+    }
+
+    &game {
+        width: 28px;
+        translate: -8px 50px;
+        transition: ease;
+
+        animation: gameAnimation ease 1.4s forwards;
+        @include rotateLeft(-38deg, gameAnimation);
+    }
+
+    &book {
+        width: 36px;
+        transform: translate(30px, -48px);
+        transition: ease;
+
+        animation: bookAnimation ease 1.4s forwards;
+        @include rotateRight(-32deg, bookAnimation);
+    }
+
+
+    &plane {
+        width: 24px;
+        transform: translate(20px, 60px);
+        transition: ease;
+
+        animation: planeAnimation ease 1.4s forwards;
+        @include rotateRight(50deg, planeAnimation);
     }
 }

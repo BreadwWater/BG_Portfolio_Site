@@ -1,11 +1,15 @@
 import React, { useEffect, useRef } from 'react';
 import './AboutMe.scss';
 
-import breadIcon from '../../assets/icons/Bread--icon.svg';
 import profilePicMobile from '../../assets/images/Headshot_casual--mobile.png';
 import profilePicDesktop from '../../assets/images//Headshot_casual--desktop.jpg';
 import aboutMeIconAnim from '../../assets/animated icons/aboutme-animated-icon.gif';
 import aboutMeIconStatic from '../../assets/animated icons/aboutme-icon.svg';
+
+import BrushIcon from '../../assets/icons/Brush--icon.svg';
+import PlaneIcon from '../../assets/icons/Plane--icon.svg';
+import BookIcon from '../../assets/icons/Book--icon.svg';
+import GameIcon from '../../assets/icons/Game--icon.svg';
 
 import SectionHeader from '../SectionHeader/SectionHeader';
 
@@ -79,9 +83,12 @@ function AboutMe() {
                             </div>
                         </div>
                         <div className="aboutme__mobile--body">
-                            <img className="aboutme__mobile--img" src={breadIcon} alt="Bread Icon" />
+                            <img className="aboutme__mobile--img img--brush" src={BrushIcon} alt="Hobby Icon" />
+                            <img className="aboutme__mobile--img img--game" src={GameIcon} alt="Hobby Icon" />
                             <img className="aboutme__mobile--profile" src={profilePicMobile} alt="selfie mobile" />
-                            <img className="aboutme__mobile--img" src={breadIcon} alt="Bread Icon" />
+                            <img className="aboutme__mobile--img img--book" src={BookIcon} alt="Hobby Icon" />
+                            <img className="aboutme__mobile--img  img--plane" src={PlaneIcon} alt="Hobby Icon" />
+
                         </div>
 
                         <div className="aboutme__text">

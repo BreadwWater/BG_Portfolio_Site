@@ -126,34 +126,44 @@ a {
 }
 
 // Flip out from center animation
-@keyframes flipOutLeft {
-    0% {
-        translate: 160px 0px;
-        rotate: -15deg;
-    }
 
+@mixin rotateLeft($rotateValue, $animationName) {
+    @keyframes #{$animationName} {
+        0% {
+            translate: 160px 0px;
+            rotate: ($rotateValue);
+            scale: 0;
+        }
 
-    10% {
-        rotate: 180deg;
-    }
+        10% {
+            rotate: 180deg;
+            scale: 0;
+        }
 
-    100% {
-        rotate: -15deg;
+        100% {
+            rotate: ($rotateValue);
+            scale: 100%;
+        }
     }
 }
 
-@keyframes flipOutRight {
-    0% {
-        translate: -160px 0px;
-        rotate: 15deg;
-    }
+@mixin rotateRight($rotateValue, $animationName) {
+    @keyframes #{$animationName} {
+        0% {
+            translate: -100px 0px;
+            rotate: ($rotateValue);
+            scale: 0;
+        }
 
-    10% {
-        rotate: -180deg;
-    }
+        10% {
+            rotate: 80deg;
+            scale: 0;
+        }
 
-    100% {
-        rotate: 15deg;
+        100% {
+            rotate: ($rotateValue);
+            scale: 100%;
+        }
     }
 }
 

@@ -25,19 +25,35 @@ function Footer() {
     return (
         <>
             <footer className='footer'>
-                <div className='footer__sec'>
-                    <Link target='_blank' to='https://www.linkedin.com/in/bren-gonzalez/' className='footer__link'>
-                        <img className='footer--icon icon-linkedin' src={LinkedInIconAnim} alt="LinkedIn Profile Link" />
-                    </Link>
-                    <Link target='_blank' to='https://github.com/BreadwWater' className='footer__link'>
-                        <img className='footer--icon icon-github' src={GitHubIconAnim} alt="GitHub Profile Link" />
-                    </Link>
-                </div>
+                <div className='footer__cont'>
+                    <div className='footer__sec'>
+                        <Link target='_blank' to='https://www.linkedin.com/in/bren-gonzalez/' className='footer__sec--socials'>
+                            <img className='footer--icon icon-linkedin' src={LinkedInIconAnim} alt="LinkedIn Profile Link" />
+                        </Link>
+                        <Link target='_blank' to='https://github.com/BreadwWater' className='footer__sec--socials'>
+                            <img className='footer--icon icon-github' src={GitHubIconAnim} alt="GitHub Profile Link" />
+                        </Link>
 
-                <div className='footer__sec'>
-                    <p className='footer__text'>
-                        CopyRight © 2021 BrenDev | All Rights Reserved
-                    </p>
+                        <div className='footer__sec--group'>
+                            <h3 className='footer__sec--name'>Brenda Gonzalez</h3>
+                            <p className='footer__sec--text'>Software Engineer • Graphic Designer • 3D Modeler</p>
+                            <div className='footer__sec--socials'>
+                                Put Social Links Here
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className='footer__sec'>
+                        <ul className='footer__sec--sitenav'>
+                            <li className='footer__sec--link'>Home</li>
+                            <li className='footer__sec--link'>Who</li>
+                            <li className='footer__sec--link'>What</li>
+                            <li className='footer__sec--link'>Where</li>
+                        </ul>
+                        <p className='footer__text'>
+                            CopyRight © 2021 BrenDev | All Rights Reserved
+                        </p>
+                    </div>
                 </div>
             </footer>
         </>

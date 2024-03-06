@@ -10,21 +10,99 @@
     z-index: 998;
 
     @include md {
-        height: 120px;
+        @include flex(row, center, center);
+        height: 150px;
+    }
+
+    &__cont {
+        @include flex(column, space-between, center);
+        margin: 0px 8px;
+        width: 100%;
+
+        @include md {
+            @include flex(row, space-between, center);
+            width: 100%;
+        }
+
+        @include lg {
+            width: 80%
+        }
     }
 
     &__sec {
         @include flex(row, space-between, center);
-        width: 100%;
+        width: 95%;
 
         &:first-of-type {
-            width: 40%;
+            width: 50%;
+            max-width: 200px;
         }
-    }
 
-    &__links {
-        @include flex(row, center, center);
-        width: 50%;
+        @include md {
+            @include flex(column, space-between, center);
+            width: 58%;
+
+            &:first-of-type {
+                max-width: 500px;
+            }
+        }
+
+
+        &--group {
+            display: none;
+
+            @include md {
+                @include flex(column, space-between, center);
+                width: 100%;
+                text-align: center;
+            }
+
+            &>* {
+                margin: 8px 0px;
+            }
+        }
+
+        &--name {
+            @include sub-font(18px, 600, 1.2);
+            color: $portfolio-color--white;
+
+            @include lg {
+                @include sub-font(24px, 600, 1.2);
+            }
+        }
+
+        &--text {
+            @include sub-font(12px, 500, 1.2);
+            color: $portfolio-color--white;
+
+            @include lg {
+                @include sub-font(16px, 500, 1.2);
+            }
+        }
+
+        &--socials {
+            color: $portfolio-color--white;
+        }
+
+        &--sitenav {
+            display: none;
+
+            @include md {
+                @include flex(row, space-between, center);
+                width: 100%;
+                max-width: 350px;
+                margin-bottom: 16px;
+            }
+        }
+
+        &--link {
+            color: $portfolio-color--white;
+
+            &:hover {
+                cursor: pointer;
+                text-decoration: underline;
+            }
+        }
     }
 
     &--icon {
