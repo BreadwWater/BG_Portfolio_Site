@@ -47,7 +47,6 @@
             }
         }
 
-
         &--group {
             display: none;
 
@@ -80,10 +79,6 @@
             }
         }
 
-        &--socials {
-            color: $portfolio-color--white;
-        }
-
         &--sitenav {
             display: none;
 
@@ -103,15 +98,37 @@
                 text-decoration: underline;
             }
         }
-    }
 
-    &--icon {
-        width: 50px;
-        margin: 0px 0px 4px 0px;
-        cursor: pointer;
+        &--socials {
+            color: $portfolio-color--white;
+            @include flex(row, space-between, center);
+            margin: 0;
+            width: 100%;
 
-        @include md {
-            display: none
+            @include md {
+                width: 50%;
+                max-width: 200px;
+            }
+        }
+
+        &--icon {
+            width: 50px;
+            margin: 0px 0px 4px 0px;
+
+            @include md {
+                display: none;
+            }
+
+            &-desktop {
+                display: none;
+
+                @include md {
+                    display: unset;
+                    width: 50px;
+                    cursor: pointer;
+                }
+            }
+
         }
     }
 
