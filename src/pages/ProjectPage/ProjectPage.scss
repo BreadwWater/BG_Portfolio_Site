@@ -2,7 +2,7 @@
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/breakpoints' as *;
 
-.indivproj {
+.ProjectPage {
     @include flex(column, center, center);
     transition: ease .3s;
 
@@ -182,7 +182,7 @@
                 width: 100%;
             }
 
-            &>.indivproj_collage--img {
+            &>.ProjectPage_collage--img {
                 width: 100%;
 
                 @include md {
@@ -319,7 +319,7 @@
             }
         }
 
-        &--next>.indivproj_btn--arrow {
+        &--next>.ProjectPage_btn--arrow {
             transform: rotate(180deg);
         }
 

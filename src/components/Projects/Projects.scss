@@ -65,18 +65,19 @@
     }
 
     &__text {
+        @include sub-font(16px, 500, 1.8);
         color: $portfolio-color--white;
         text-align: center;
         width: 75%;
 
         @include md {
+            @include sub-font(18px, 500, 2);
             width: 88%;
-            margin: 16px 0px;
+            margin: 8px 0px 16px 0px;
         }
 
         @include lg {
             width: 70%;
-
         }
     }
 

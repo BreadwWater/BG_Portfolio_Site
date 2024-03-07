@@ -1,1 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27.28 123.04"><defs><style>.cls-1,.cls-2{fill:none;stroke:#fff;stroke-width:3.31px;}.cls-1{stroke-miterlimit:10;}.cls-2{stroke-linecap:round;stroke-linejoin:round;}</style></defs><title>Layer 29 (2)</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_25" data-name="Layer 25"><g id="Layer_29" data-name="Layer 29"><path class="cls-1" d="M17.74,2.38h0S8,6.24,7.23,11.46C4.77,29.13,6.16,62.15,8.3,79.64a5,5,0,0,0,5,4.43h0a5,5,0,0,0,5-4.42C20.83,59.17,17.74,2.38,17.74,2.38Z"/><path class="cls-2" d="M16.42,84.53C6.46,82.38-2.27,96.34,3.5,105.26c4.95,7.67.52,16.12.52,16.12H4s18.31-4.86,20.91-16.94C28.6,87.38,16.42,84.53,16.42,84.53Z"/></g></g></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 27.3 123" style="enable-background:new 0 0 27.3 123;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#FFFFFF;stroke-width:4;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#FFFFFF;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;}
+</style>
+<title>Layer 29 (2)</title>
+<g id="Layer_2_1_">
+	<g id="Layer_25">
+		<g id="Layer_29">
+			<path class="st0" d="M17.7,2.4L17.7,2.4c0,0-9.7,3.9-10.5,9.1C4.8,29.1,6.2,62.2,8.3,79.6c0.3,2.5,2.4,4.4,5,4.4l0,0
+				c2.5,0,4.7-1.9,5-4.4C20.8,59.2,17.7,2.4,17.7,2.4z"/>
+			<path class="st1" d="M16.4,84.5c-10-2.2-18.7,11.8-12.9,20.7c4.9,7.7,0.5,16.1,0.5,16.1h0c0,0,18.3-4.9,20.9-16.9
+				C28.6,87.4,16.4,84.5,16.4,84.5z"/>
+		</g>
+	</g>
+</g>
+</svg>

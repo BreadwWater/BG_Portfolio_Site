@@ -56,13 +56,26 @@ function AboutMe() {
             });
         });
 
-        listItems.forEach((item) => observerFadeIn.observe(item));
+        listItems.forEach((item) => {
+            if (item) {
+                observerFadeIn.observe(item);
+            }
+        });
 
         return () => {
-            observerUnderline.unobserve(animatedText);
-            listItems.forEach((item) => observerFadeIn.unobserve(item));
+            if (observerUnderline && animatedText) {
+                observerUnderline.unobserve(animatedText);
+            }
+            if (observerFadeIn && listItems.length > 0) {
+                listItems.forEach((item) => {
+                    if (item) {
+                        observerFadeIn.unobserve(item);
+                    }
+                });
+            }
         };
     }, []);
+
 
     return (
         <>

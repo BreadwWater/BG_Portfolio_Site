@@ -3,7 +3,14 @@
 @use '../../styles/partials/breakpoints' as *;
 
 .socials-modal {
-    display: none;
+
+    &.slide-in {
+        display: none;
+
+        @include md {
+            display: unset
+        }
+    }
 
     @include md {
         @include flex(column, center, center);

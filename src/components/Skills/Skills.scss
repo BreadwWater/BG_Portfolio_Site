@@ -11,7 +11,6 @@
 
     @include md {
         padding: 40px 0px;
-
     }
 
     &__body {
@@ -99,9 +98,9 @@
     }
 
     &__group {
-        @include flex(row, flex-start, center);
+        @include flex(row, center, center);
         flex-wrap: wrap;
-        width: 94%;
+        width: 95%;
 
         @include md {
             @include flex(row, flex-start, center);

@@ -1,1 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102.92 122.68"><defs><style>.cls-1,.cls-2{fill:none;stroke:#fff;stroke-width:3.68px;}.cls-1{stroke-miterlimit:10;}.cls-2{stroke-linecap:round;stroke-linejoin:round;}</style></defs><title>Asset 9</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_25" data-name="Layer 25"><path class="cls-1" d="M24,56.39v-23h6.7a5.87,5.87,0,0,1,5.94,5.79h0A5.87,5.87,0,0,1,30.71,45H24"/><polyline class="cls-1" points="44.4 31.87 44.4 45.56 44.4 56.39"/><line class="cls-1" x1="57.12" y1="44.13" x2="44.4" y2="44.13"/><line class="cls-1" x1="57.12" y1="31.87" x2="57.12" y2="56.39"/><line class="cls-1" x1="67.61" y1="31.87" x2="67.61" y2="56.39"/><path class="cls-2" d="M13.19,3.51h87.9V120.08H13.19l-2.11.53a7.36,7.36,0,0,1-1.81.23h0a7.44,7.44,0,0,1-7.43-7.44V7.62A5.77,5.77,0,0,1,7.62,1.84H8.69a5.87,5.87,0,0,1,2.81.72Z"/><path class="cls-2" d="M88.14,4.48V110.24H10.51a2.28,2.28,0,0,0-2.28,2.28h0a2.28,2.28,0,0,0,2.28,2.29h83.9V5.2"/></g></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 102.9 122.7" style="enable-background:new 0 0 102.9 122.7;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#FFFFFF;stroke-width:5;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#FFFFFF;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;}
+</style>
+<title>Asset 9</title>
+<g id="Layer_2_1_">
+	<g id="Layer_25">
+		<path class="st0" d="M24,56.4v-23h6.7c3.2,0,5.9,2.6,5.9,5.8l0,0c0,3.2-2.7,5.8-5.9,5.8c0,0,0,0,0,0H24"/>
+		<polyline class="st0" points="44.4,31.9 44.4,45.6 44.4,56.4 		"/>
+		<line class="st0" x1="57.1" y1="44.1" x2="44.4" y2="44.1"/>
+		<line class="st0" x1="57.1" y1="31.9" x2="57.1" y2="56.4"/>
+		<line class="st0" x1="67.6" y1="31.9" x2="67.6" y2="56.4"/>
+		<path class="st1" d="M13.2,3.5h87.9v116.6H13.2l-2.1,0.5c-0.6,0.2-1.2,0.2-1.8,0.2l0,0c-4.1,0-7.4-3.3-7.4-7.4V7.6
+			c0-3.2,2.6-5.8,5.8-5.8c0,0,0,0,0,0h1.1c1,0,1.9,0.2,2.8,0.7L13.2,3.5z"/>
+		<path class="st1" d="M88.1,4.5v105.8H10.5c-1.3,0-2.3,1-2.3,2.3l0,0c0,1.3,1,2.3,2.3,2.3c0,0,0,0,0,0"/>
+	</g>
+</g>
+</svg>

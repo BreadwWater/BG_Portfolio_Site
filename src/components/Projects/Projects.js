@@ -63,7 +63,7 @@ function Projects() {
                                     Title={'Hello, This is my project'}
                                     Desc={'This is the description of my project, short and sweet but right to the point, maybe even a little more, and even more than that perhaps; honestly, it may go on forever.'}
                                     Thumb={require('../../assets/images/StairBox_Simple-1.jpg')}
-                                    link={'/proj-link-1'}
+                                    projLink={`stairbox`}
                                 />
                             </div>
                         </div>

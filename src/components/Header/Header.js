@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
-import { Link } from 'react-router-dom';
+import { Link as RouterLink, useLocation } from 'react-router-dom';
 import './Header.scss';
 import Logo from '../../assets/icons/Portfolio_Logo.svg';
 
 function Header() {
     const [showMobileHeader, setShowMobileHeader] = useState(false);
+    const location = useLocation();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -27,6 +28,16 @@ function Header() {
         };
     }, []);
 
+    const scrollToTop = () => {
+        if (location.pathname === '/') {
+            // If on the home page, scroll to the top
+            window.scrollTo(0, 0);
+        } else {
+            // If on another page, navigate to the home page
+            window.location.href = '/';
+        }
+    };
+
     return (
         <>
             <header className={`navbar ${showMobileHeader ? 'show-mobile-header' : ''}`}>
@@ -42,15 +53,9 @@ function Header() {
                         >
                             Home
                         </ScrollLink>
-                        <ScrollLink
-                            to="hero"
-                            spy={true}
-                            smooth={true}
-                            offset={-70}
-                            duration={500}
-                            className='navbar__logo'>
+                        <div className='navbar__logo' onClick={scrollToTop}>
                             <img src={Logo} alt="Bren.Dev Logo" className='navbar__logo--desktop' />
-                        </ScrollLink>
+                        </div>
                         <ScrollLink
                             to="contact"
                             spy={true}

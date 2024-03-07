@@ -11,7 +11,7 @@
     position: relative;
 
     @include md {
-        height: 750px;
+        height: 700px;
     }
 
     @include lg {
@@ -22,10 +22,6 @@
         @include flex(row, center, center);
 
         @include md {
-            width: 100%;
-        }
-
-        @include lg {
             width: 100%;
         }
     }
@@ -49,7 +45,6 @@
             position: absolute;
 
             @include md {
-                // width: 47%; Change to this when you get the 3D Model up and running
                 width: 47%;
                 margin: 0;
             }
@@ -112,58 +107,35 @@
             @include flex(column, center, center);
         }
 
-        // &--img {
+        &--img {
+            display: none;
 
-        //     &:first-of-type {
-        //         width: 100px;
-        //         left: -50px;
-        //         top: 10px;
-        //         transform: rotate(-15deg);
-        //         position: absolute;
-        //         justify-self: flex-start;
-        //         align-self: flex-start;
-        //         animation: floatDown ease-in-out infinite 3s;
-        //     }
+            @include md {
+                display: unset;
 
-        //     &:last-of-type {
-        //         width: 140px;
-        //         right: -80px;
-        //         bottom: -32px;
-        //         transform: rotate(15deg);
-        //         position: absolute;
-        //         justify-self: flex-end;
-        //         align-self: flex-end;
-        //         animation: floatUp ease-in-out infinite 3s;
-        //     }
+                &:first-of-type {
+                    width: 90px;
+                    left: 80px;
+                    top: 100px;
+                    transform: rotate(75deg);
+                    position: absolute;
+                    justify-self: flex-start;
+                    align-self: flex-start;
+                    animation: floatDown ease-in-out infinite 3s;
+                }
 
-
-        //     // DELETE THIS WHEN YOU GET THE MODEL WORKING; ITS THE BREAD BUT ON MD
-        //     // @include md {
-
-        //     //     &:first-of-type {
-        //     //         width: 250px;
-        //     //         left: -80px;
-        //     //         top: 100px;
-        //     //         transform: rotate(-15deg);
-        //     //         position: absolute;
-        //     //         justify-self: flex-start;
-        //     //         align-self: flex-start;
-        //     //         animation: floatDown ease-in-out infinite 3s;
-        //     //     }
-
-        //     //     &:last-of-type {
-        //     //         width: 240px;
-        //     //         right: -80px;
-        //     //         bottom: 150px;
-        //     //         transform: rotate(15deg);
-        //     //         position: absolute;
-        //     //         justify-self: flex-end;
-        //     //         align-self: flex-end;
-        //     //         animation: floatUp ease-in-out infinite 3s;
-        //     //     }
-
-        //     // }
-        // }
+                &:last-of-type {
+                    width: 120px;
+                    right: 40px;
+                    bottom: 115px;
+                    transform: rotate(15deg);
+                    position: absolute;
+                    justify-self: flex-end;
+                    align-self: flex-end;
+                    animation: floatUp ease-in-out infinite 3s;
+                }
+            }
+        }
     }
 
     &__model {
@@ -176,11 +148,4 @@
             width: 80%;
         }
     }
-
-}
-
-
-// Delete this and the class entirely when you get the 3D Model running; this was just to hide the section
-.render {
-    // display: none;
 }

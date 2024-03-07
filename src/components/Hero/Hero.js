@@ -1,9 +1,9 @@
 import React from 'react';
 import HeroButton from '../HeroButton/HeroButton';
 import Button from '../Button/Button';
-import BreadModel from '../BreadModel/BreadModel';
 
-import BreadIcon from '../../assets/icons/Bread--icon.svg';
+import HeroIcon from '../../assets/icons/Plane--icon.svg';
+import HeroIcon2 from '../../assets/icons/Book--icon.svg';
 
 import '../Hero/Hero.scss';
 
@@ -12,7 +12,6 @@ function Hero() {
         <>
             <section id='hero' className='hero'>
                 <article className='hero__cont'>
-
                     <div className='hero__sec'>
 
                         <div className='hero__info'>
@@ -30,13 +29,12 @@ function Hero() {
                         </div>
 
                         <div className='hero__info'>
-                            {/* <div className='hero__mobile--bg'>
-                                <img className='hero__mobile--img' src={BreadIcon} alt="Bread Icon" />
-                                <img className='hero__mobile--img' src={BreadIcon} alt="Bread Icon" />
-                            </div> */}
+                            <div className='hero__mobile--bg'>
+                                <img className='hero__mobile--img' src={HeroIcon} alt="Bread Icon" />
+                                <img className='hero__mobile--img' src={HeroIcon2} alt="Bread Icon" />
+                            </div>
                         </div>
                     </div>
-
                 </article>
             </section>
         </>
