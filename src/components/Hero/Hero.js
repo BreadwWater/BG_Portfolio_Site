@@ -2,8 +2,8 @@ import React from 'react';
 import HeroButton from '../HeroButton/HeroButton';
 import Button from '../Button/Button';
 
-import HeroIcon from '../../assets/icons/Plane--icon.svg';
-import HeroIcon2 from '../../assets/icons/Book--icon.svg';
+import HeroIcon from '../../assets/icons/3-Sparkle--icon.svg';
+import HeroIcon2 from '../../assets/icons/2-Sparkle--icon.svg';
 
 import '../Hero/Hero.scss';
 
@@ -30,8 +30,8 @@ function Hero() {
 
                         <div className='hero__info'>
                             <div className='hero__mobile--bg'>
-                                <img className='hero__mobile--img' src={HeroIcon} alt="Bread Icon" />
-                                <img className='hero__mobile--img' src={HeroIcon2} alt="Bread Icon" />
+                                <img className='hero__mobile--img' src={HeroIcon} alt="Sparkle Icon" />
+                                <img className='hero__mobile--img' src={HeroIcon2} alt="Sparkle Icon" />
                             </div>
                         </div>
                     </div>

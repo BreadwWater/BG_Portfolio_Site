@@ -1,0 +1,346 @@
+@use '../../styles/partials/globals.scss' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/breakpoints' as *;
+
+.ProjectPage {
+    @include flex(column, center, center);
+    transition: ease .3s;
+
+    &_header {
+        @include flex(column, center, center);
+
+        &--hero {
+            @include flex(row, center, center);
+            background-color: $portfolio-color--blue;
+            overflow: hidden;
+            width: 100%;
+            min-height: 215px;
+            background-image: url(../../assets/images/project-1/image-0.jpg);
+            background-size: cover;
+            transition: ease-in-out .8s;
+
+            @include md {
+                height: 400px;
+            }
+
+            @include lg {
+                height: 500px;
+            }
+        }
+
+        &--title {
+            @include main-font(18px, 500, normal, );
+            @include flex(row, center, center);
+            color: $portfolio-color--white;
+            position: absolute;
+            translate: 0px 24px;
+            transition: ease-in-out .3s;
+
+            @include md {
+                font-size: 32px;
+                translate: 0px 24px;
+            }
+
+            @include lg {
+                font-size: 36px;
+            }
+        }
+
+        &--text {
+            @include sub-font(12px, 500, normal);
+            @include flex(row, center, center);
+            color: $portfolio-color--pink;
+            position: absolute;
+            translate: 0px 0px;
+            transition: ease-in-out .3s;
+
+            @include md {
+                font-size: 16px;
+                translate: 0px -16px;
+            }
+
+            @include lg {
+                font-size: 18px
+            }
+        }
+    }
+
+    &_desc {
+        @include flex(column, center, center);
+        margin: 40px 12px 24px 12px;
+        width: 80%;
+        transition: ease-in-out .5s;
+
+        @include md {
+            width: 70%;
+        }
+
+        @include lg {
+            margin-top: 96px;
+        }
+
+        &--title {
+            @include sub-font(16px, 600, normal);
+            margin: 0px 0px 12px 0px;
+            text-transform: uppercase;
+
+            @include md {
+                width: 100%;
+            }
+        }
+
+        &--text {
+            @include sub-font(12px, 500, 3);
+
+            @include lg {
+                @include sub-font(16px, 500, 2.5);
+            }
+        }
+    }
+
+    &_services {
+        @include flex(column, center, center);
+        text-align: center;
+        margin: 0px 8px 24px 8px;
+        width: 100%;
+
+        @include md {
+            margin: 24px 8px 64px 8px;
+        }
+
+        &--title {
+            @include sub-font(16px, 600, normal);
+            margin: 0px 0px 12px 0px;
+            text-transform: uppercase;
+            text-align: center;
+            width: 80%;
+
+            @include md {
+                text-align: start;
+                width: 70%;
+            }
+        }
+
+        &--group {
+            @include flex(row, center, center);
+            flex-wrap: wrap;
+            padding: 8px 0px;
+            width: 80%;
+            transition: ease-in-out .3s;
+
+            @include md {
+                @include flex(row, start, start);
+                width: 70%;
+            }
+        }
+
+        &--tag {
+            @include sub-font(12px, 600, normal);
+            background-color: $portfolio-color--pink;
+            margin: 4px;
+            padding: 6px 8px;
+            border-radius: 50px;
+            transition: ease-in-out .3s;
+            width: 115px;
+
+            @include lg {
+                width: 110px
+            }
+        }
+    }
+
+    &_group {
+        @include flex(column, center, center);
+        margin: 8px 0px 0px 0px;
+        padding: 12px 0px 0px 0px;
+        background-color: $portfolio-color--white;
+        width: 100%;
+
+        @include md {
+            padding: 24px 0px 0px 0px;
+        }
+    }
+
+    &_collage {
+        @include flex(column, space-between, center);
+        width: 100%;
+        margin: 4px 0px;
+        transition: ease .5s;
+
+        @include md {
+            padding: 42px 0px;
+            width: 70%;
+        }
+
+        &--collection {
+            @include flex(column, center, center);
+            width: 100%;
+            transition: ease .8s;
+
+            @include md {
+                @include flex(row, space-between, center);
+                width: 100%;
+            }
+
+            &>.ProjectPage_collage--img {
+                width: 100%;
+
+                @include md {
+                    width: 49%;
+                }
+            }
+        }
+
+        &--img {
+            background-color: $portfolio-color--grey;
+            width: 100%;
+            margin: 8px 0px;
+            transition: ease-in-out .3s;
+
+            @include md {
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.005) translate(0px, -5px);
+                    box-shadow: 0px 10px 15px -9px rgba(0, 0, 0, 0.1);
+                }
+            }
+
+        }
+    }
+
+    &_contact {
+        @include flex(column, center, center);
+        margin: 0px;
+        padding: 16px;
+        width: 100%;
+        background-color: $portfolio-color--grey;
+
+        &--group {
+            @include flex(column, center, center);
+            text-align: center;
+            margin: 16px 0px;
+            transition: ease-in-out .3s;
+
+            @include md {
+                &:last-of-type {
+                    @include flex(row, space-between, center);
+                    width: 90%;
+                }
+
+                @include lg {
+                    margin: 40px 0px 0px 0px;
+                }
+            }
+        }
+
+        &--title {
+            @include sub-font(16px, 600, normal);
+            margin: 0px 0px 12px 0px;
+            text-transform: uppercase;
+            width: 100%;
+
+            @include md {
+                font-size: 18px;
+            }
+        }
+
+        &--text {
+            @include sub-font(12px, 500, 2.5);
+            width: 75%;
+            margin: 0px 0px 8px 0px;
+
+            @include md {
+                font-size: 16px;
+            }
+
+            @include lg {
+                width: 50%
+            }
+        }
+
+        &--btn {
+            @include sub-font(16px, 600, normal);
+            @include btn($portfolio-color--black, $portfolio-color--white, $portfolio-color--black, );
+            border-radius: 4px;
+            width: 150px;
+            padding: 8px 0px;
+            margin: 12px 0px 0px 0px;
+            transition: ease 500ms;
+
+            @include md {
+                margin: 16px 0px 0px 0px;
+                width: 150px;
+
+                &:hover {
+                    @include btn($portfolio-color--white, $portfolio-color--black, $portfolio-color--black);
+                    box-shadow: 0px 6px 23px -4px rgba(0, 0, 0, 0.18);
+                    cursor: pointer;
+
+                    @include md {
+                        scale: 1.015;
+                        animation: shake ease .4s infinite;
+                    }
+
+                    &>.btn-text {
+                        color: $portfolio-color--white;
+                    }
+                }
+            }
+
+            @include lg {
+                @include sub-font(18px, 600, normal);
+                padding: 10px 0px;
+                margin: 24px 0px 0px 0px;
+            }
+
+            &:active {
+                background-color: $portfolio-color--black;
+                color: $portfolio-color--white;
+            }
+        }
+    }
+
+    &_btn {
+
+        &--last,
+        &--next {
+            @include flex(row, space-evenly, center);
+            @include sub-font(16px, 600, normal);
+            background-color: $portfolio-color--white;
+            margin: 16px 0px;
+            padding: 8px 0px;
+            border-radius: 12px;
+            width: 180px;
+            transition: ease .3s;
+
+            @include md {
+                background-color: unset;
+                cursor: pointer;
+            }
+        }
+
+        &--next>.ProjectPage_btn--arrow {
+            transform: rotate(180deg);
+        }
+
+        &--last {
+            @include md {
+                &:hover {
+                    translate: -15px;
+                }
+            }
+        }
+
+        &--next {
+            @include md {
+                &:hover {
+                    translate: 15px;
+                }
+            }
+        }
+
+        &--arrow {
+            width: 16px;
+        }
+    }
+}

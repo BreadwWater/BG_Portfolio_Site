@@ -1,6 +1,31 @@
 import './Skeleton.scss';
 
 function Skeleton() {
+    // Function to disable scrolling
+    function disableScroll() {
+        document.body.style.overflow = 'hidden';
+    }
+
+    // Function to enable scrolling
+    function enableScroll() {
+        document.body.style.overflow = 'auto';
+    }
+
+    // Simulate content loading (replace this with your actual loading logic)
+    function simulateContentLoading() {
+        // Disable scrolling when content is loading
+        disableScroll();
+
+        // Simulate loading delay (e.g., 3 seconds)
+        setTimeout(() => {
+            // Enable scrolling after the content has loaded
+            enableScroll();
+        }, 3000); // Adjust the delay as needed
+    }
+
+    // Call the function to simulate content loading
+    simulateContentLoading();
+
     return (
         <>
             <section className='skeleton'>

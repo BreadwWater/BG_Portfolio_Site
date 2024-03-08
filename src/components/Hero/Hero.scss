@@ -114,10 +114,10 @@
                 display: unset;
 
                 &:first-of-type {
-                    width: 90px;
-                    left: 80px;
-                    top: 100px;
-                    transform: rotate(75deg);
+                    width: 500px;
+                    left: -150px;
+                    top: 50px;
+                    transform: rotate(15deg);
                     position: absolute;
                     justify-self: flex-start;
                     align-self: flex-start;
@@ -125,14 +125,38 @@
                 }
 
                 &:last-of-type {
-                    width: 120px;
-                    right: 40px;
-                    bottom: 115px;
+                    width: 400px;
+                    right: -150px;
+                    bottom: 40px;
                     transform: rotate(15deg);
                     position: absolute;
                     justify-self: flex-end;
                     align-self: flex-end;
                     animation: floatUp ease-in-out infinite 3s;
+                }
+
+                @include lg {
+                    &:first-of-type {
+                        width: 600px;
+                        left: -50px;
+                        top: 20px;
+                        transform: rotate(15deg);
+                        position: absolute;
+                        justify-self: flex-start;
+                        align-self: flex-start;
+                        animation: floatDown ease-in-out infinite 3s;
+                    }
+
+                    &:last-of-type {
+                        width: 500px;
+                        right: -100px;
+                        bottom: 115px;
+                        transform: rotate(15deg);
+                        position: absolute;
+                        justify-self: flex-end;
+                        align-self: flex-end;
+                        animation: floatUp ease-in-out infinite 3s;
+                    }
                 }
             }
         }

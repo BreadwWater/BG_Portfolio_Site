@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { animateScroll as scroll, Link } from 'react-scroll'
+import { animateScroll as scroll, Link } from 'react-scroll';
 import { Link as RouterLink, useLocation } from 'react-router-dom';
 import './Header.scss';
 import Logo from '../../assets/icons/Portfolio_Logo.svg';
