@@ -6,49 +6,62 @@ import './ProjectPage.scss';
 function ProjectPage() {
     const { projectId } = useParams();
     const [projTitle, setProjTitle] = useState('');
+    const [projHero, setProjHero] = useState('');
     const [projDesc, setProjDesc] = useState('');
     const [projType, setProjType] = useState('');
     const [projImages, setProjImages] = useState([]);
 
+    // Dynamically import images from the specified project folder
+    const importImages = (folderName, count) => {
+        return Array.from({ length: count }, (_, index) => {
+            return import(`../../assets/images/projects/design/${folderName}/image-${index + 1}.jpg`)
+                .then(module => module.default);
+        });
+    };
+
     useEffect(() => {
+        window.scrollTo(0, 0)
         if (projectId === 'stairbox') {
-            setProjTitle('My Project');
-            setProjDesc('This is the description');
-            setProjType('ooloo');
+            setProjTitle(`StairBox`);
+            setProjHero(require('../../assets/images/projects/design/project-1/image-0.png'));
+            setProjDesc('This is stair box, a company that has your stairs in mind.');
+            setProjType('Logo Revision');
 
-            setProjTitle('My Project');
-            setProjDesc('This is the description');
-            setProjType('ooloo');
-
-            // Dynamically import images from the specified project folder
-            const importImages = (count) => {
-                return Array.from({ length: count }, (_, index) => {
-                    return import(`../../assets/images/project-1/image-${index + 1}.jpg`)
-                        .then(module => module.default);
-                });
-            };
-
-            Promise.all(importImages(7))
-                .then(images => setProjImages(images))
+            Promise.all(importImages('project-1', 10))
+                .then(images => {
+                    // Organize images into collections
+                    const collections = [];
+                    for (let i = 0; i < images.length; i += 3) {
+                        collections.push(images.slice(i, i + 3));
+                    }
+                    setProjImages(collections);
+                })
                 .catch(error => console.error('Error loading images:', error));
         }
+        else if (projectId === 'letschill') {
+            setProjTitle(`Let's Chill`);
+            setProjHero(require('../../assets/images/projects/design/project-2/image-0.png'));
+            setProjDesc('This is stair box, a company that has your stairs in mind.');
+            setProjType('Logo Revision');
 
-        else if (projectId === 'placeholder') {
-            setProjTitle('My Project');
-            setProjDesc('This is the description');
-            setProjType('ooloo');
-            setProjImages([])
+            Promise.all(importImages('project-2', 10))
+                .then(images => {
+                    // Organize images into collections
+                    const collections = [];
+                    for (let i = 0; i < images.length; i += 3) {
+                        collections.push(images.slice(i, i + 3));
+                    }
+                    setProjImages(collections);
+                })
+                .catch(error => console.error('Error loading images:', error));
         }
+    }, [projectId]);
 
-    }, [projectId]);
-    useEffect(() => {
-        console.log('Inside useEffect', projImages);
-        // Rest of the code...
-    }, [projectId]);
     return (
         <>
             <ProjectInfo
                 projTitle={projTitle}
+                projHero={projHero}
                 projType={projType}
                 projDesc={projDesc}
                 projectImages={projImages}

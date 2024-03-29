@@ -17,7 +17,7 @@ function Hero() {
                         <div className='hero__info'>
                             <div className='hero__text'>
                                 <h1 className='hero__title'>Brenda Gonzalez</h1>
-                                <h2 className='hero__subtitle'>3D Modeler | Front-End Dev | Bread Lover</h2>
+                                <h2 className='hero__subtitle'>3D Modeler | Front-End Dev | Designer</h2>
                             </div>
                             <div className='hero__mobile--btn'>
                                 <Button location={'#contact'} text='Contact' />

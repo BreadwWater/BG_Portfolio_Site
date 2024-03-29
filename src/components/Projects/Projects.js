@@ -22,6 +22,16 @@ function Projects() {
         setActiveBtn(id);
     };
 
+    const handleReplaceSrc = () => {
+        if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            const iconElement = document.querySelector('.contact__header--icon');
+            iconElement.setAttribute('src', ProjIconStatic);
+        }
+    };
+
+    useEffect(() => {
+        handleReplaceSrc();
+    }, []);
     return (
         <>
             <section id="projects" className="projects">
@@ -53,18 +63,26 @@ function Projects() {
                         <div className='projects__sec'>
                             <div className='projects__group'>
                                 {/* Design Projects */}
+                                <ProjCard
+                                    projLink={`stairbox`}
+                                    Title={'Hello, This is my project'}
+                                    Desc={'This is the description of my project, short and sweet but right to the point, maybe even a little more, and even more than that perhaps; honestly, it may go on forever.'}
+                                    Thumb={require('../../assets/images/projects/design/project-1/image-1.jpg')}
+                                />
+
+                                <ProjCard
+                                    projLink={`letschill`}
+                                    Title={'Hello, This is my project'}
+                                    Desc={'This is the description of my project, short and sweet but right to the point, maybe even a little more, and even more than that perhaps; honestly, it may go on forever.'}
+                                    Thumb={require('../../assets/images/projects/design/project-2/image-1.jpg')}
+                                />
                             </div>
                         </div>
                     ) : (
                         <div className='projects__sec'>
                             <div className='projects__group'>
                                 {/* Code Projects */}
-                                <ProjCard
-                                    projLink={`stairbox`}
-                                    Title={'Hello, This is my project'}
-                                    Desc={'This is the description of my project, short and sweet but right to the point, maybe even a little more, and even more than that perhaps; honestly, it may go on forever.'}
-                                    Thumb={require('../../assets/images/project-1/image-1.jpg')}
-                                />
+
                             </div>
                         </div>
                     )}

@@ -11,11 +11,10 @@
 
         &--hero {
             @include flex(row, center, center);
-            background-color: $portfolio-color--blue;
+            background-color: $portfolio-color--navy;
             overflow: hidden;
             width: 100%;
             min-height: 215px;
-            background-image: url(../../assets/images/project-1/image-0.jpg);
             background-size: cover;
             transition: ease-in-out .8s;
 
@@ -158,53 +157,6 @@
 
         @include md {
             padding: 24px 0px 0px 0px;
-        }
-    }
-
-    &_collage {
-        @include flex(column, space-between, center);
-        width: 100%;
-        margin: 4px 0px;
-        transition: ease .5s;
-
-        @include md {
-            padding: 42px 0px;
-            width: 70%;
-        }
-
-        &--collection {
-            @include flex(column, center, center);
-            width: 100%;
-            transition: ease .8s;
-
-            @include md {
-                @include flex(row, space-between, center);
-                width: 100%;
-            }
-
-            &>.ProjectPage_collage--img {
-                width: 100%;
-
-                @include md {
-                    width: 49%;
-                }
-            }
-        }
-
-        &--img {
-            background-color: $portfolio-color--grey;
-            width: 100%;
-            margin: 8px 0px;
-            transition: ease-in-out .3s;
-
-            @include md {
-                &:hover {
-                    cursor: pointer;
-                    transform: scale(1.005) translate(0px, -5px);
-                    box-shadow: 0px 10px 15px -9px rgba(0, 0, 0, 0.1);
-                }
-            }
-
         }
     }
 

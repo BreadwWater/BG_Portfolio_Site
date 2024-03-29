@@ -1,13 +1,16 @@
 import './ProjectInfo.scss';
+import PhotoSec from '../PhotoSec/PhotoSec';
+
 import arrow from '../../assets/icons/arrow--icon.svg';
 
+
 function ProjectInfo(props) {
-    const { projTitle, projType, projDesc, projectImages } = props;
+    const { projTitle, projHero, projType, projDesc, projectImages } = props;
 
     return (
         <>
             <section className='ProjectPage'>
-                <div className='ProjectPage_header--hero'>
+                <div className='ProjectPage_header--hero' style={{ backgroundImage: `url(${projHero})` }}>
                     <div className='ProjectPage_header'>
                         <h2 className='ProjectPage_header--text'>{projType}</h2>
                         <h1 className='ProjectPage_header--title'>{projTitle}</h1>
@@ -27,11 +30,9 @@ function ProjectInfo(props) {
                 </div>
 
                 <div className='ProjectPage_group'>
-                    <div className='ProjectPage_collage'>
-                        {projectImages.map((image, index) => (
-                            <img key={index} className='ProjectPage_collage--img' src={image} alt={`Project img ${index + 1}`} />
-                        ))}
-                    </div>
+
+                    <PhotoSec projectImages={projectImages} />
+
                     <div className='ProjectPage_contact'>
                         <div className='ProjectPage_contact--group'>
                             <h2 className='ProjectPage_contact--title'>Let's Talk Logos.</h2>
