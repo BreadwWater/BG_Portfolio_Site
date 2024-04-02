@@ -103,6 +103,9 @@ function Footer() {
                         <p className='footer__text'>
                             Copyright © 2021 BrendaG.Dev | All rights reserved.
                         </p>
+                        <p className='footer__text'>
+                            Credit to <a className='footer__text--highlight' rel="noreferrer" target='_blank' href="https://unsplash.com/">Unsplash</a> for all project hero images!
+                        </p>
                     </div>
                 </div>
             </footer>

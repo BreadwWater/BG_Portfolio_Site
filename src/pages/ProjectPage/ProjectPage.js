@@ -18,7 +18,7 @@ function ProjectPage() {
                 .then(module => module.default);
         });
     };
-
+    //Create/Replace if statement for new projects & give required info
     useEffect(() => {
         window.scrollTo(0, 0)
         if (projectId === 'stairbox') {
@@ -45,6 +45,23 @@ function ProjectPage() {
             setProjType('Logo Revision');
 
             Promise.all(importImages('project-2', 10))
+                .then(images => {
+                    // Organize images into collections
+                    const collections = [];
+                    for (let i = 0; i < images.length; i += 3) {
+                        collections.push(images.slice(i, i + 3));
+                    }
+                    setProjImages(collections);
+                })
+                .catch(error => console.error('Error loading images:', error));
+        }
+        else if (projectId === 'eternalframes') {
+            setProjTitle(`Eternal Frames`);
+            setProjHero(require('../../assets/images/projects/design/project-3/image-0.png'));
+            setProjDesc('This is stair box, a company that has your stairs in mind.');
+            setProjType('Logo Revision');
+
+            Promise.all(importImages('project-3', 4))
                 .then(images => {
                     // Organize images into collections
                     const collections = [];

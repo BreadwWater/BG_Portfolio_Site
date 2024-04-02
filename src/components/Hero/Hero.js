@@ -20,7 +20,7 @@ function Hero() {
                                 <h2 className='hero__subtitle'>3D Modeler | Front-End Dev | Designer</h2>
                             </div>
                             <div className='hero__mobile--btn'>
-                                <Button location={'#contact'} text='Contact' />
+                                {/* <Button location={'#contact'} text='Contact' /> */}
                                 <Button location={'#projects'} text='Projects' />
                             </div>
                             <div className='hero__desktop--btn'>

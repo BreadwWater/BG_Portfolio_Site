@@ -4,7 +4,8 @@
 
 .hero {
     @include flex(row, center, center);
-    background-color: $portfolio-color--pink;
+    background: $portfolio-color--blue url('../../assets/images/hero-bg.png') center/100vw no-repeat;
+    background-size: cover;
     height: 270px;
     width: 100%;
     overflow: hidden;
@@ -37,7 +38,6 @@
 
     &__info {
         @include flex(column, center, center);
-        margin-top: 16px;
 
         &:first-of-type {
             width: 100%;
@@ -46,7 +46,6 @@
 
             @include md {
                 width: 47%;
-                margin: 0;
             }
         }
     }
@@ -93,9 +92,20 @@
 
     &__mobile {
 
+        &--btn {
+            max-width: 250px;
+            min-height: 40px;
+            width: 50%;
+
+            &>* {
+                background-color: rgba($portfolio-color--white, 0.5);
+            }
+        }
+
         &--btn,
         &--bg {
             display: flex;
+            flex-direction: column;
 
             @include md {
                 display: none;
@@ -109,14 +119,16 @@
 
         &--img {
             display: none;
+            opacity: 50%;
 
             @include md {
                 display: unset;
+                pointer-events: none;
 
                 &:first-of-type {
-                    width: 500px;
-                    left: -150px;
-                    top: 50px;
+                    width: 150px;
+                    left: 50px;
+                    top: 120px;
                     transform: rotate(15deg);
                     position: absolute;
                     justify-self: flex-start;
@@ -125,10 +137,10 @@
                 }
 
                 &:last-of-type {
-                    width: 400px;
-                    right: -150px;
-                    bottom: 40px;
-                    transform: rotate(15deg);
+                    width: 120px;
+                    right: 100px;
+                    bottom: 450px;
+                    transform: rotate(-15deg);
                     position: absolute;
                     justify-self: flex-end;
                     align-self: flex-end;
@@ -137,9 +149,9 @@
 
                 @include lg {
                     &:first-of-type {
-                        width: 600px;
-                        left: -50px;
-                        top: 20px;
+                        width: 200px;
+                        left: 50px;
+                        top: 100px;
                         transform: rotate(15deg);
                         position: absolute;
                         justify-self: flex-start;
@@ -148,10 +160,10 @@
                     }
 
                     &:last-of-type {
-                        width: 500px;
-                        right: -100px;
-                        bottom: 115px;
-                        transform: rotate(15deg);
+                        width: 150px;
+                        right: 150px;
+                        bottom: 450px;
+                        transform: rotate(-15deg);
                         position: absolute;
                         justify-self: flex-end;
                         align-self: flex-end;

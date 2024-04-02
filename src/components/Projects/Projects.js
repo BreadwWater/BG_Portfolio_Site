@@ -65,16 +65,23 @@ function Projects() {
                                 {/* Design Projects */}
                                 <ProjCard
                                     projLink={`stairbox`}
-                                    Title={'Hello, This is my project'}
-                                    Desc={'This is the description of my project, short and sweet but right to the point, maybe even a little more, and even more than that perhaps; honestly, it may go on forever.'}
+                                    Title={`Stair Box`}
+                                    Desc={`The UK's number one staircase manufacturer.`}
                                     Thumb={require('../../assets/images/projects/design/project-1/image-1.jpg')}
                                 />
 
                                 <ProjCard
                                     projLink={`letschill`}
-                                    Title={'Hello, This is my project'}
-                                    Desc={'This is the description of my project, short and sweet but right to the point, maybe even a little more, and even more than that perhaps; honestly, it may go on forever.'}
+                                    Title={`Let's Chill`}
+                                    Desc={`Homemade and veteran owned ice cream parlor in south florida.`}
                                     Thumb={require('../../assets/images/projects/design/project-2/image-1.jpg')}
+                                />
+
+                                <ProjCard
+                                    projLink={`eternalframes`}
+                                    Title={`Eternal Frames`}
+                                    Desc={`A small framing studio in the country side of England.`}
+                                    Thumb={require('../../assets/images/projects/design/project-3/image-1.jpg')}
                                 />
                             </div>
                         </div>
@@ -82,7 +89,12 @@ function Projects() {
                         <div className='projects__sec'>
                             <div className='projects__group'>
                                 {/* Code Projects */}
-
+                                <ProjCard
+                                    projLink={`fetchfind`}
+                                    Title={`Fetch Find`}
+                                    Desc={``}
+                                    Thumb={require('../../assets/images/projects/design/project-3/image-1.jpg')}
+                                />
                             </div>
                         </div>
                     )}

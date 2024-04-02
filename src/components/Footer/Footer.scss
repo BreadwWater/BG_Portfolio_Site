@@ -140,8 +140,29 @@
         width: 100%;
         margin: 8px 0px;
 
+        &:last-of-type {
+            display: none
+        }
+
         @include md {
             @include sub-font(16px, 700, 16px);
+
+            &:last-of-type {
+                display: unset;
+                @include sub-font(12px, 500, 16px);
+                color: $skeleton-color--gray
+            }
+
+            &--highlight {
+                @include sub-font(12px, 500, 16px);
+                color: $skeleton-color--gray;
+                font-style: italic;
+
+                &:hover {
+                    text-decoration: underline;
+                    color: $portfolio-color--pink
+                }
+            }
         }
 
     }

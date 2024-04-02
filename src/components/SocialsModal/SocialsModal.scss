@@ -67,6 +67,7 @@
                     content: 'LinkedIn';
                     background-color: rgba(35, 87, 137, 0.9);
                     color: $portfolio-color--white;
+                    pointer-events: none;
                 }
             }
 
@@ -75,6 +76,7 @@
                     content: 'GitHub';
                     background-color: rgba(30, 27, 25, 0.9);
                     color: $portfolio-color--white;
+                    pointer-events: none;
                 }
             }
 
