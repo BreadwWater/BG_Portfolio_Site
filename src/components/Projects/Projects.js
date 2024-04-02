@@ -83,18 +83,33 @@ function Projects() {
                                     Desc={`A small framing studio in the country side of England.`}
                                     Thumb={require('../../assets/images/projects/design/project-3/image-1.jpg')}
                                 />
+
+                                <ProjCard
+                                    projLink={`myportfolio`}
+                                    Title={`My Portfolio Site`}
+                                    Desc={`The most recent version of my personal portfolio website.`}
+                                    Thumb={require('../../assets/images/projects/design/project-4/image-1.jpg')}
+                                />
+
+                                <ProjCard
+                                    projLink={`odysseycruisline`}
+                                    Title={`Odyssey Cruiseline`}
+                                    Desc={`Website design for an ancient Greek themed Cruiseline as part of a 2 day design sprint challenge.`}
+                                    Thumb={require('../../assets/images/projects/design/project-5/image-1.jpg')}
+                                />
+
+                                <ProjCard
+                                    projLink={`raccoon3d`}
+                                    Title={`Raccoon 3D Model`}
+                                    Desc={`A 3d model of a raccoon with a basket of bread; originally inteded to be personal mascot.`}
+                                    Thumb={require('../../assets/images/projects/design/project-6/image-5.jpg')}
+                                />
                             </div>
                         </div>
                     ) : (
                         <div className='projects__sec'>
                             <div className='projects__group'>
                                 {/* Code Projects */}
-                                <ProjCard
-                                    projLink={`fetchfind`}
-                                    Title={`Fetch Find`}
-                                    Desc={``}
-                                    Thumb={require('../../assets/images/projects/design/project-3/image-1.jpg')}
-                                />
                             </div>
                         </div>
                     )}
