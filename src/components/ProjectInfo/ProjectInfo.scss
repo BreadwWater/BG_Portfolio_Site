@@ -91,6 +91,10 @@
         &--text {
             @include sub-font(12px, 500, 3);
 
+            @include md {
+                @include sub-font(14px, 500, 3);
+            }
+
             @include lg {
                 @include sub-font(16px, 500, 2.5);
             }

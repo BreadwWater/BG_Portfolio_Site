@@ -68,12 +68,13 @@
         @include sub-font(16px, 500, 1.8);
         color: $portfolio-color--white;
         text-align: center;
+        margin: 16px 0px 8px 0px;
         width: 75%;
 
         @include md {
             @include sub-font(18px, 500, 2);
             width: 88%;
-            margin: 8px 0px 16px 0px;
+            margin: 0px 0px 8px 0px;
         }
 
         @include lg {
@@ -82,16 +83,24 @@
     }
 
     &__opts {
-        @include flex(row, center, center);
+        @include flex(column, center, center);
         margin: 16px 0px;
+        width: 100%;
+
+        @include md {
+            @include flex(row, center, center);
+            width: unset;
+        }
 
         & * {
             color: $portfolio-color--white;
             border-color: $portfolio-color--white;
             min-width: 90px;
+            width: 85%;
 
             @include md {
                 min-width: 100px;
+                width: unset;
             }
 
             @include lg {

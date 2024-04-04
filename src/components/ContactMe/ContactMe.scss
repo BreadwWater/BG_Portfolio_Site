@@ -58,10 +58,16 @@
         @include sub-font(12px, 600, none);
         position: relative;
         text-align: center;
-        margin: 8px 0px;
+
         width: 70%;
 
         &:nth-of-type(2) {
+            margin-bottom: 8px;
+
+            @include md {
+                margin-bottom: 16px;
+            }
+
             &::after {
                 all: unset;
             }
@@ -193,9 +199,66 @@
     }
 
     &__btn {
-        @include flex(row, center, center);
+        @include flex(column, center, center);
         line-height: normal;
         align-self: center;
         margin-top: 8px;
+        width: 100%;
+        transition: ease-out .2s;
+
+
+        &:last-of-type {
+            @include md {
+                @include flex(row, center, center);
+            }
+        }
+
+        .contact__btn--submit,
+        .contact__btn--resume {
+            @include sub-font(12px, 600, 14px);
+            box-shadow: 0px 6px 23px -4px rgba(0, 0, 0, 0.15);
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 600;
+            letter-spacing: .5px;
+            min-width: 64px;
+            min-height: 35px;
+            padding: 0px 8px;
+            margin: 8px;
+            border-radius: 4px;
+            cursor: pointer;
+
+            @include md {
+                @include sub-font(24px, 600, 30px);
+                border-radius: 8px;
+                padding: 8px 16px;
+                width: unset;
+            }
+
+            &:hover {
+                @include btn($portfolio-color--white, $portfolio-color--black, $portfolio-color--black);
+                box-shadow: unset;
+            }
+        }
+
+        &--submit {
+            @include btn($portfolio-color--white, $portfolio-color--blue, $portfolio-color--blue);
+            width: 100%;
+        }
+
+        &--resume {
+            @include btn($portfolio-color--black, transparent, $portfolio-color--black);
+            width: 85%;
+
+            &:hover {
+                @include btn($portfolio-color--white, $portfolio-color--black, $portfolio-color--black);
+                box-shadow: 0px 6px 23px -4px rgba(0, 0, 0, 0.18);
+
+                @include md {
+                    scale: 1.015;
+                    animation: shake ease .4s infinite;
+                }
+            }
+        }
     }
 }

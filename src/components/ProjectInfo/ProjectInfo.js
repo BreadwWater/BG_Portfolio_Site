@@ -34,7 +34,7 @@ function ProjectInfo(props) {
                     <p className='ProjectPage_desc--text'>{projDesc}</p>
                 </div>
                 <div className='ProjectPage_services' >
-                    <h2 className='ProjectPage_services--title'>Project Services</h2>
+                    <h2 className='ProjectPage_services--title'>Project Tools/Services</h2>
                     <div className='ProjectPage_services--group'>
                         {stackTags.map((tag, index) => (
                             <StackTag key={index} tag={tag} />
@@ -49,11 +49,14 @@ function ProjectInfo(props) {
                     <div className='ProjectPage_contact'>
                         <div className='ProjectPage_contact--group'>
                             <h2 className='ProjectPage_contact--title'>Let's Talk <span className='ProjectPage_contact--keyword'>{projKeyword}</span>.</h2>
-                            <p className='ProjectPage_contact--text'>Have a logo that needs updating? How about a logo for your new company, or maybe you want to solidify your visual identity.
-                                Have a logo that needs updating? How about a logo for your new company.</p>
+                            <p className='ProjectPage_contact--text'>
+                                Have a project you’re working on that needs a Front-End developer? How about a logo for your new company- or maybe you want to solidify your visual identity; if you’re interested in my work, please reach out!
+                            </p>
                             <button onClick={scrollToContact} className='ProjectPage_contact--btn'>Contact</button>
                         </div>
                         <div className='ProjectPage_contact--group'>
+                            {/* LAST & NEXT PROJECT BUTTONS W.I.P  */}
+
                             {/* <button className='ProjectPage_btn--last'>
                                 <img className='ProjectPage_btn--arrow' src={arrow} alt="" />
                                 Last Project

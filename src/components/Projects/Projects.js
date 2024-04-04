@@ -44,7 +44,8 @@ function Projects() {
                 <div className="projects__body">
                     <div className='projects__sec'>
                         <p className='projects__text'>
-                            Explore my latest projects which are a testament to my growth in the field. Some are still in progress, reflecting my journey; I'll periodically update my showcase, sharing my favorite or most remarkable creations.                        </p>
+                            Explore my latest projects as I progress through my journey in the field. Some are still a work in progress, and I will periodically update my showcase to share my favorite or most worthy creations!
+                        </p>
                         <div className="projects__opts">
                             <Button
                                 newId={activeBtn === 'btn1' ? 'btn--active' : 'btn--inactive'}
@@ -102,7 +103,7 @@ function Projects() {
                                     projLink={`raccoon3d`}
                                     Title={`Raccoon 3D Model`}
                                     Desc={`A 3d model of a raccoon with a basket of bread; originally inteded to be personal mascot.`}
-                                    Thumb={require('../../assets/images/projects/design/project-6/image-5.jpg')}
+                                    Thumb={require('../../assets/images/projects/design/project-6/image-1.jpg')}
                                 />
                             </div>
                         </div>
@@ -110,6 +111,12 @@ function Projects() {
                         <div className='projects__sec'>
                             <div className='projects__group'>
                                 {/* Code Projects */}
+                                <ProjCard
+                                    projLink={`fetchfind`}
+                                    Title={`Fetch Find`}
+                                    Desc={`An adoption site that simplifies dog adoption and donation by connecting users with their perfect furry companions from local shelters and rescue organizations!`}
+                                    Thumb={require('../../assets/images/projects/code/project-1/image-1.jpg')}
+                                />
                             </div>
                         </div>
                     )}

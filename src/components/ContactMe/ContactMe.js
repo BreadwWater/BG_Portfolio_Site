@@ -129,14 +129,13 @@ function ContactMe() {
                     />
 
                     <div className="contact__btn">
-                        <Button type="submit" text={'Contact'} />
+                        <button className='contact__btn--submit' type="submit">Contact</button>
                     </div>
                 </form>
-                <p className="contact__title">or</p>
-                <p className="contact__title">View/Download my Resume now!</p>
+                <p className="contact__title"> or <br /> View/Download my Resume now!</p>
                 <div className="contact__btn">
-                    <Button text={'View'} onClick={handleViewResume} />
-                    <Button text={'Download'} onClick={handleDownloadResume} />
+                    <button className='contact__btn--resume' text={'View'} onClick={handleViewResume} >View</button>
+                    <button className='contact__btn--resume' text={'Download'} onClick={handleDownloadResume} >Download</button>
                 </div>
             </section>
         </>
