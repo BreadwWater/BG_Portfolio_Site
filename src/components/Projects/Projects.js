@@ -117,6 +117,18 @@ function Projects() {
                                     Desc={`An adoption site that simplifies dog adoption and donation by connecting users with their perfect furry companions from local shelters and rescue organizations!`}
                                     Thumb={require('../../assets/images/projects/code/project-1/image-1.jpg')}
                                 />
+                                <ProjCard
+                                    projLink={`2ye`}
+                                    Title={`2Ye Brand`}
+                                    Desc={`Faux clothing brand created for a 6 hour hackathon with use of an API and AI implementation.`}
+                                    Thumb={require('../../assets/images/projects/code/project-2/image-1.jpg')}
+                                />
+                                <ProjCard
+                                    projLink={`industryproject`}
+                                    Title={`UKG | Industry Project`}
+                                    Desc={`Winning project for UKG’s industry project hackathon event; created the concept & coded an app with a voting system to plan weekly after work events.`}
+                                    Thumb={require('../../assets/images/projects/code/project-3/image-1.jpg')}
+                                />
                             </div>
                         </div>
                     )}

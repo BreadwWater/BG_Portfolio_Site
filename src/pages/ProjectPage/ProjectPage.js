@@ -156,12 +156,50 @@ function ProjectPage() {
         if (projectId === `fetchfind`) {
             setProjTitle(`Fetch Find`);
             setProjHero(require('../../assets/images/projects/code/project-1/image-0.png'));
-            setProjDesc(`This website was my final project while in the Brainstation bootcamp; it was the first time we had full reign's to create an application that could show our abilities. I focused on highlighting the design of the website, drawing from my background in commercial art and product design; I created all the assets and animation used in its development.`);
+            setProjDesc(`This website was my final project while in the Brainstation bootcamp; it was the first time we had full reign's to create an application that could show our abilities. I focused on highlighting the design of the website, drawing from my background in commercial art and product design; I created all the assets and animation used in its development. I used the pet finder API to source real pets that are up for adoption and applied various filters to get the appropriate results.`);
             setProjType(`Website`);
             setProjKeyword(`React Projects`);
-            setStackTags([`React`, `JSX`, `SCSS`, `Figma`]);
+            setStackTags([`React`, `JSX`, `SCSS`, `API`, `Figma`]);
 
-            Promise.all(importImagesCode('project-1', 1))
+            Promise.all(importImagesCode('project-1', 7))
+                .then(images => {
+                    // Organize images into collections
+                    const collections = [];
+                    for (let i = 0; i < images.length; i += 3) {
+                        collections.push(images.slice(i, i + 3));
+                    }
+                    setProjImages(collections);
+                })
+                .catch(error => console.error('Error loading images:', error));
+        }
+        else if (projectId === `2ye`) {
+            setProjTitle(`2Ye Brand`);
+            setProjHero(require('../../assets/images/projects/code/project-2/image-0.png'));
+            setProjDesc(`2Ye is a clothing brand created as the project for a 6 hour hackathon, and received second place. With a team of 4, we completed this website's design and code in less than six hours; with the many challenges we faced we managed to implement the key features we desired such as an AI Kanye voiced video playing as the hero image. I took the lead in designing the concept and proposing the idea, which was enthusiastically accepted by the group. With the help of an AI voice application, we collaborated to bring Kanye West's fictional clothing brand, 2Ye, to life! Additionally, we integrated an API to generate some of Kanye's quotes.`);
+            setProjType(`Website`);
+            setProjKeyword(`AI Projects`);
+            setStackTags([`React`, `JSX`, `SCSS`, `API`, `Voice AI`, `Image Generation`]);
+
+            Promise.all(importImagesCode('project-2', 3))
+                .then(images => {
+                    // Organize images into collections
+                    const collections = [];
+                    for (let i = 0; i < images.length; i += 3) {
+                        collections.push(images.slice(i, i + 3));
+                    }
+                    setProjImages(collections);
+                })
+                .catch(error => console.error('Error loading images:', error));
+        }
+        else if (projectId === `industryproject`) {
+            setProjTitle(`UKG | Industry Project`);
+            setProjHero(require('../../assets/images/projects/code/project-3/image-0.png'));
+            setProjDesc(`In the Hackathon, our team was tasked with solving a problem presented by UKG. I am humbled to share that my proposed solution, a vote-based system for weekly after-work activities, led us to win among eight other teams. We felt honored to be chosen, and our solution was commended for its effective simplicity. Participating in the Hackathon was an amazing experience and I’m so glad to share that experience with my awesome team and get the chance to work with the UI/UX students!`);
+            setProjType(`Website`);
+            setProjKeyword(`User Focused Projects`);
+            setStackTags([`React`, `JSX`, `SCSS`, `UI/UX Team`]);
+
+            Promise.all(importImagesCode('project-3', 4))
                 .then(images => {
                     // Organize images into collections
                     const collections = [];
