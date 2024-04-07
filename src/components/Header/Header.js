@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { animateScroll as scroll, Link } from 'react-scroll';
-import { Link as RouterLink, useLocation } from 'react-router-dom';
+import { Link as RouterLink, useLocation, useNavigate } from 'react-router-dom';
 import './Header.scss';
 import Logo from '../../assets/icons/Portfolio_Logo.svg';
 
 function Header() {
     const [showMobileHeader, setShowMobileHeader] = useState(false);
     const location = useLocation();
+    const navigate = useNavigate();
+
 
     const scrollToTop = () => {
         if (location.pathname === '/') {
@@ -24,7 +26,7 @@ function Header() {
             scroll.scrollTo(700, { smooth: true, });
         } else {
             // If on another page, navigate to the home page
-            window.location.href = '/';
+            navigate('/#aboutme');
         }
     };
 
@@ -34,7 +36,7 @@ function Header() {
             scroll.scrollTo(2000, { smooth: true, });
         } else {
             // If on another page, navigate to the home page
-            window.location.href = '/';
+            navigate('/#projects');
         }
     };
 
@@ -44,7 +46,7 @@ function Header() {
             scroll.scrollTo(2700, { smooth: true, });
         } else {
             // If on another page, navigate to the home page
-            window.location.href = '/';
+            navigate('/#contact');
         }
     };
 

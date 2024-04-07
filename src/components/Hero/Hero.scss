@@ -52,7 +52,11 @@
 
     &__text {
         text-align: center;
-        margin: 16px 0px;
+        margin: 24px 0px;
+
+        @include md {
+            margin: 16px 0px;
+        }
     }
 
     &__title {
@@ -74,7 +78,7 @@
         @include main-font(14px, 400, 16px);
 
         @include md {
-            @include main-font(20px, 400, 32px);
+            @include main-font(18px, 400, 32px);
         }
 
         @include lg {
@@ -95,7 +99,7 @@
         &--btn {
             max-width: 250px;
             min-height: 40px;
-            width: 50%;
+            width: 80%;
 
             &>* {
                 background-color: rgba($portfolio-color--white, 0.5);

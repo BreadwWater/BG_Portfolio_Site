@@ -65,6 +65,15 @@ a {
     }
 }
 
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 50px $portfolio-color--white inset;
+    -webkit-text-fill-color: $portfolio-color--black;
+}
+
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 50px $portfolio-color--white inset;
+}
+
 .hidden {
     display: none;
 }

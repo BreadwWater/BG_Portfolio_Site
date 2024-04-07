@@ -1,5 +1,4 @@
-import { animateScroll as scroll } from 'react-scroll';
-import { useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './ProjectInfo.scss';
 import PhotoSec from '../PhotoSec/PhotoSec';
 import StackTag from '../StackTag/StackTag';
@@ -8,16 +7,10 @@ import StackTag from '../StackTag/StackTag';
 
 function ProjectInfo(props) {
     const { projTitle, projHero, projType, projDesc, projectImages, projKeyword, stackTags } = props;
-    const location = useLocation();
+    const navigate = useNavigate();
 
     const scrollToContact = () => {
-        if (location.pathname === '/') {
-            // If on the home page, scroll to the top
-            scroll.scrollTo(2700, { smooth: true, });
-        } else {
-            // If on another page, navigate to the home page
-            window.location.href = '/';
-        }
+        navigate('/#contact');
     };
 
     return (
