@@ -66,12 +66,12 @@ a {
 }
 
 input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 50px $portfolio-color--white inset;
+    -webkit-box-shadow: 0 0 0 3.125rem $portfolio-color--white inset;
     -webkit-text-fill-color: $portfolio-color--black;
 }
 
 input:-webkit-autofill:focus {
-    -webkit-box-shadow: 0 0 0 50px $portfolio-color--white inset;
+    -webkit-box-shadow: 0 0 0 3.125rem $portfolio-color--white inset;
 }
 
 .hidden {
@@ -82,14 +82,14 @@ input:-webkit-autofill:focus {
 
 // This is to open ::after ::before from center
 .animation--underline::after {
-    width: 80px;
-    height: 3px;
+    width: 5rem;
+    height: .1875rem;
 }
 
 .fade-in {
     opacity: 1;
     filter: blur(0);
-    translate: 0px 0px;
+    translate: 0rem 0rem;
 }
 
 // Slides in from right to left
@@ -112,29 +112,29 @@ input:-webkit-autofill:focus {
 // Floating animation
 @keyframes floatUp {
     0% {
-        translate: 0px 15px;
+        translate: 0rem .9375rem;
     }
 
     50% {
-        translate: 0px 0px;
+        translate: 0rem 0rem;
     }
 
     100% {
-        translate: 0px 15px;
+        translate: 0rem .9375rem;
     }
 }
 
 @keyframes floatDown {
     0% {
-        translate: 0px -10px;
+        translate: 0rem -0.625rem;
     }
 
     50% {
-        translate: 0px 0px;
+        translate: 0rem 0rem;
     }
 
     100% {
-        translate: 0px -10px;
+        translate: 0rem -0.625rem;
     }
 }
 
@@ -143,7 +143,7 @@ input:-webkit-autofill:focus {
 @mixin rotateLeft($rotateValue, $animationName) {
     @keyframes #{$animationName} {
         0% {
-            translate: 160px 0px;
+            translate: 10rem 0rem;
             rotate: ($rotateValue);
             scale: 0;
         }
@@ -163,7 +163,7 @@ input:-webkit-autofill:focus {
 @mixin rotateRight($rotateValue, $animationName) {
     @keyframes #{$animationName} {
         0% {
-            translate: -100px 0px;
+            translate: -6.25rem 0rem;
             rotate: ($rotateValue);
             scale: 0;
         }
@@ -228,7 +228,7 @@ input:-webkit-autofill:focus {
     }
 
     & img {
-        filter: blur(8px);
+        filter: blur(.5rem);
     }
 }
 
@@ -245,14 +245,14 @@ input:-webkit-autofill:focus {
         transition: none;
 
         &::before {
-            width: 3px;
-            height: 32px;
+            width: .1875rem;
+            height: 2rem;
         }
     }
 
     .aboutme__header--text::after {
-        width: 80px;
-        height: 3px;
+        width: 5rem;
+        height: .1875rem;
     }
 
     .aboutme__list--item {

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import ProjectInfo from '../../components/ProjectInfo/ProjectInfo';
-import './ProjectPage.scss';
 
 function ProjectPage() {
     const { projectId } = useParams();

@@ -6,14 +6,14 @@
 .projects {
     @include flex(column, center, center);
     background-color: $portfolio-color--navy;
-    padding: 40px 0px;
+    padding: 2.5rem 0rem;
     width: 100%;
 
     &__header {
         @include flex(column, center, center);
         background-color: $portfolio-color--white;
         width: 100%;
-        padding: 8px 0px;
+        padding: .5rem 0rem;
 
         & h4 {
             color: $portfolio-color--white;
@@ -22,7 +22,7 @@
         @include md {
             @include flex(column, center, flex-start);
             background-color: transparent;
-            padding: 16px 0px;
+            padding: 1rem 0rem;
             width: 90%;
         }
 
@@ -31,8 +31,8 @@
         }
 
         &--icon {
-            width: 50px;
-            margin: 0px 0px 4px 0px;
+            width: 3.125rem;
+            margin: 0rem 0rem .25rem 0rem;
 
             @include md {
                 display: none
@@ -41,7 +41,7 @@
 
         &--text {
             @include flex(column, center, center);
-            @include sub-font(16px, 700, 20px);
+            @include sub-font(1rem, 700, 1.25rem);
 
             @include md {
                 display: none
@@ -60,31 +60,31 @@
 
     &__body {
         @include flex(column, center, center);
-        padding: 16px 0px;
+        padding: 1rem 0rem;
         width: 100%;
     }
 
     &__text {
-        @include sub-font(16px, 500, 1.8);
+        @include sub-font(1rem, 500, 1.8);
         color: $portfolio-color--white;
         text-align: center;
-        margin: 16px 0px 8px 0px;
+        margin: 1rem 0rem .5rem 0rem;
         width: 75%;
 
         @include md {
-            @include sub-font(18px, 500, 2);
+            @include sub-font(1.125rem, 500, 2);
             width: 88%;
-            margin: 0px 0px 8px 0px;
+            margin: 0rem 0rem .5rem 0rem;
         }
 
         @include lg {
-            width: 70%;
+            width: 75%;
         }
     }
 
     &__opts {
         @include flex(column, center, center);
-        margin: 16px 0px;
+        margin: 1rem 0rem;
         width: 100%;
 
         @include md {
@@ -95,16 +95,16 @@
         & * {
             color: $portfolio-color--white;
             border-color: $portfolio-color--white;
-            min-width: 90px;
+            min-width: 5.625rem;
             width: 85%;
 
             @include md {
-                min-width: 100px;
+                min-width: 6.25rem;
                 width: unset;
             }
 
             @include lg {
-                min-width: 120px;
+                min-width: 7.5rem;
             }
 
             &:hover {
@@ -114,6 +114,6 @@
     }
 
     &__btns {
-        margin: 16px;
+        margin: 1rem;
     }
 }

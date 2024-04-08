@@ -15,14 +15,14 @@
     @include md {
         @include flex(column, center, center);
         background-color: rgba(255, 255, 255, .5);
-        backdrop-filter: blur(8px);
-        box-shadow: 0px 4px 12px -5px rgba(0, 0, 0, 0.4);
-        border-radius: 8px 0px 0px 8px;
+        backdrop-filter: blur(.5rem);
+        box-shadow: 0rem .25rem .75rem -0.3125rem rgba(0, 0, 0, 0.4);
+        border-radius: .5rem 0rem 0rem .5rem;
         position: fixed;
         top: 15%;
         right: 0;
-        margin: 8px -1px;
-        padding: 8px 8px 16px 8px;
+        margin: .5rem -0.0625rem;
+        padding: .5rem .5rem 1rem .5rem;
         z-index: 100;
         transition: ease .3s;
 
@@ -31,9 +31,9 @@
         }
 
         &__title {
-            @include main-font(16px, 700, none);
-            letter-spacing: 0.5px;
-            padding: 0px 0px 8px 0px;
+            @include main-font(1rem, 700, none);
+            letter-spacing: .0313rem;
+            padding: 0rem 0rem .5rem 0rem;
         }
 
         &__link {
@@ -42,14 +42,14 @@
 
             &::before {
                 content: '';
-                @include sub-font(16px, 700, none);
+                @include sub-font(1rem, 700, none);
                 background-color: $portfolio-color--white;
                 color: $portfolio-color--white;
                 position: absolute;
                 right: 0;
-                margin: 0px 30px 12px 0px;
-                padding: 0px 8px;
-                border-radius: 10px 10px 0px 10px;
+                margin: 0rem 1.875rem .75rem 0rem;
+                padding: 0rem .5rem;
+                border-radius: .625rem .625rem 0rem .625rem;
                 overflow: hidden;
                 opacity: 0;
                 z-index: 100;
@@ -59,7 +59,7 @@
             &:hover::before {
                 opacity: 1;
                 color: $portfolio-color--black;
-                margin: 0px 40px 16px 0px;
+                margin: 0rem 2.5rem 1rem 0rem;
             }
 
             &:nth-of-type(1) {
@@ -90,11 +90,11 @@
         }
 
         &--icon {
-            width: 35px;
-            margin: 2px 0px;
+            width: 2.1875rem;
+            margin: .125rem 0rem;
             background-color: $portfolio-color--black;
-            border-radius: 4px;
-            border: 2px solid white;
+            border-radius: .25rem;
+            border: .125rem solid white;
         }
     }
 

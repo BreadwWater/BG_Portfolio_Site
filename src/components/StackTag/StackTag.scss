@@ -3,15 +3,15 @@
 @use '../../styles/partials/breakpoints' as *;
 
 .stacktag {
-    @include sub-font(12px, 600, normal);
+    @include sub-font(.75rem, 600, normal);
     background-color: $portfolio-color--pink;
-    margin: 4px;
-    padding: 6px 8px;
-    border-radius: 50px;
+    margin: .25rem;
+    padding: .375rem .5rem;
+    border-radius: 3.125rem;
     transition: ease-in-out .3s;
 
     &--title {
-        @include sub-font(12px, 600, none);
+        @include sub-font(.75rem, 600, none);
         text-align: center;
         line-height: normal;
     }

@@ -5,18 +5,18 @@
 .footer {
     @include flex(column, center, center);
     background-color: $portfolio-color--black;
-    height: 140px;
+    height: 8.75rem;
     width: 100%;
     z-index: 998;
 
     @include md {
         @include flex(row, center, center);
-        height: 150px;
+        height: 9.375rem;
     }
 
     &__cont {
         @include flex(column, space-between, center);
-        margin: 0px 8px;
+        margin: 0rem .5rem;
         width: 100%;
 
         @include md {
@@ -35,7 +35,7 @@
 
         &:first-of-type {
             width: 50%;
-            max-width: 200px;
+            max-width: 12.5rem;
         }
 
         @include md {
@@ -43,7 +43,7 @@
             width: 58%;
 
             &:first-of-type {
-                max-width: 500px;
+                max-width: 31.25rem;
             }
         }
 
@@ -57,25 +57,25 @@
             }
 
             &>* {
-                margin: 8px 0px;
+                margin: .5rem 0rem;
             }
         }
 
         &--name {
-            @include sub-font(18px, 600, 1.2);
+            @include sub-font(1.125rem, 600, 1.2);
             color: $portfolio-color--white;
 
             @include lg {
-                @include sub-font(24px, 600, 1.2);
+                @include sub-font(1.5rem, 600, 1.2);
             }
         }
 
         &--text {
-            @include sub-font(12px, 500, 1.2);
+            @include sub-font(.75rem, 500, 1.2);
             color: $portfolio-color--white;
 
             @include lg {
-                @include sub-font(16px, 500, 1.2);
+                @include sub-font(1rem, 500, 1.2);
             }
         }
 
@@ -85,8 +85,8 @@
             @include md {
                 @include flex(row, space-between, center);
                 width: 100%;
-                max-width: 350px;
-                margin-bottom: 16px;
+                max-width: 21.875rem;
+                margin-bottom: 1rem;
             }
         }
 
@@ -107,13 +107,13 @@
 
             @include md {
                 width: 50%;
-                max-width: 200px;
+                max-width: 12.5rem;
             }
         }
 
         &--icon {
-            width: 50px;
-            margin: 0px 0px 4px 0px;
+            width: 3.125rem;
+            margin: 0rem 0rem .25rem 0rem;
 
             @include md {
                 display: none;
@@ -124,7 +124,7 @@
 
                 @include md {
                     display: unset;
-                    width: 50px;
+                    width: 3.125rem;
                     cursor: pointer;
                 }
             }
@@ -134,27 +134,27 @@
 
     &__text {
         @include flex(row, center, center);
-        @include sub-font(12px, 700, 16px);
+        @include sub-font(.75rem, 700, 1rem);
         color: $portfolio-color--white;
         text-align: center;
         width: 100%;
-        margin: 8px 0px;
+        margin: .5rem 0rem;
 
         &:last-of-type {
             display: none
         }
 
         @include md {
-            @include sub-font(16px, 700, 16px);
+            @include sub-font(1rem, 700, 1rem);
 
             &:last-of-type {
                 display: unset;
-                @include sub-font(12px, 500, 16px);
+                @include sub-font(.75rem, 500, 1rem);
                 color: $skeleton-color--gray
             }
 
             &--highlight {
-                @include sub-font(12px, 500, 16px);
+                @include sub-font(.75rem, 500, 1rem);
                 color: $skeleton-color--gray;
                 font-style: italic;
 

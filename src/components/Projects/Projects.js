@@ -44,7 +44,7 @@ function Projects() {
                 <div className="projects__body">
                     <div className='projects__sec'>
                         <p className='projects__text'>
-                            Explore my latest projects as I progress through my journey in the field. Some are still a work in progress, and I will periodically update my showcase to share my favorite or most worthy creations!
+                            Explore my latest projects as I progress through my journey in the field. Some are still a work in progress, and I will periodically update my showcase to share my favorite or most worthwhile creations!
                         </p>
                         <div className="projects__opts">
                             <Button

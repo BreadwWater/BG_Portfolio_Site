@@ -4,43 +4,43 @@
 
 .progress-bar {
     @include flex(column, center, center);
-    margin: 8px;
-    padding: 4px;
+    margin: .5rem;
+    padding: .25rem;
 
     &__cont {
         @include flex(column, center, center);
         position: relative;
-        height: 75px;
-        width: 75px;
+        height: 4.6875rem;
+        width: 4.6875rem;
         border-radius: 50%;
         background: conic-gradient($portfolio-color--pink 360deg, $portfolio-color--grey 0deg);
 
         @include md {
-            height: 100px;
-            width: 100px;
+            height: 6.25rem;
+            width: 6.25rem;
         }
 
         @include lg {
-            height: 115px;
-            width: 115px;
+            height: 7.1875rem;
+            width: 7.1875rem;
         }
 
         &::after {
             content: "";
             position: absolute;
             background-color: $portfolio-color--navy;
-            width: 55px;
-            height: 55px;
+            width: 3.4375rem;
+            height: 3.4375rem;
             border-radius: 50%;
 
             @include md {
-                height: 75px;
-                width: 75px;
+                height: 4.6875rem;
+                width: 4.6875rem;
             }
 
             @include lg {
-                height: 90px;
-                width: 90px;
+                height: 5.625rem;
+                width: 5.625rem;
             }
         }
 
@@ -48,25 +48,25 @@
 
     &__value,
     &__text {
-        @include sub-font(12px, 600, 1.5);
-        margin: 4px 0px;
+        @include sub-font(.75rem, 600, 1.5);
+        margin: .25rem 0rem;
 
         @include md {
-            @include sub-font(14px, 600, 1.5);
-            margin: 8px 0px;
+            @include sub-font(.875rem, 600, 1.5);
+            margin: .5rem 0rem;
         }
     }
 
     &--img {
-        width: 34px;
+        width: 2.125rem;
         z-index: 2;
 
         @include md {
-            width: 45px;
+            width: 2.8125rem;
         }
 
         @include lg {
-            width: 55px;
+            width: 3.4375rem;
         }
     }
 }
