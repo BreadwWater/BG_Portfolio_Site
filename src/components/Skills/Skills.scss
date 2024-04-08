@@ -35,10 +35,12 @@
     }
 
     &__sec {
+        @include flex(column, center, center);
         margin: 0px 0px 8px 0px;
 
         @include md {
             margin: 0px 0px 16px 0px;
+            width: 100%;
         }
     }
 
@@ -93,8 +95,15 @@
 
     &__cont {
         @include flex(column, center, center);
-        background-color: $portfolio-color--white;
-        width: 100%;
+        width: 80%;
+
+        @include md {
+            width: 90%;
+        }
+
+        @include lg {
+            width: 100%;
+        }
     }
 
     &__group {
@@ -103,8 +112,8 @@
         width: 95%;
 
         @include md {
-            @include flex(row, flex-start, center);
-            width: 100%;
+            @include flex(row, center, center);
+            flex-wrap: wrap;
         }
 
         @include lg {

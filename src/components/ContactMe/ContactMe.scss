@@ -206,6 +206,14 @@
         width: 100%;
         transition: ease-out .2s;
 
+        &:nth-of-type(2) {
+            @include flex(column, center, center);
+
+            @include md {
+                @include flex(row, center, center);
+            }
+        }
+
         .contact__btn--submit,
         .contact__btn--resume {
             @include sub-font(12px, 600, none);
