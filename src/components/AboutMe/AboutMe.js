@@ -1,11 +1,15 @@
 import React, { useEffect, useRef } from 'react';
 import './AboutMe.scss';
 
-import breadIcon from '../../assets/icons/Bread--icon.svg';
 import profilePicMobile from '../../assets/images/Headshot_casual--mobile.png';
-import profilePicDesktop from '../../assets/images//Headshot_casual--desktop.png';
+import profilePicDesktop from '../../assets/images//Headshot_casual--desktop.jpg';
 import aboutMeIconAnim from '../../assets/animated icons/aboutme-animated-icon.gif';
 import aboutMeIconStatic from '../../assets/animated icons/aboutme-icon.svg';
+
+import BrushIcon from '../../assets/icons/Brush--icon.svg';
+import PlaneIcon from '../../assets/icons/Plane--icon.svg';
+import BookIcon from '../../assets/icons/Book--icon.svg';
+import GameIcon from '../../assets/icons/Game--icon.svg';
 
 import SectionHeader from '../SectionHeader/SectionHeader';
 
@@ -52,13 +56,26 @@ function AboutMe() {
             });
         });
 
-        listItems.forEach((item) => observerFadeIn.observe(item));
+        listItems.forEach((item) => {
+            if (item) {
+                observerFadeIn.observe(item);
+            }
+        });
 
         return () => {
-            observerUnderline.unobserve(animatedText);
-            listItems.forEach((item) => observerFadeIn.unobserve(item));
+            if (observerUnderline && animatedText) {
+                observerUnderline.unobserve(animatedText);
+            }
+            if (observerFadeIn && listItems.length > 0) {
+                listItems.forEach((item) => {
+                    if (item) {
+                        observerFadeIn.unobserve(item);
+                    }
+                });
+            }
         };
     }, []);
+
 
     return (
         <>
@@ -79,30 +96,27 @@ function AboutMe() {
                             </div>
                         </div>
                         <div className="aboutme__mobile--body">
-                            <img className="aboutme__mobile--img" src={breadIcon} alt="Bread Icon" />
+                            <img className="aboutme__mobile--img img--brush" src={BrushIcon} alt="Hobby Icon" />
+                            <img className="aboutme__mobile--img img--game" src={GameIcon} alt="Hobby Icon" />
                             <img className="aboutme__mobile--profile" src={profilePicMobile} alt="selfie mobile" />
-                            <img className="aboutme__mobile--img" src={breadIcon} alt="Bread Icon" />
+                            <img className="aboutme__mobile--img img--book" src={BookIcon} alt="Hobby Icon" />
+                            <img className="aboutme__mobile--img  img--plane" src={PlaneIcon} alt="Hobby Icon" />
+
                         </div>
 
                         <div className="aboutme__text">
                             <p className="aboutme__desc">
-                                A creative Front End Software Engineer blending artistic vision with technical expertise in 3D art, animation, game design, and Commercial Art. I'm Passionate about too many things to list, but some include video games, pet care, and philosophy. Thriving on merging art and tech for immersive digital experiences, pushing boundaries in the ever-evolving tech world.
+                                A creative Front End Software Engineer blending artistic vision with technical expertise in 3D art, animation, and Commercial Art. I'm Passionate about too many things to list, but some include video game design, travel, and philosophy. Thriving on merging art and tech for immersive digital experiences, pushing boundaries in the ever-evolving tech world.
                             </p>
                             <ul className="aboutme__list">
                                 <li ref={(el) => (listItemsRef.current[0] = el)} className="aboutme__list--item">
-                                    * Nicknamed the "Queen of Sass/SCSS" by my cohort.
+                                    • Nicknamed the "Queen of Sass/SCSS" by my cohort.
                                 </li>
                                 <li ref={(el) => (listItemsRef.current[1] = el)} className="aboutme__list--item">
-
-                                    * Currently a Dev in the <a
-                                        href="https://www.theshrimpsociety.com/insights/built-in-miami-official-announcement#:~:text=via%20builtmiami.com-,The%20Builders%20Summer,-is%20a%20six"
-                                        className="aboutme__list--link"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >Miami Bulider's Summer</a> collaboration
+                                    • Designed logo's for a handful of small businesses.
                                 </li>
                                 <li ref={(el) => (listItemsRef.current[2] = el)} className="aboutme__list--item">
-                                    * Ran a small Web Dev server to help self-learner's mantain accountability.
+                                    • Ran a small Web Dev server to help self-learner's mantain accountability.
                                 </li>
                             </ul>
                         </div>

@@ -6,15 +6,11 @@
     @include flex(column, center, center);
     background-color: $portfolio-color--navy;
     width: 100%;
-    padding: 60px 0px;
+    padding: 3.75rem 0rem;
     overflow: hidden;
 
     & * {
         color: $portfolio-color--white;
-    }
-
-    @include md {
-        padding: 60px 8px;
     }
 
     &__sec {
@@ -39,13 +35,13 @@
 
         @include lg {
             width: 90%;
-            max-width: 1400px
+            max-width: 87.5rem
         }
     }
 
     &__body {
         @include flex(column, center, center);
-        height: 500px;
+        height: 31.25rem;
 
         @include md {
             @include flex(column, flex-start, center);
@@ -60,11 +56,11 @@
         @include md {
             @include flex(row, flex-start, flex-start);
             width: 100%;
-            margin-bottom: 32px;
+            margin-bottom: 2rem;
         }
 
         &--title {
-            @include main-font(32px, 500, 40px);
+            @include main-font(2rem, 500, 2.5rem);
             display: none;
 
             @include md {
@@ -77,8 +73,8 @@
         }
 
         &--icon {
-            width: 45px;
-            margin: 0px 0px 8px 0px;
+            width: 2.8125rem;
+            margin: 0rem 0rem .5rem 0rem;
 
             @include md {
                 display: none
@@ -87,15 +83,15 @@
 
         &--text {
             @include flex(column, center, center);
-            @include sub-font(16px, 700, 20px);
+            @include sub-font(1rem, 700, 1.25rem);
 
             &::after {
                 content: "";
                 background-color: $portfolio-color--pink;
-                border-radius: 4px;
-                margin: 4px;
-                width: 0px;
-                height: 3px;
+                border-radius: .25rem;
+                margin: .25rem;
+                width: 0rem;
+                height: .1875rem;
                 transition: 1.5s ease-out 0.2s;
             }
 
@@ -109,33 +105,17 @@
 
         &--body {
             @include flex(row, center, center);
-            margin: 16px;
+            margin: 1rem;
 
             @include md {
                 display: none
             }
         }
 
-        &--img {
-            width: 65px;
-            margin: 0px 8px;
-
-            &:first-of-type {
-                rotate: -15deg;
-                animation: flipOutLeft ease 1 2s;
-            }
-
-            &:last-of-type {
-                rotate: 15deg;
-                animation: flipOutRight ease 1 2s;
-
-            }
-        }
-
         &--profile {
-            width: 150px;
+            width: 9.375rem;
             border-radius: 100%;
-            border: 6px solid $portfolio-color--white;
+            border: .375rem solid $portfolio-color--white;
             z-index: 100;
         }
 
@@ -152,11 +132,11 @@
     }
 
     &__desc {
-        @include sub-font(16px, 500, 25px);
-        margin: 8px 0px;
+        @include sub-font(1rem, 500, 1.5625rem);
+        margin: .5rem 0rem;
 
         @include md {
-            @include sub-font(18px, 500, 30px);
+            @include sub-font(1.125rem, 500, 1.875rem);
             text-align: start;
         }
     }
@@ -166,17 +146,17 @@
 
         @include md {
             @include flex(column, flex-start, flex-start);
-            padding: 8px 0px;
+            padding: .5rem 0rem;
             width: 100%;
         }
 
         &--item {
-            @include sub-font(18px, 500, 1.5);
+            @include sub-font(1.125rem, 500, 1.5);
             text-align: left;
-            margin: 2px 0px;
+            margin: .5rem 0rem;
             opacity: 0;
-            filter: blur(5px);
-            translate: -100px 0px;
+            filter: blur(.3125rem);
+            translate: -6.25rem 0rem;
             transition: ease 0.4s 0.3s;
 
             &:nth-of-type(2) {
@@ -212,16 +192,56 @@
         }
 
         &--profile {
-            width: 250px;
-            border: 4px solid $portfolio-color--white;
-            border-radius: 4px;
+            width: 15.625rem;
+            border: .25rem solid $portfolio-color--white;
+            border-radius: .25rem;
             transition: ease .3s;
-            margin: 16px;
+            margin: 1rem;
 
             @include lg {
-                width: 360px;
-                margin: 0px;
+                width: 22.5rem;
+                margin: 0rem;
             }
         }
+    }
+}
+
+.img-- {
+    &brush {
+        width: .75rem;
+        rotate: -40deg;
+        translate: 1.625rem -3.125rem;
+        transition: ease 1.5s;
+
+        animation: brushAnimation ease 1.4s forwards;
+        @include rotateLeft(38deg, brushAnimation);
+    }
+
+    &game {
+        width: 1.75rem;
+        translate: -0.5rem 3.125rem;
+        transition: ease;
+
+        animation: gameAnimation ease 1.4s forwards;
+        @include rotateLeft(-38deg, gameAnimation);
+    }
+
+    &book {
+        width: 2.25rem;
+        transform: translate(1.875rem, -3rem);
+        transition: ease;
+
+        animation: bookAnimation ease 1.4s forwards;
+        @include rotateRight(-32deg, bookAnimation);
+    }
+
+
+    &plane {
+        width: 1.5rem;
+        transform: translate(1.25rem, 3.75rem);
+        transition: ease;
+
+        animation: planeAnimation ease 1.4s forwards;
+        @include rotateRight(50deg, planeAnimation);
     }
 }

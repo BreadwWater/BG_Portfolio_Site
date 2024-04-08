@@ -6,12 +6,11 @@
 .skills {
     @include flex(column, center, center);
     background-color: $portfolio-color--white;
-    min-height: 620px;
+    min-height: 38.75rem;
     width: 100%;
 
     @include md {
-        padding: 40px 0px;
-
+        padding: 2.5rem 0rem;
     }
 
     &__body {
@@ -22,7 +21,7 @@
             content: '';
             background-color: $portfolio-color--navy;
             width: 100%;
-            height: 80px;
+            height: 5rem;
 
             @include md {
                 all: unset;
@@ -36,21 +35,23 @@
     }
 
     &__sec {
-        margin: 0px 0px 8px 0px;
+        @include flex(column, center, center);
+        margin: 0rem 0rem .5rem 0rem;
 
         @include md {
-            margin: 0px 0px 16px 0px;
+            margin: 0rem 0rem 1rem 0rem;
+            width: 100%;
         }
     }
 
     &__header {
         @include flex(column, center, center);
         width: 100%;
-        padding: 8px 0px;
+        padding: .5rem 0rem;
 
         @include md {
             @include flex(column, center, flex-start);
-            padding: 16px 0px;
+            padding: 1rem 0rem;
             width: 90%;
         }
 
@@ -59,8 +60,8 @@
         }
 
         &--icon {
-            width: 45px;
-            margin: 0px 0px 8px 0px;
+            width: 2.8125rem;
+            margin: 0rem 0rem .5rem 0rem;
 
             @include md {
                 display: none
@@ -69,7 +70,7 @@
 
         &--text {
             @include flex(column, center, center);
-            @include sub-font(16px, 700, 20px);
+            @include sub-font(1rem, 700, 1.25rem);
 
             @include md {
                 display: none
@@ -78,15 +79,15 @@
     }
 
     &__subheader {
-        @include sub-font(16px, 600, 20px);
+        @include sub-font(1rem, 600, 1.25rem);
         background-color: $portfolio-color--navy;
         color: $portfolio-color--white;
         text-align: center;
         width: 100%;
-        padding: 16px 0px;
+        padding: 1rem 0rem;
 
         @include md {
-            @include sub-font(24px, 600, 20px);
+            @include sub-font(1.5rem, 600, 1.25rem);
             background-color: transparent;
             color: $portfolio-color--black;
         }
@@ -94,18 +95,25 @@
 
     &__cont {
         @include flex(column, center, center);
-        background-color: $portfolio-color--white;
-        width: 100%;
+        width: 80%;
+
+        @include md {
+            width: 90%;
+        }
+
+        @include lg {
+            width: 100%;
+        }
     }
 
     &__group {
-        @include flex(row, flex-start, center);
+        @include flex(row, center, center);
         flex-wrap: wrap;
-        width: 94%;
+        width: 95%;
 
         @include md {
-            @include flex(row, flex-start, center);
-            width: 100%;
+            @include flex(row, center, center);
+            flex-wrap: wrap;
         }
 
         @include lg {

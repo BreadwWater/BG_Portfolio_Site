@@ -4,18 +4,19 @@
 
 .hero {
     @include flex(row, center, center);
-    background-color: $portfolio-color--pink;
-    height: 270px;
+    background: $portfolio-color--blue url('../../assets/images/hero-bg.png') center/100vw no-repeat;
+    background-size: cover;
+    height: 16.875rem;
     width: 100%;
     overflow: hidden;
     position: relative;
 
     @include md {
-        height: 750px;
+        height: 43.75rem;
     }
 
     @include lg {
-        height: 900px;
+        height: 50rem;
     }
 
     &__cont {
@@ -24,10 +25,6 @@
         @include md {
             width: 100%;
         }
-
-        @include lg {
-            width: 80%;
-        }
     }
 
 
@@ -35,13 +32,12 @@
         @include flex(row, center, center);
 
         @include md {
-            width: 100%;
+            width: 40%;
         }
     }
 
     &__info {
         @include flex(column, center, center);
-        margin-top: 16px;
 
         &:first-of-type {
             width: 100%;
@@ -49,58 +45,71 @@
             position: absolute;
 
             @include md {
-                // width: 47%; Change to this when you get the 3D Model up and running
-                width: 80%;
-                margin: 0;
+                width: 47%;
             }
         }
     }
 
     &__text {
         text-align: center;
-        margin: 16px 0px;
+        margin: 1.5rem 0rem;
+
+        @include md {
+            margin: 1rem 0rem;
+        }
     }
 
     &__title {
-        @include main-font(24px, 400, none);
-        margin: 16px 0px;
+        @include main-font(1.5rem, 400, none);
+        margin: 1rem 0rem;
 
         @include md {
-            @include main-font(40px, 400, none);
-            margin: 0px 0px;
+            @include main-font(2.5rem, 400, none);
+            margin: 0rem 0rem;
         }
 
         @include lg {
-            @include main-font(48px, 400, none);
-            margin: 16px 0px;
+            @include main-font(3rem, 400, none);
+            margin: 1rem 0rem;
         }
     }
 
     &__subtitle {
-        @include main-font(14px, 400, 16px);
+        @include main-font(.875rem, 400, 1rem);
 
         @include md {
-            @include main-font(20px, 400, 32px);
+            @include main-font(1.125rem, 400, 2rem);
         }
 
         @include lg {
-            @include main-font(24px, 400, 32px);
+            @include main-font(1.5rem, 400, 2rem);
         }
     }
 
     &__desktop {
         &--btn {
             @include md {
-                margin: 16px;
+                margin: 1rem;
             }
         }
     }
 
     &__mobile {
 
+        &--btn {
+            max-width: 15.625rem;
+            min-height: 2.5rem;
+            width: 80%;
+
+            &>* {
+                background-color: rgba($portfolio-color--white, 0.5);
+            }
+        }
+
         &--btn,
         &--bg {
             display: flex;
+            flex-direction: column;
 
             @include md {
                 display: none;
@@ -110,43 +119,21 @@
         &--bg {
             width: 100%;
             @include flex(column, center, center);
-
-            @include md {}
         }
 
         &--img {
+            display: none;
+            opacity: 50%;
 
-            &:first-of-type {
-                width: 100px;
-                left: -50px;
-                top: 10px;
-                transform: rotate(-15deg);
-                position: absolute;
-                justify-self: flex-start;
-                align-self: flex-start;
-                animation: floatDown ease-in-out infinite 3s;
-            }
-
-            &:last-of-type {
-                width: 140px;
-                right: -80px;
-                bottom: -32px;
-                transform: rotate(15deg);
-                position: absolute;
-                justify-self: flex-end;
-                align-self: flex-end;
-                animation: floatUp ease-in-out infinite 3s;
-            }
-
-
-            // DELETE THIS WHEN YOU GET THE MODEL WORKING; ITS THE BREAD BUT ON MD
             @include md {
+                display: unset;
+                pointer-events: none;
 
                 &:first-of-type {
-                    width: 250px;
-                    left: -80px;
-                    top: 100px;
-                    transform: rotate(-15deg);
+                    width: 9.375rem;
+                    left: 3.125rem;
+                    top: 7.5rem;
+                    transform: rotate(15deg);
                     position: absolute;
                     justify-self: flex-start;
                     align-self: flex-start;
@@ -154,16 +141,39 @@
                 }
 
                 &:last-of-type {
-                    width: 240px;
-                    right: -80px;
-                    bottom: 150px;
-                    transform: rotate(15deg);
+                    width: 7.5rem;
+                    right: 6.25rem;
+                    bottom: 28.125rem;
+                    transform: rotate(-15deg);
                     position: absolute;
                     justify-self: flex-end;
                     align-self: flex-end;
                     animation: floatUp ease-in-out infinite 3s;
                 }
 
+                @include lg {
+                    &:first-of-type {
+                        width: 12.5rem;
+                        left: 3.125rem;
+                        top: 6.25rem;
+                        transform: rotate(15deg);
+                        position: absolute;
+                        justify-self: flex-start;
+                        align-self: flex-start;
+                        animation: floatDown ease-in-out infinite 3s;
+                    }
+
+                    &:last-of-type {
+                        width: 9.375rem;
+                        right: 9.375rem;
+                        bottom: 28.125rem;
+                        transform: rotate(-15deg);
+                        position: absolute;
+                        justify-self: flex-end;
+                        align-self: flex-end;
+                        animation: floatUp ease-in-out infinite 3s;
+                    }
+                }
             }
         }
     }
@@ -173,16 +183,9 @@
 
         @include md {
             @include flex(row, center, center);
-            padding: 8px 0px;
-            height: 350px;
+            padding: .5rem 0rem;
+            height: 21.875rem;
             width: 80%;
         }
     }
-
-}
-
-
-// Delete this and the class entirely when you get the 3D Model running; this was just to hide the section
-.render {
-    display: none;
 }

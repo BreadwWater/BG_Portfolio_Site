@@ -4,38 +4,38 @@
 
 .btn {
     @include btn($portfolio-color--black, transparent, $portfolio-color--black);
-    @include sub-font(12px, 600, 14px);
+    @include sub-font(.75rem, 600, .875rem);
     @include flex(row, center, center);
-    box-shadow: 0px 6px 23px -4px rgba(0, 0, 0, 0.15);
+    box-shadow: 0rem .375rem 1.4375rem -0.25rem rgba(0, 0, 0, 0.15);
     text-transform: uppercase;
     text-align: center;
     font-weight: 600;
-    letter-spacing: .5px;
-    min-width: 64px;
-    min-height: 32px;
-    padding: 0px 8px;
-    margin: 8px;
-    border-radius: 4px;
+    letter-spacing: .0313rem;
+    min-width: 4rem;
+    min-height: 2.1875rem;
+    padding: 0rem .5rem;
+    margin: .5rem;
+    border-radius: .25rem;
     cursor: pointer;
     transition: ease-out .2s;
 
     @include md {
-        border-radius: 8px;
-        padding: 8px 16px;
+        border-radius: .5rem;
+        padding: .5rem 1rem;
     }
 
     &-text {
-        @include sub-font(12px, 600, 16px);
+        @include sub-font(.75rem, 600, 1rem);
         color: $portfolio-color--black;
 
         @include md {
-            @include sub-font(24px, 600, 30px);
+            @include sub-font(1.5rem, 600, 1.875rem);
         }
     }
 
     &:hover {
         @include btn($portfolio-color--white, $portfolio-color--black, $portfolio-color--black);
-        box-shadow: 0px 6px 23px -4px rgba(0, 0, 0, 0.18);
+        box-shadow: 0rem .375rem 1.4375rem -0.25rem rgba(0, 0, 0, 0.18);
 
         @include md {
             scale: 1.015;
@@ -45,24 +45,6 @@
         &>.btn-text {
             color: $portfolio-color--white;
         }
-    }
-}
-
-@keyframes shake {
-    0% {
-        rotate: 0deg;
-    }
-
-    25% {
-        rotate: 2deg;
-    }
-
-    75% {
-        rotate: -2deg;
-    }
-
-    100% {
-        rotate: 0deg;
     }
 }
 

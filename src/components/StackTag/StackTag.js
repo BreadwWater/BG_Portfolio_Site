@@ -1,10 +1,12 @@
 import './StackTag.scss';
 
-function StackTag({ stack }) {
+function StackTag(props) {
+    const { tag } = props;
+
     return (
         <>
             <article className='stacktag'>
-                <p className='stacktag--title'>{stack}</p>
+                <p className='stacktag--title'>{tag}</p>
             </article>
         </>
     );

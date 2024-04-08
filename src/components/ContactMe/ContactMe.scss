@@ -2,22 +2,21 @@
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/breakpoints' as *;
 
-
 .contact {
     @include flex(column, center, center);
     background-color: $portfolio-color--white;
     width: 100%;
-    padding: 16px 0px 48px 0px;
+    padding: 1rem 0rem 3rem 0rem;
 
     @include md {
-        padding: 24px 0px 60px 0px;
+        padding: 1.5rem 0rem 3.75rem 0rem;
     }
 
     &__header {
         @include flex(column, center, center);
         background-color: $portfolio-color--white;
         width: 100%;
-        padding: 8px 0px;
+        padding: .5rem 0rem;
 
         & h4 {
             color: $portfolio-color--black;
@@ -26,7 +25,7 @@
         @include md {
             @include flex(column, center, flex-start);
             background-color: transparent;
-            padding: 16px 0px;
+            padding: 1rem 0rem;
             width: 90%;
         }
 
@@ -35,8 +34,8 @@
         }
 
         &--icon {
-            width: 50px;
-            margin: 0px 0px 4px 0px;
+            width: 3.125rem;
+            margin: 0rem 0rem .25rem 0rem;
 
             @include md {
                 display: none
@@ -45,7 +44,7 @@
 
         &--text {
             @include flex(column, center, center);
-            @include sub-font(16px, 700, 20px);
+            @include sub-font(1rem, 700, 1.25rem);
 
             @include md {
                 display: none
@@ -55,13 +54,19 @@
 
     &__title {
         display: inline-block;
-        @include sub-font(12px, 600, none);
+        @include sub-font(.75rem, 600, none);
         position: relative;
         text-align: center;
-        margin: 8px 0px;
+
         width: 70%;
 
         &:nth-of-type(2) {
+            margin-bottom: .5rem;
+
+            @include md {
+                margin-bottom: 1rem;
+            }
+
             &::after {
                 all: unset;
             }
@@ -72,15 +77,15 @@
             @include flex(row, center, center);
             bottom: 0;
             background-color: $portfolio-color--pink;
-            height: 3px;
-            margin: 4px 0px;
+            height: .1875rem;
+            margin: .25rem 0rem;
             width: 100%;
-            border-radius: 60px;
+            border-radius: 3.75rem;
         }
 
         @include md {
             @include flex(row, center, center);
-            @include sub-font(16px, 600, none);
+            @include sub-font(1rem, 600, none);
             width: 100%;
 
 
@@ -90,21 +95,21 @@
                 position: absolute;
                 bottom: 0;
                 background-color: $portfolio-color--pink;
-                height: 3px;
+                height: .1875rem;
                 width: 50%;
-                border-radius: 60px;
+                border-radius: 3.75rem;
             }
         }
 
         &--link {
-            @include sub-font(12px, 600, none);
+            @include sub-font(.75rem, 600, none);
             display: inline-block;
             text-decoration: underline;
             font-style: italic;
-            margin-left: 4px;
+            margin-left: .25rem;
 
             @include md {
-                @include sub-font(16px, 600, none);
+                @include sub-font(1rem, 600, none);
                 font-style: italic;
 
                 &:hover {
@@ -115,18 +120,19 @@
     }
 
     &__limit-msg {
-        @include sub-font(10px, 600, none);
+        @include sub-font(.625rem, 600, none);
         color: red;
-        padding-left: 8px;
+        padding-left: .5rem;
     }
 
     &__form {
         @include flex(column, center, flex-start);
         width: 85%;
-        margin: 16px 0px;
+        margin: 1rem 0rem;
 
         @include md {
             width: 65%;
+            margin: 0rem;
         }
 
         @include lg {
@@ -135,38 +141,38 @@
     }
 
     & textarea {
-        @include sub-font(12px, 500, none);
+        @include sub-font(.75rem, 500, none);
         background-color: $portfolio-color--white;
-        border: 2px solid $portfolio-color--black;
-        border-radius: 2px;
-        margin-bottom: 8px;
-        padding: 4px 16px 4px 4px;
+        border: .125rem solid $portfolio-color--black;
+        border-radius: .125rem;
+        margin-bottom: .5rem;
+        padding: .25rem 1rem .25rem .25rem;
         min-width: 100%;
-        height: 80px;
+        height: 5rem;
         z-index: 1000;
         resize: none;
 
         @include md {
-            @include sub-font(12px, 500, none);
-            height: 100px;
+            @include sub-font(.75rem, 500, none);
+            height: 6.25rem;
         }
     }
 
     &__label {
-        @include sub-font(12px, 600, none);
-        margin: 4px 0px 8px 0px;
+        @include sub-font(.75rem, 600, none);
+        margin: .25rem 0rem .5rem 0rem;
 
         @include md {
-            @include sub-font(16px, 600, none);
+            @include sub-font(1rem, 600, none);
         }
 
         &--input {
-            @include sub-font(12px, 500, none);
+            @include sub-font(.75rem, 500, none);
             background-color: $portfolio-color--white;
-            border: 2px solid $portfolio-color--black;
-            border-radius: 2px;
-            margin-bottom: 8px;
-            padding: 4px;
+            border: .125rem solid $portfolio-color--black;
+            border-radius: .125rem;
+            margin-bottom: .5rem;
+            padding: .25rem;
             width: 100%;
             z-index: 1000;
             resize: none;
@@ -181,21 +187,84 @@
 
             &:focus {
                 outline: none !important;
-                border: 2px solid $portfolio-color--pink;
-                box-shadow: 0 0 10px rgba(233, 161, 139, 0.5);
+                border: .125rem solid $portfolio-color--pink;
+                box-shadow: 0 0 .625rem rgba(233, 161, 139, 0.5);
                 background-color: white;
             }
 
             @include md {
-                @include sub-font(12px, 500, none);
+                @include sub-font(.75rem, 500, none);
             }
         }
     }
 
     &__btn {
-        @include flex(row, center, center);
+        @include flex(column, center, center);
         line-height: normal;
         align-self: center;
-        margin-top: 8px;
+        margin-top: .5rem;
+        width: 100%;
+        transition: ease-out .2s;
+
+        &:nth-of-type(2) {
+            @include flex(column, center, center);
+
+            @include md {
+                @include flex(row, center, center);
+            }
+        }
+
+        .contact__btn--submit,
+        .contact__btn--resume {
+            @include sub-font(.75rem, 600, none);
+            box-shadow: 0rem .375rem 1.4375rem -0.25rem rgba(0, 0, 0, 0.15);
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 600;
+            letter-spacing: .0313rem;
+            min-width: 4rem;
+            min-height: 2.1875rem;
+            padding: 0rem .5rem;
+            margin: .5rem;
+            border-radius: .25rem;
+            cursor: pointer;
+
+            @include md {
+                @include sub-font(1.5rem, 600, none);
+                border-radius: .5rem;
+                padding: .5rem 1rem;
+                width: unset;
+            }
+
+            &:hover {
+                @include btn($portfolio-color--white, $portfolio-color--black, $portfolio-color--black);
+                box-shadow: unset;
+            }
+        }
+
+        &--submit {
+            @include btn($portfolio-color--white, $portfolio-color--blue, $portfolio-color--blue);
+            width: 100%;
+
+            &:disabled {
+                @include btn($portfolio-color--white, $portfolio-color--black, $portfolio-color--black);
+                cursor: default;
+            }
+        }
+
+        &--resume {
+            @include btn($portfolio-color--black, transparent, $portfolio-color--black);
+            width: 85%;
+
+            &:hover {
+                @include btn($portfolio-color--white, $portfolio-color--black, $portfolio-color--black);
+                box-shadow: 0rem .375rem 1.4375rem -0.25rem rgba(0, 0, 0, 0.18);
+
+                @include md {
+                    scale: 1.015;
+                    animation: shake ease .4s infinite;
+                }
+            }
+        }
     }
 }

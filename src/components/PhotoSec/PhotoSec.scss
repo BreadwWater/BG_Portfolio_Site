@@ -1,0 +1,90 @@
+@use '../../styles/partials/globals.scss' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/breakpoints' as *;
+
+
+.PhotoSec {
+    &_collage {
+        @include flex(column, space-between, center);
+        width: 100%;
+        margin: .25rem 0rem;
+        transition: ease .5s;
+
+        @include md {
+            padding: 2.625rem 0rem;
+            width: 70%;
+        }
+
+        &--collection {
+            @include flex(column, center, center);
+            width: 100%;
+            transition: ease .8s;
+
+            @include md {
+                @include flex(row, space-between, center);
+                width: 100%;
+            }
+
+            &>.PhotoSec_collage--img {
+                width: 100%;
+
+                @include md {
+                    width: 49%;
+                }
+            }
+        }
+
+        &--img {
+            background-color: $portfolio-color--grey;
+            width: 100%;
+            margin: .5rem 0rem;
+            transition: ease-in-out .3s;
+
+            @include md {
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.005) translate(0rem, -0.3125rem);
+                    box-shadow: 0rem .625rem .9375rem -0.5625rem rgba(0, 0, 0, 0.1);
+                }
+            }
+
+        }
+    }
+}
+
+.modal {
+    &__overlay {
+        @include flex(column, center, center);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($portfolio-color--black, 0.95);
+        backdrop-filter: blur(.3125rem);
+        z-index: 1000;
+        cursor: pointer;
+    }
+
+    &__content {
+        @include flex(column, center, center);
+
+        &.zoomed {
+            @include md {
+                transform: scale(1.5);
+                width: 100%;
+                max-height: 100vh;
+            }
+        }
+
+        &--img {
+            max-width: 100%;
+            max-height: 90vh;
+            cursor: zoom-in;
+
+            @include md {
+                max-width: 90%;
+            }
+        }
+    }
+}

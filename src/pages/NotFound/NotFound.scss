@@ -1,0 +1,94 @@
+@use '../../styles/partials/globals.scss' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/breakpoints' as *;
+
+
+.notfound {
+    @include flex(column, center, center);
+    background-color: $portfolio-color--white;
+    height: 100vh;
+    width: 100%;
+
+    @include md {
+        height: 50rem;
+    }
+
+    &__cont {
+        @include flex(column, center, center);
+        width: 100%;
+        padding: 1rem 0rem;
+        transition: ease-in-out .5s;
+
+        @include lg {
+            @include flex(row-reverse, center, center);
+            width: 60%;
+        }
+    }
+
+    &__img {
+        width: 60%;
+        max-width: 12.5rem;
+        transition: ease-in-out .5s;
+
+        @include md {
+            width: 80%;
+            max-width: 18rem;
+        }
+
+        @include lg {
+            width: 80%;
+            max-width: 28.125rem;
+        }
+    }
+
+    &__desc {
+        @include flex(column, center, center);
+        text-align: center;
+        margin: .5rem 0rem;
+        width: 100%;
+
+        &--404 {
+            @include sub-font(3rem, 600, none);
+            margin: 1rem 0rem;
+
+            @include md {
+                @include sub-font(4rem, 600, none);
+                margin: .5rem 0rem;
+            }
+
+            @include lg {
+                @include sub-font(6rem, 600, none);
+                margin: 1rem 0rem;
+            }
+        }
+
+        &--text {
+            @include sub-font(.75rem, 600, none);
+
+            @include md {
+                @include sub-font(1.125rem, 600, none);
+            }
+
+            @include lg {
+                @include sub-font(1.25rem, 600, none);
+                margin: .5rem 0rem;
+            }
+        }
+
+        &--link {
+            @include sub-font(.75rem, 500, none);
+            margin: 1rem 0rem;
+            text-decoration: underline;
+            cursor: pointer;
+
+            &:hover {
+                color: $portfolio-color--pink;
+            }
+
+            @include md {
+                @include sub-font(1rem, 600, none);
+                margin: 0rem;
+            }
+        }
+    }
+}

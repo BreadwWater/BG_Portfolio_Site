@@ -1,15 +1,17 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import '../ContactMe/ContactMe.scss';
-import Button from '../Button/Button';
 import SectionHeader from '../SectionHeader/SectionHeader';
 import ContactIconAnim from '../../assets/animated icons/contact-animated-icon.gif';
 import ContactIconStatic from '../../assets/animated icons/contact-icon.svg';
 import Resume from '../../assets/pdf/Brenda_Gonzalez_Resume.pdf';
 
 function ContactMe() {
-    const [fullName, setFullName] = React.useState('');
-    const [companyName, setCompanyName] = React.useState('');
+    const [userName, setUserName] = React.useState('');
+    const [userEmail, setUserEmail] = React.useState('');
     const [subjectName, setSubjectName] = React.useState('');
+    const [messageSent, setMessageSent] = React.useState(false);
+    const form = useRef();
 
     const handleReplaceSrc = () => {
         if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -22,30 +24,35 @@ function ContactMe() {
         handleReplaceSrc();
     }, []);
 
-    const handleFullNameChange = (e) => {
+    //Sends form to email; Email.js API val
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs
+            .sendForm('service_bjdodc9', 'template_tnmdljj', form.current, {
+                publicKey: 'X6UsTu0nQpvrN_uj1',
+            })
+
+            .then(() => {
+                setMessageSent(true);
+                setUserName('');
+                setUserEmail('');
+                setSubjectName('');
+            })
+    };
+    const handleUserNameChange = (e) => {
         const value = e.target.value.slice(0, 28);
-        setFullName(value);
+        setUserName(value);
     };
 
-    const handleCompanyNameChange = (e) => {
-        const value = e.target.value.slice(0, 34);
-        setCompanyName(value);
+    const handleUserEmailChange = (e) => {
+        const value = e.target.value.slice(0, 45);
+        setUserEmail(value);
     };
 
     const handleSubjectNameChange = (e) => {
         const value = e.target.value.slice(0, 151);
         setSubjectName(value);
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-
-        const emailSubject = encodeURIComponent(subjectName);
-        const emailBody = `Hey, this is ${fullName} from ${companyName}.`;
-
-        const emailLink = `mailto:bren.gonzalez1926@gmail.com?subject=${emailSubject}&body=${emailBody}`;
-
-        const newWindow = window.open(emailLink, '_blank');
     };
 
     const handleDownloadResume = () => {
@@ -79,64 +86,75 @@ function ContactMe() {
                         rel="noopener noreferrer">
                         other platforms!</a>
                 </p>
-                <form action="" className="contact__form" onSubmit={handleSubmit}>
-                    <label className="contact__label" htmlFor="full-name">
+                <form className="contact__form" ref={form} onSubmit={sendEmail}>
+                    <label className="contact__label" htmlFor="user_name">
                         First Name
-                        {fullName.length >= 28 && <span className="contact__limit-msg">* Maximum characters reached</span>}
+                        {userName.length >= 28 && <span className="contact__limit-msg">* Maximum characters reached</span>}
                     </label>
                     <input
                         type="text"
+                        id="user_name"
                         placeholder="Enter First Name"
-                        id="full-name"
                         className="contact__label--input"
-                        name="first-name"
-                        value={fullName}
-                        onChange={handleFullNameChange}
-                        required
+                        name="user_name"
+                        value={userName}
+                        onChange={handleUserNameChange}
                         autoComplete='true'
+                        required
                     />
 
-                    <label className="contact__label" htmlFor="company-name">
-                        Company/Startup
-                        {companyName.length >= 34 && <span className="contact__limit-msg">* Maximum characters reached</span>}
+                    <label className="contact__label" htmlFor="user_email">
+                        Email
+                        {userEmail.length >= 45 && <span className="contact__limit-msg">* Maximum characters reached</span>}
                     </label>
                     <input
-                        type="text"
-                        placeholder="Company Name"
-                        id="company-name"
+                        type="email"
+                        placeholder="Your Email"
+                        id="user_email"
                         className="contact__label--input"
-                        name="company-name"
-                        value={companyName}
-                        onChange={handleCompanyNameChange}
+                        name="user_email"
+                        value={userEmail}
+                        onChange={handleUserEmailChange}
                         required
                         autoComplete='true'
                     />
 
-                    <label className="contact__label" htmlFor="subject-name">
+                    <label className="contact__label" htmlFor="message">
                         Subject
                         {subjectName.length >= 151 && <span className="contact__limit-msg">* Maximum characters reached</span>}
                     </label>
                     <textarea
                         type="text"
                         placeholder="What's This About?"
-                        id="subject-name"
+                        id="message"
                         className="contact__label--input"
-                        name="subject-name"
+                        name="message"
                         value={subjectName}
                         onChange={handleSubjectNameChange}
                         required
                         autoComplete='true'
                     />
-
                     <div className="contact__btn">
-                        <Button type="submit" text={'Contact'} />
+                        {messageSent ? (
+                            <button className="contact__btn--submit" disabled>
+                                Message Sent!
+                            </button>
+                        ) : (
+                            <button
+                                className="contact__btn--submit"
+                                type="submit"
+                                value="Send"
+                                disabled={messageSent}
+                            >
+                                Contact
+                            </button>
+                        )}
                     </div>
                 </form>
-                <p className="contact__title">or</p>
-                <p className="contact__title">View/Download my Resume now!</p>
+                <p className="contact__title"> or <br /> View/Download my Resume now!</p>
                 <div className="contact__btn">
-                    <Button text={'View'} onClick={handleViewResume} />
-                    <Button text={'Download'} onClick={handleDownloadResume} />
+                    <button className='contact__btn--resume' text={'View'} onClick={handleViewResume} >View</button>
+                    <button className='contact__btn--resume' text={'Download'} onClick={handleDownloadResume} >Download</button>
                 </div>
             </section>
         </>

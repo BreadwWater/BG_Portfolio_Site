@@ -3,11 +3,15 @@
 @use './typography' as *;
 
 $portfolio-color--pink: #E9A18B;
-$portfolio-color--grey: #D1C5C2;
+$portfolio-color--grey: #E3E4E5;
 $portfolio-color--white: #F8F8F8;
 $portfolio-color--blue: #235789;
 $portfolio-color--navy: #1E2433;
 $portfolio-color--black: #1E1B19;
+
+$skeleton-color--light-gray: #ececec;
+$skeleton-color--gray: #939596;
+$skeleton-color--dark-gray: #4d4d4e;
 
 * {
     box-sizing: border-box;
@@ -61,6 +65,15 @@ a {
     }
 }
 
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 3.125rem $portfolio-color--white inset;
+    -webkit-text-fill-color: $portfolio-color--black;
+}
+
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 3.125rem $portfolio-color--white inset;
+}
+
 .hidden {
     display: none;
 }
@@ -69,14 +82,14 @@ a {
 
 // This is to open ::after ::before from center
 .animation--underline::after {
-    width: 80px;
-    height: 3px;
+    width: 5rem;
+    height: .1875rem;
 }
 
 .fade-in {
     opacity: 1;
     filter: blur(0);
-    translate: 0px 0px;
+    translate: 0rem 0rem;
 }
 
 // Slides in from right to left
@@ -99,62 +112,112 @@ a {
 // Floating animation
 @keyframes floatUp {
     0% {
-        translate: 0px 15px;
+        translate: 0rem .9375rem;
     }
 
     50% {
-        translate: 0px 0px;
+        translate: 0rem 0rem;
     }
 
     100% {
-        translate: 0px 15px;
+        translate: 0rem .9375rem;
     }
 }
 
 @keyframes floatDown {
     0% {
-        translate: 0px -10px;
+        translate: 0rem -0.625rem;
     }
 
     50% {
-        translate: 0px 0px;
+        translate: 0rem 0rem;
     }
 
     100% {
-        translate: 0px -10px;
+        translate: 0rem -0.625rem;
     }
 }
 
 // Flip out from center animation
-@keyframes flipOutLeft {
-    0% {
-        translate: 160px 0px;
-        rotate: -15deg;
-    }
 
+@mixin rotateLeft($rotateValue, $animationName) {
+    @keyframes #{$animationName} {
+        0% {
+            translate: 10rem 0rem;
+            rotate: ($rotateValue);
+            scale: 0;
+        }
 
-    10% {
-        rotate: 180deg;
-    }
+        10% {
+            rotate: 180deg;
+            scale: 0;
+        }
 
-    100% {
-        rotate: -15deg;
+        100% {
+            rotate: ($rotateValue);
+            scale: 100%;
+        }
     }
 }
 
-@keyframes flipOutRight {
+@mixin rotateRight($rotateValue, $animationName) {
+    @keyframes #{$animationName} {
+        0% {
+            translate: -6.25rem 0rem;
+            rotate: ($rotateValue);
+            scale: 0;
+        }
+
+        10% {
+            rotate: 80deg;
+            scale: 0;
+        }
+
+        100% {
+            rotate: ($rotateValue);
+            scale: 100%;
+        }
+    }
+}
+
+//Pulse animation
+@keyframes Pulse {
     0% {
-        translate: -160px 0px;
-        rotate: 15deg;
+        background-color: rgb(197, 197, 197);
     }
 
-    10% {
-        rotate: -180deg;
+    50% {
+
+        background-color: $skeleton-color--gray;
     }
 
     100% {
-        rotate: 15deg;
+        background-color: rgb(197, 197, 197);
     }
+}
+
+//Shake animation
+@keyframes shake {
+    0% {
+        rotate: 0deg;
+    }
+
+    25% {
+        rotate: 2deg;
+    }
+
+    75% {
+        rotate: -2deg;
+    }
+
+    100% {
+        rotate: 0deg;
+    }
+}
+
+.pulse-anim {
+    animation: Pulse ease-in-out 1.2s infinite;
+    transition: ease-in-out .5s;
 }
 
 // All status
@@ -165,7 +228,7 @@ a {
     }
 
     & img {
-        filter: blur(8px);
+        filter: blur(.5rem);
     }
 }
 
@@ -182,14 +245,14 @@ a {
         transition: none;
 
         &::before {
-            width: 3px;
-            height: 32px;
+            width: .1875rem;
+            height: 2rem;
         }
     }
 
     .aboutme__header--text::after {
-        width: 80px;
-        height: 3px;
+        width: 5rem;
+        height: .1875rem;
     }
 
     .aboutme__list--item {
